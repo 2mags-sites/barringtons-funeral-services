@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test POST to admin-save.php</title>
+</head>
+<body>
+    <h1>Test POST Request</h1>
+    <button onclick="testPost()">Test POST to admin-save.php</button>
+    <div id="result"></div>
+
+    <script>
+    function testPost() {
+        // Get current page name
+        const currentPage = 'index';
+
+        // Test data
+        const testData = {
+            page: currentPage,
+            field: 'test.field',
+            value: 'Test value',
+            csrf_token: 'test'
+        };
+
+        console.log('Sending POST to admin-save.php:', testData);
+
+        fetch('admin-save.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(testData)
+        })
+        .then(response => {
+            console.log('Response status:', response.status);
+            console.log('Response headers:', response.headers);
+            return response.text();
+        })
+        .then(data => {
+            console.log('Response data:', data);
+            document.getElementById('result').innerHTML = '<pre>' + data + '</pre>';
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            document.getElementById('result').innerHTML = 'Error: ' + error;
+        });
+    }
+    </script>
+</body>
+</html>
