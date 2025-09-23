@@ -84,7 +84,7 @@ function initImageEditing() {
                     imgElement.style.opacity = '0.5';
 
                     // Upload to server
-                    fetch('/admin-upload.php', {
+                    fetch('admin-upload', {
                         method: 'POST',
                         body: formData
                     })
@@ -244,7 +244,7 @@ window.editHeroImage = function(overlayElement) {
             overlayElement.innerHTML = '⏳ Uploading...';
 
             // Upload to server
-            fetch('/admin-upload.php', {
+            fetch('admin-upload', {
                 method: 'POST',
                 body: formData
             })
@@ -467,7 +467,7 @@ function saveAllChanges() {
 
     const currentPage = window.location.pathname.replace('/', '').replace('.php', '') || 'index';
 
-    fetch('admin-save.php', {
+    fetch('admin-save', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

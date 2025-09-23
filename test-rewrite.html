@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Rewrite Rules</title>
+</head>
+<body>
+    <h1>Test Different URL Patterns</h1>
+
+    <h2>Test URLs:</h2>
+    <button onclick="testUrl('admin-save.php')">Test admin-save.php</button>
+    <button onclick="testUrl('admin-save')">Test admin-save (no .php)</button>
+    <button onclick="testUrl('./admin-save.php')">Test ./admin-save.php</button>
+    <button onclick="testUrl('admin-save-test.php')">Test admin-save-test.php</button>
+
+    <h2>Results:</h2>
+    <pre id="result"></pre>
+
+    <script>
+    function testUrl(url) {
+        const testData = {
+            test: 'data',
+            url: url
+        };
+
+        document.getElementById('result').innerHTML = 'Testing ' + url + '...\n';
+
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(testData)
+        })
+        .then(response => {
+            document.getElementById('result').innerHTML +=
+                'URL: ' + url + '\n' +
+                'Status: ' + response.status + ' ' + response.statusText + '\n' +
+                'Final URL: ' + response.url + '\n';
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('result').innerHTML +=
+                'Response:\n' + data.substring(0, 500) + '\n\n';
+        })
+        .catch(error => {
+            document.getElementById('result').innerHTML +=
+                'Error: ' + error + '\n\n';
+        });
+    }
+    </script>
+</body>
+</html>

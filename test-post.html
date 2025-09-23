@@ -1,27 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Test POST to admin-save.php</title>
+    <title>Debug Admin Save</title>
+    <style>
+        body { font-family: monospace; padding: 20px; }
+        button { padding: 10px; margin: 5px; cursor: pointer; }
+        .success { color: green; }
+        .error { color: red; }
+        pre { background: #f0f0f0; padding: 10px; overflow-x: auto; }
+    </style>
 </head>
 <body>
-    <h1>Test POST Request</h1>
-    <button onclick="testPost()">Test POST to admin-save.php</button>
-    <div id="result"></div>
+    <h1>Debug Admin Save Endpoint</h1>
+
+    <h2>Test 1: Direct GET Request</h2>
+    <button onclick="testGet()">Test GET to admin-save.php</button>
+    <div id="get-result"></div>
+
+    <h2>Test 2: POST with CSRF from Meta</h2>
+    <button onclick="testPostWithCSRF()">Test POST with CSRF Token</button>
+    <div id="post-result"></div>
+
+    <h2>Test 3: Check File Accessibility</h2>
+    <button onclick="checkFile()">Check if admin-save.php exists</button>
+    <div id="file-result"></div>
+
+    <h2>Test 4: POST to test-save.php</h2>
+    <button onclick="testSaveEndpoint()">Test POST to test-save.php</button>
+    <div id="test-save-result"></div>
 
     <script>
-    function testPost() {
-        // Get current page name
-        const currentPage = 'index';
+    function testGet() {
+        fetch('admin-save.php')
+            .then(response => {
+                document.getElementById('get-result').innerHTML =
+                    '<pre>Status: ' + response.status + ' ' + response.statusText + '</pre>';
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('get-result').innerHTML += '<pre>' + data + '</pre>';
+            })
+            .catch(error => {
+                document.getElementById('get-result').innerHTML =
+                    '<pre class="error">Error: ' + error + '</pre>';
+            });
+    }
 
-        // Test data
+    function testPostWithCSRF() {
+        // Get CSRF token from meta tag
+        const csrfMeta = document.querySelector('meta[name="csrf-token"]');
+        const csrfToken = csrfMeta ? csrfMeta.content : 'no-csrf-found';
+
         const testData = {
-            page: currentPage,
-            field: 'test.field',
-            value: 'Test value',
-            csrf_token: 'test'
+            page: 'index',
+            fields: {'test.field': 'Test value'},
+            csrf_token: csrfToken
         };
 
-        console.log('Sending POST to admin-save.php:', testData);
+        console.log('Sending:', testData);
 
         fetch('admin-save.php', {
             method: 'POST',
@@ -31,19 +67,80 @@
             body: JSON.stringify(testData)
         })
         .then(response => {
-            console.log('Response status:', response.status);
-            console.log('Response headers:', response.headers);
+            const result = '<pre>Status: ' + response.status + ' ' + response.statusText +
+                          '\nURL: ' + response.url + '</pre>';
+            document.getElementById('post-result').innerHTML = result;
             return response.text();
         })
         .then(data => {
-            console.log('Response data:', data);
-            document.getElementById('result').innerHTML = '<pre>' + data + '</pre>';
+            document.getElementById('post-result').innerHTML += '<pre>' + data + '</pre>';
         })
         .catch(error => {
-            console.error('Error:', error);
-            document.getElementById('result').innerHTML = 'Error: ' + error;
+            document.getElementById('post-result').innerHTML =
+                '<pre class="error">Error: ' + error + '</pre>';
         });
     }
+
+    function checkFile() {
+        // Try multiple approaches to check file
+        const checks = [
+            { url: 'admin-save.php', desc: 'Relative path' },
+            { url: './admin-save.php', desc: 'Explicit relative' },
+            { url: window.location.origin + '/admin-save.php', desc: 'Absolute path' }
+        ];
+
+        let results = '<pre>';
+        let completed = 0;
+
+        checks.forEach(check => {
+            fetch(check.url, { method: 'HEAD' })
+                .then(response => {
+                    results += check.desc + ': ' + response.status + ' ' + response.statusText + '\n';
+                })
+                .catch(error => {
+                    results += check.desc + ': Failed - ' + error + '\n';
+                })
+                .finally(() => {
+                    completed++;
+                    if (completed === checks.length) {
+                        document.getElementById('file-result').innerHTML = results + '</pre>';
+                    }
+                });
+        });
+    }
+
+    function testSaveEndpoint() {
+        fetch('test-save.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ test: 'data' })
+        })
+        .then(response => {
+            document.getElementById('test-save-result').innerHTML =
+                '<pre>Status: ' + response.status + '</pre>';
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('test-save-result').innerHTML += '<pre>' + data + '</pre>';
+        })
+        .catch(error => {
+            document.getElementById('test-save-result').innerHTML =
+                '<pre class="error">Error: ' + error + '</pre>';
+        });
+    }
+
+    // Show current URL and admin status
+    window.onload = function() {
+        const info = document.createElement('div');
+        info.innerHTML = '<h3>Current Environment:</h3><pre>' +
+            'URL: ' + window.location.href + '\n' +
+            'Origin: ' + window.location.origin + '\n' +
+            'CSRF Token: ' + (document.querySelector('meta[name="csrf-token"]')?.content || 'Not found') +
+            '</pre>';
+        document.body.insertBefore(info, document.body.firstChild);
+    };
     </script>
 </body>
 </html>
