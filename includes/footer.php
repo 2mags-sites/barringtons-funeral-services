@@ -220,8 +220,7 @@
 
     <?php if (IS_ADMIN): ?>
     <!-- Admin Mode Scripts -->
-    <meta name="csrf-token" content="<?php echo getCSRFToken(); ?>">
-    <script src="/assets/js/admin-functions.js" defer></script>
+    <script src="assets/js/admin-functions.js" defer></script>
     <?php endif; ?>
 
 </body>

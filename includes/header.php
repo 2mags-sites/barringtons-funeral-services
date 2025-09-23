@@ -38,6 +38,9 @@ if (!isset($page_keywords)) $page_keywords = 'funeral directors Liverpool, indep
     <meta name="twitter:title" content="<?php echo htmlspecialchars($page_title); ?>">
     <meta name="twitter:description" content="<?php echo htmlspecialchars($page_description); ?>">
 
+    <!-- CSRF Token for Admin Mode -->
+    <meta name="csrf-token" content="<?php echo htmlspecialchars($_SESSION['csrf_token'] ?? ''); ?>">
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">

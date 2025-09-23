@@ -467,7 +467,7 @@ function saveAllChanges() {
 
     const currentPage = window.location.pathname.replace('/', '').replace('.php', '') || 'index';
 
-    fetch('/admin-save.php', {
+    fetch('admin-save.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
