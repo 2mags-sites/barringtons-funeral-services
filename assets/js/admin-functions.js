@@ -84,7 +84,7 @@ function initImageEditing() {
                     imgElement.style.opacity = '0.5';
 
                     // Upload to server
-                    fetch('admin-upload', {
+                    fetch('admin-upload.php', {
                         method: 'POST',
                         body: formData
                     })
@@ -244,7 +244,7 @@ window.editHeroImage = function(overlayElement) {
             overlayElement.innerHTML = '⏳ Uploading...';
 
             // Upload to server
-            fetch('admin-upload', {
+            fetch('admin-upload.php', {
                 method: 'POST',
                 body: formData
             })
@@ -477,7 +477,7 @@ function saveAllChanges() {
     console.log('Saving to admin-save with payload:', payload);
     console.log('CSRF Token found:', csrfToken ? 'Yes' : 'No');
 
-    fetch('admin-save', {
+    fetch('admin-save.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

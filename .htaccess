@@ -108,7 +108,8 @@ RewriteRule ^(includes|content|cache|vendor)/ - [F,L]
     RewriteCond %{REQUEST_FILENAME}\.php -f
     RewriteRule ^(.*)$ $1.php [L]
 
-    # Redirect .php to clean URL
+    # Redirect .php to clean URL (but not for POST requests)
+    RewriteCond %{REQUEST_METHOD} !POST
     RewriteCond %{THE_REQUEST} /([^.]+)\.php [NC]
     RewriteRule ^ /%1 [R=301,L]
 

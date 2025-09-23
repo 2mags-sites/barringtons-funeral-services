@@ -30,7 +30,7 @@ $_SESSION['admin_login_time'] = time();
 
         console.log('Testing save with CSRF token:', csrfToken);
 
-        fetch('admin-save', {
+        fetch('admin-save.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
