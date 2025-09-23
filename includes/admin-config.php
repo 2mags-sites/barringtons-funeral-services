@@ -7,9 +7,12 @@ if (!isset($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 }
 
-// Admin Secret Key - In production, this should be in .env file
-define('ADMIN_SECRET_KEY', 'barringtons_admin_2024_secure');
-define('CACHE_CLEAR_KEY', 'clear_cache_2024');
+// Load environment variables
+require_once __DIR__ . '/env-loader.php';
+
+// Admin Secret Key from .env file
+define('ADMIN_SECRET_KEY', EnvLoader::get('ADMIN_SECRET_KEY', 'barringtons_admin_2024_secure'));
+define('CACHE_CLEAR_KEY', EnvLoader::get('CACHE_CLEAR_KEY', 'clear_cache_2024'));
 
 // Check if admin mode should be activated
 if (isset($_GET['admin']) && $_GET['admin'] === ADMIN_SECRET_KEY) {
