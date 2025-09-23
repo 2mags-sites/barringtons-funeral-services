@@ -466,20 +466,36 @@ function saveAllChanges() {
     }
 
     const currentPage = window.location.pathname.replace('/', '').replace('.php', '') || 'index';
+    const csrfToken = document.querySelector('meta[name="csrf-token"]')?.content || '';
+
+    const payload = {
+        page: currentPage,
+        fields: editedFields,
+        csrf_token: csrfToken
+    };
+
+    console.log('Saving to admin-save with payload:', payload);
+    console.log('CSRF Token found:', csrfToken ? 'Yes' : 'No');
 
     fetch('admin-save', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-            page: currentPage,
-            fields: editedFields,
-            csrf_token: document.querySelector('meta[name="csrf-token"]').content || ''
-        })
+        body: JSON.stringify(payload)
     })
-    .then(response => response.json())
+    .then(response => {
+        console.log('Response status:', response.status);
+        console.log('Response URL:', response.url);
+        console.log('Redirected:', response.redirected);
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+    })
     .then(data => {
+        console.log('Response data:', data);
         if (data.success) {
             alert('Changes saved successfully!');
             editedFields = {};
@@ -489,6 +505,7 @@ function saveAllChanges() {
         }
     })
     .catch(error => {
-        alert('Error saving changes: ' + error);
+        console.error('Fetch error:', error);
+        alert('Error saving changes: ' + error.message);
     });
 }
