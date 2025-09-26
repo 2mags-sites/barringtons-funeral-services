@@ -32,9 +32,9 @@ require_once 'includes/header.php';
         <div class="container">
             <div class="intro-section fade-in">
                 <h2><?php echo editable($content['intro']['title'] ?? '', 'intro.title'); ?></h2>
-                <p><?php echo editable($content['intro']['paragraphs'][0] ?? ''s (CMA) market investigation into the funeral sector it is compulsory that every funeral director has a Standard Price List. The price list should be available on their website, in the window of their branch, and available to be taken away for reflection.', 'intro.paragraphs.0'); ?></p>
+                <p><?php echo editable($content['intro']['paragraphs'][0] ?? '', 'intro.paragraphs.0'); ?></p>
 
-                <p><?php echo editable($content['intro']['paragraphs'][1] ?? ''s attended funeral service and unattended funeral service specifications.', 'intro.paragraphs.1'); ?></p>
+                <p><?php echo editable($content['intro']['paragraphs'][1] ?? '', 'intro.paragraphs.1'); ?></p>
 
                 <p><?php echo editable($content['intro']['paragraphs'][2] ?? '', 'intro.paragraphs.2'); ?></p>
             </div>
@@ -46,7 +46,7 @@ require_once 'includes/header.php';
             </div>
 
             <div class="price-section fade-in">
-                <h2><?php echo editable($content['attended_funeral']['title'] ?? '', 'attended_funeral.title'); ?> <span class="subtitle"><?php echo editable($content['attended_funeral']['subtitle'] ?? ''s charges only)', 'attended_funeral.subtitle'); ?></span></h2>
+                <h2><?php echo editable($content['attended_funeral']['title'] ?? '', 'attended_funeral.title'); ?> <span class="subtitle"><?php echo editable($content['attended_funeral']['subtitle'] ?? '', 'attended_funeral.subtitle'); ?></span></h2>
                 <p class="section-description"><?php echo editable($content['attended_funeral']['description'] ?? '', 'attended_funeral.description'); ?></p>
 
                 <table class="price-table">
