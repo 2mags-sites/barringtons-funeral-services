@@ -130,6 +130,7 @@ if (!isset($page_keywords)) $page_keywords = 'funeral directors Liverpool, indep
         </div>
         <div style="display: flex; gap: 10px;">
             <button onclick="editPageSEO()" style="background: #10b981; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: 500;">🔍 Edit SEO</button>
+            <button onclick="downloadContent()" style="background: #8b5cf6; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: 500;">📥 Download Content</button>
             <button onclick="saveAllChanges()" style="background: white; color: #2563eb; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: 500;">💾 Save Changes</button>
             <a href="?logout=true" style="background: #dc2626; color: white; text-decoration: none; padding: 8px 16px; border-radius: 4px; font-weight: 500;">Logout</a>
         </div>

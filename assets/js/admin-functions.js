@@ -509,3 +509,21 @@ function saveAllChanges() {
         alert('Error saving changes: ' + error.message);
     });
 }
+
+/**
+ * Download all JSON content files as ZIP
+ */
+function downloadContent() {
+    // Create a temporary link element
+    const link = document.createElement('a');
+    link.href = 'download-content.php';
+    link.download = 'content-backup-' + new Date().toISOString().slice(0, 10) + '.zip';
+
+    // Trigger the download
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    // Optional: Show a message
+    console.log('Initiating content download...');
+}
