@@ -1,13 +1,13 @@
 {
     "meta": {
         "title": "Funeral Services Overview - Traditional & Contemporary | Barringtons Liverpool",
-        "description": "Complete range of funeral services in Liverpool. Traditional burials, cremations, green funerals, and celebrations of life. Transparent pricing from £1,795.",
+        "description": "Complete range of funeral services in Liverpool. Traditional burials, cremations, green funerals, and celebrations of life. Transparent pricing from \u00a31,795.",
         "keywords": "funeral services Liverpool, traditional funeral, cremation services, green funerals, celebration of life, funeral prices"
     },
     "intro": {
         "title": "Comprehensive Funeral Services",
         "subtitle": "Every life is unique, and every farewell should be too. We offer a complete range of services to create a meaningful tribute that honors your loved one's memory.",
-        "credentials": "Professional Standards: As proud members of NAFD, SAIF, Association of Green Funeral Directors, and recommended by the Good Funeral Guide, we maintain the highest standards in funeral care. Our director David Barrington served as NAFD President 2019-2021 and is a NAFD Approved Tutor."
+        "credentials": "Professional Standards: As proud members of NAFD, SAIF, Association of Green Funeral Directors, and recommended by the Good Funeral Guide, we maintain the highest standards in funeral care. Our director David Barrington served as NAFD President 2019-2021 and is a NAFD Approved Tutor.<br>We are advocates of continuing professional development and support our team in awareness of new funeral products and services to support you, and your loved ones. We believe in the highest standards of customer service and will always try and make what you want happen or find a creative alternative.<br>"
     },
     "services": {
         "traditional": {
@@ -113,12 +113,12 @@
         "packages": {
             "essential": {
                 "title": "Essential Service",
-                "price": "From \u00a31,795",
-                "description": "Our simplest option, including all necessary arrangements and a basic coffin."
+                "price": "From \u00a32,370",
+                "description": "Our simplest option, including all necessary arrangements and a simple coffin."
             },
             "standard": {
                 "title": "Standard Service",
-                "price": "From \u00a32,995",
+                "price": "From \u00a32,895",
                 "description": "Our most popular package, including hearse, one limousine, and choice of coffin."
             },
             "premium": {
@@ -127,7 +127,8 @@
                 "description": "Complete service with additional vehicles, premium coffin, and extended viewing."
             }
         },
-        "note": "All prices include our professional fees, care of your loved one, and essential administration. Additional costs such as crematorium fees and celebrant charges are shown separately."
+        "note": "All prices include our professional fees, care of your loved one, and essential administration. Additional costs such as crematorium fees and celebrant charges are shown separately.",
+        "viewDetailsText": "View Details"
     },
     "hero": {
         "title": "Services Overview",

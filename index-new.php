@@ -5,18 +5,13 @@ require_once 'includes/admin-config.php';
 // Load content from JSON
 $content = loadContent('index');
 
-// Business info for schema markup
-$business_info = [
-    'name' => 'Barringtons Funeral Services',
-    'phone' => '0151 928 1625',
-    'email' => 'info@barringtonsfunerals.co.uk',
-    'address' => '23 Crosby Rd N, Waterloo, Liverpool, L22 4QF'
-];
+// Business info for schema markup from JSON
+$business_info = $content['business_info'] ?? [];
 
-// Set page meta
-$page_title = 'Barringtons Funeral Services | Independent Family Funeral Directors Liverpool';
-$page_description = 'Family funeral directors in Liverpool since 1902. Available 24/7. Compassionate, professional service with transparent pricing. Call 0151 928 1625.';
-$page_keywords = 'funeral directors Liverpool, family funeral directors, Barringtons funerals, Liverpool funeral services';
+// Set page meta from JSON
+$page_title = $content['meta']['title'] ?? '';
+$page_description = $content['meta']['description'] ?? '';
+$page_keywords = $content['meta']['keywords'] ?? '';
 
 // Include header
 require_once 'includes/header.php';
@@ -27,20 +22,20 @@ require_once 'includes/header.php';
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="hero-card">
-                <h2><?php echo editable($content['hero']['card1']['title'] ?? 'Immediate Need', 'hero.card1.title'); ?></h2>
-                <p><?php echo editable($content['hero']['card1']['description'] ?? 'Our caring team is here to guide you through every step', 'hero.card1.description'); ?></p>
+                <h2><?php echo editable($content['hero']['card1']['title'] ?? '', 'hero.card1.title'); ?></h2>
+                <p><?php echo editable($content['hero']['card1']['description'] ?? '', 'hero.card1.description'); ?></p>
                 <button class="hero-btn" onclick="window.location.href='immediate-need.php'">Begin Planning</button>
             </div>
             <div class="hero-card">
-                <h2><?php echo editable($content['hero']['card2']['title'] ?? 'Plan For The Future', 'hero.card2.title'); ?></h2>
-                <p><?php echo editable($content['hero']['card2']['description'] ?? 'Take comfort in knowing your wishes are documented', 'hero.card2.description'); ?></p>
+                <h2><?php echo editable($content['hero']['card2']['title'] ?? '', 'hero.card2.title'); ?></h2>
+                <p><?php echo editable($content['hero']['card2']['description'] ?? '', 'hero.card2.description'); ?></p>
                 <button class="hero-btn" onclick="window.location.href='planning-ahead.php'">Start Your Plan</button>
             </div>
         </div>
     </section>
 
     <section class="reviews-section">
-        <h2><?php echo editable($content['reviews']['title'] ?? 'Our Family Caring for Your Family', 'reviews.title'); ?></h2>
+        <h2><?php echo editable($content['reviews']['title'] ?? '', 'reviews.title'); ?></h2>
         <div class="reviews-carousel">
             <button class="carousel-btn carousel-btn-left" onclick="scrollReviews(-1)">‹</button>
             <div class="reviews-container">
@@ -66,7 +61,7 @@ require_once 'includes/header.php';
     <section class="family-section">
         <div class="family-content">
             <div class="family-text">
-                <h2><?php echo editable($content['family']['title'] ?? "Liverpool's Independent & Family Run Funeral Service", 'family.title'); ?></h2>
+                <h2><?php echo editable($content['family']['title'] ?? "", 'family.title'); ?></h2>
                 <p><?php echo editable($content['family']['description1'] ?? '', 'family.description1'); ?></p>
                 <p><?php echo editable($content['family']['description2'] ?? '', 'family.description2'); ?></p>
                 <div class="accreditation-logos">
@@ -85,14 +80,14 @@ require_once 'includes/header.php';
 
     <section class="services-section" id="services">
         <div class="container">
-            <h2><?php echo editable($content['services']['title'] ?? 'Services We Offer', 'services.title'); ?></h2>
+            <h2><?php echo editable($content['services']['title'] ?? '', 'services.title'); ?></h2>
             <div class="services-grid">
                 <div class="service-card fade-in">
                     <div class="service-image">
                         <img src="assets/images/arrange.jpg" alt="Arrange a Funeral" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="service-content">
-                        <h3><?php echo editable($content['services']['service1']['title'] ?? 'Arrange a Funeral', 'services.service1.title'); ?></h3>
+                        <h3><?php echo editable($content['services']['service1']['title'] ?? '', 'services.service1.title'); ?></h3>
                         <p><?php echo editable($content['services']['service1']['description'] ?? '', 'services.service1.description'); ?></p>
                     </div>
                 </div>
@@ -101,7 +96,7 @@ require_once 'includes/header.php';
                         <img src="assets/images/estimator.jpg" alt="Funeral Estimator" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="service-content">
-                        <h3><?php echo editable($content['services']['service2']['title'] ?? 'Funeral Estimator', 'services.service2.title'); ?></h3>
+                        <h3><?php echo editable($content['services']['service2']['title'] ?? '', 'services.service2.title'); ?></h3>
                         <p><?php echo editable($content['services']['service2']['description'] ?? '', 'services.service2.description'); ?></p>
                     </div>
                 </div>
@@ -110,7 +105,7 @@ require_once 'includes/header.php';
                         <img src="assets/images/planning.jpg" alt="Plan Ahead" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="service-content">
-                        <h3><?php echo editable($content['services']['service3']['title'] ?? 'Plan Ahead', 'services.service3.title'); ?></h3>
+                        <h3><?php echo editable($content['services']['service3']['title'] ?? '', 'services.service3.title'); ?></h3>
                         <p><?php echo editable($content['services']['service3']['description'] ?? '', 'services.service3.description'); ?></p>
                     </div>
                 </div>
@@ -119,7 +114,7 @@ require_once 'includes/header.php';
                         <img src="assets/images/storefront.jpg" alt="Memorial Masonry" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="service-content">
-                        <h3><?php echo editable($content['services']['service4']['title'] ?? 'Memorial Masonry', 'services.service4.title'); ?></h3>
+                        <h3><?php echo editable($content['services']['service4']['title'] ?? '', 'services.service4.title'); ?></h3>
                         <p><?php echo editable($content['services']['service4']['description'] ?? '', 'services.service4.description'); ?></p>
                     </div>
                 </div>

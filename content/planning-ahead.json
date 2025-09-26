@@ -6,7 +6,7 @@
     },
     "intro": {
         "title": "Plan Your Farewell, Your Way",
-        "subtitle": "Taking time now to plan your funeral isn't morbid \u2013 it's one of the most thoughtful gifts you can give your family. It ensures your wishes are known and removes difficult decisions during an emotional time."
+        "subtitle": "Taking time now to plan your funeral is what you want\u2013 it's one of the most thoughtful gifts you can give your family. It ensures your wishes are known and removes difficult decisions during an emotional time.<br><br>Funeral plans are regulated by the Financial Conduct Authority (FCA), we are an appointed representative of Ecclesiastical Planning Services Limited (EPSL) and cannot give you advice. We will give you the information to be able to make a decision if the plan is right for your needs. EPSL and Barringtons Funeral Services can be found on the FCA Register.&nbsp;<br>"
     },
     "benefits": {
         "family": {
@@ -45,6 +45,8 @@
     },
     "plans": {
         "title": "Planning Options",
+        "learnMoreText": "Learn More",
+        "getStartedText": "Get Started",
         "wishes": {
             "title": "Wishes Only",
             "price": "Free",
@@ -58,7 +60,7 @@
         },
         "prepaid": {
             "title": "Prepaid Plan",
-            "price": "Fixed Price",
+            "price": "Bespoke Service",
             "description": "Lock in today's prices and protect against inflation. Full peace of mind for you and your family.",
             "badge": "Most Popular",
             "features": [
@@ -86,19 +88,19 @@
         "items": [
             {
                 "question": "Can I change my mind?",
-                "answer": "Absolutely. Your plan can be updated anytime, and prepaid plans can be cancelled with a full refund if unused."
+                "answer": "Absolutely. Your plan can be updated anytime, and prepaid plans can be cancelled with if unused and a refund less the administration fee (\u00a3325) will be issued.&nbsp;"
             },
             {
                 "question": "What if I move away?",
-                "answer": "Your plan can be transferred to any funeral director in the UK, or we can arrange services anywhere in the country."
+                "answer": "Your plan can be transferred to another funeral director in the UK, or we can arrange services anywhere in the country. (There may be additional fees to pay)."
             },
             {
                 "question": "Is my money safe?",
-                "answer": "Yes. All prepaid funds are held in an independent trust or insurance policy, completely separate from our business."
+                "answer": "Yes. All prepaid funds are held in an whole of life insurance policy, completely separate from our business. <br>We are an Appointed Representative of Ecclesiastical Planning Services (EPS) who are regulated by the Financial Conduct Authority (FCA). EPS and Barringtons can be found on the FCA Register.&nbsp;"
             },
             {
                 "question": "What's included in the price?",
-                "answer": "Our services, care of your loved one, coffin, hearse, and administration. Third-party costs like crematorium fees are also covered if you choose."
+                "answer": "Our services, care of your loved one, coffin, hearse, and administration are core parts of the plans. You can also add on additional options and third-party costs like crematorium fees if you choose."
             },
             {
                 "question": "Can I plan for someone else?",
@@ -113,7 +115,9 @@
     "cta": {
         "title": "Start Your Plan Today",
         "subtitle": "Take the first step towards peace of mind. Contact us for a free, no-obligation consultation.",
-        "phone": "0151 928 1625"
+        "phone": "0151 928 1625",
+        "callButtonText": "Call 0151 928 1625",
+        "requestPackText": "Request Information Pack"
     },
     "hero": {
         "title": "Planning Ahead",

@@ -6,16 +6,16 @@ require_once 'includes/admin-config.php';
 $content = loadContent('immediate-need');
 
 // Set page meta from JSON or use defaults
-$page_title = $content['meta']['title'] ?? 'Immediate Need - 24 Hour Support | Barringtons Funeral Services';
-$page_description = $content['meta']['description'] ?? 'We\'re here for you 24/7 when you need immediate funeral support. Compassionate guidance through every step. Call 0151 928 1625 anytime.';
-$page_keywords = $content['meta']['keywords'] ?? 'immediate funeral need Liverpool, 24 hour funeral support, emergency funeral services, death registration Liverpool, what to do when someone dies';
+$page_title = $content['meta']['title'] ?? '';
+$page_description = $content['meta']['description'] ?? '';
+$page_keywords = $content['meta']['keywords'] ?? '';
 
 // Include header
 require_once 'includes/header.php';
 ?>
 
     <section class="page-hero">
-        <div class="hero-image editable-hero-bg" data-field="hero.image" data-page="immediate-need" style="background-image: url('<?php echo $content['hero']['image'] ?? 'assets/images/hero-background.jpg'; ?>');">
+        <div class="hero-image editable-hero-bg" data-field="hero.image" data-page="immediate-need" style="background-image: url('<?php echo $content['hero']['image'] ?? ''; ?>');">
         <?php if (IS_ADMIN): ?>
             <div class="hero-edit-overlay" onclick="editHeroImage(this)" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(37, 99, 235, 0.9); color: white; padding: 15px 30px; border-radius: 8px; cursor: pointer; font-weight: 500; display: none;">
                 📷 Click to Change Hero Image
@@ -24,14 +24,14 @@ require_once 'includes/header.php';
     </div>
         <div class="hero-overlay"></div>
         <div class="hero-content-single">
-            <h1><?php echo editable($content['hero']['title'] ?? 'Immediate Need', 'hero.title'); ?></h1>
+            <h1><?php echo editable($content['hero']['title'] ?? '', 'hero.title'); ?></h1>
         </div>
     </section>
 
     <section class="content-section">
         <div class="container">
             <div class="intro-block fade-in">
-                <h2><?php echo editable($content['intro']['title'] ?? 'When Someone Dies: Your First Steps', 'intro.title'); ?></h2>
+                <h2><?php echo editable($content['intro']['title'] ?? '', 'intro.title'); ?></h2>
                 <p class="lead-text"><?php echo editable($content['intro']['subtitle'] ?? '', 'intro.subtitle'); ?></p>
             </div>
 
@@ -43,8 +43,8 @@ require_once 'includes/header.php';
                     <p><?php echo editable($step['description'] ?? '', "steps.$index.description"); ?></p>
                     <?php if(!empty($step['list'])): ?>
                     <ul>
-                        <?php foreach($step['list'] as $item): ?>
-                        <li><?php echo $item; ?></li>
+                        <?php foreach($step['list'] as $listIndex => $item): ?>
+                        <li><?php echo editable($item, "steps.$index.list.$listIndex"); ?></li>
                         <?php endforeach; ?>
                     </ul>
                     <?php endif; ?>
@@ -54,10 +54,10 @@ require_once 'includes/header.php';
             </div>
 
             <div class="promise-section fade-in">
-                <h3><?php echo editable($content['remember']['title'] ?? 'Remember:', 'remember.title'); ?></h3>
+                <h3><?php echo editable($content['remember']['title'] ?? '', 'remember.title'); ?></h3>
                 <ul class="remember-list">
-                    <?php foreach(($content['remember']['points'] ?? []) as $point): ?>
-                    <li><?php echo $point; ?></li>
+                    <?php foreach(($content['remember']['points'] ?? []) as $pointIndex => $point): ?>
+                    <li><?php echo editable($point, "remember.points.$pointIndex"); ?></li>
                     <?php endforeach; ?>
                 </ul>
 
@@ -65,26 +65,26 @@ require_once 'includes/header.php';
             </div>
 
             <div class="cta-section fade-in">
-                <h2><?php echo editable($content['cta']['title'] ?? "We're Here to Help", 'cta.title'); ?></h2>
+                <h2><?php echo editable($content['cta']['title'] ?? "", 'cta.title'); ?></h2>
                 <p><?php echo editable($content['cta']['subtitle'] ?? '', 'cta.subtitle'); ?></p>
 
                 <div class="contact-cards">
                     <div class="contact-card">
-                        <h3>24 Hour Support Line</h3>
-                        <p class="phone-number">0151 928 1625</p>
-                        <p>Available any time, day or night</p>
+                        <h3><?php echo editable($content['cta']['contacts']['phone']['title'] ?? '', 'cta.contacts.phone.title'); ?></h3>
+                        <p class="phone-number"><?php echo editable($content['cta']['contacts']['phone']['number'] ?? '', 'cta.contacts.phone.number'); ?></p>
+                        <p><?php echo editable($content['cta']['contacts']['phone']['description'] ?? '', 'cta.contacts.phone.description'); ?></p>
                     </div>
 
                     <div class="contact-card">
-                        <h3>Main Office</h3>
-                        <p>23 Crosby Rd N, Waterloo L22 4QF</p>
-                        <p>Open 24 hours</p>
+                        <h3><?php echo editable($content['cta']['contacts']['office']['title'] ?? '', 'cta.contacts.office.title'); ?></h3>
+                        <p><?php echo editable($content['cta']['contacts']['office']['address'] ?? '', 'cta.contacts.office.address'); ?></p>
+                        <p><?php echo editable($content['cta']['contacts']['office']['hours'] ?? '', 'cta.contacts.office.hours'); ?></p>
                     </div>
 
                     <div class="contact-card">
-                        <h3>Email Support</h3>
-                        <p>care@barringtonsfunerals.co.uk</p>
-                        <p>We'll respond as quickly as possible</p>
+                        <h3><?php echo editable($content['cta']['contacts']['email']['title'] ?? '', 'cta.contacts.email.title'); ?></h3>
+                        <p><?php echo editable($content['cta']['contacts']['email']['address'] ?? '', 'cta.contacts.email.address'); ?></p>
+                        <p><?php echo editable($content['cta']['contacts']['email']['description'] ?? '', 'cta.contacts.email.description'); ?></p>
                     </div>
                 </div>
             </div>

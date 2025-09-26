@@ -1,7 +1,7 @@
 {
     "meta": {
         "title": "Immediate Need - 24 Hour Support | Barringtons Funeral Services",
-        "description": "We're here for you 24/7 when you need immediate funeral support. Compassionate guidance through every step. Call 0151 928 1625 anytime.",
+        "description": "We're here for you 24\/7 when you need immediate funeral support. Compassionate guidance through every step. Call 0151 928 1625 anytime.",
         "keywords": "immediate funeral need Liverpool, 24 hour funeral support, emergency funeral services, death registration Liverpool, what to do when someone dies"
     },
     "intro": {
@@ -17,12 +17,12 @@
         {
             "number": "Step 2",
             "title": "Call for Help",
-            "description": "Call us first at 0151 928 1625 \u2013 we have a funeral director available at all times. We'll guide you through everything that needs to happen and take as much of the burden as possible, allowing you time to collect your thoughts."
+            "description": "Call us first at 0151 928 1625 \u2013 we have a funeral director available at all times. We'll guide you through everything that needs to happen and take as much of the burden as possible, allowing you time to collect your thoughts. <br><br>If the person who has died is at home or in a nursing home a medic will need to verify the death has occurred before we can transfer them into our care.&nbsp;"
         },
         {
             "number": "Step 3",
             "title": "Medical Certification",
-            "description": "A doctor will need to certify the death. Since September 2024:",
+            "description": "A doctor will need to certify the death.:",
             "list": [
                 "The doctor who treated your loved one will complete a Medical Certificate of Cause of Death",
                 "A Medical Examiner will review this and call you to discuss any concerns",

@@ -1,19 +1,25 @@
 {
     "meta": {
         "title": "Barringtons Funeral Services | Independent Family Funeral Directors Liverpool",
-        "description": "Family funeral directors in Liverpool since 1902. Available 24\/7. Compassionate, professional service with transparent pricing. Call 0151 928 1625.",
+        "description": "Family funeral directors in Liverpool since 1949. Available 24\/7. Compassionate, professional service with transparent pricing. Call 0151 928 1625.",
         "keywords": "funeral directors Liverpool, family funeral directors, Barringtons funerals, Liverpool funeral services"
+    },
+    "business_info": {
+        "name": "Barringtons Funeral Services",
+        "phone": "0151 928 1625",
+        "email": "info@barringtonsfunerals.co.uk",
+        "address": "23 Crosby Rd N, Waterloo, Liverpool, L22 4QF"
     },
     "hero": {
         "card1": {
             "title": "Immediate Need",
-            "description": "Our caring team is here to guide you through every step",
+            "description": "Our caring team is here to guide you through <br>every step in making funeral arrangements..&nbsp;",
             "buttonText": "Begin Planning",
             "buttonLink": "immediate-need.php"
         },
         "card2": {
             "title": "Plan For The Future",
-            "description": "Take comfort in knowing your wishes are documented",
+            "description": "Information about planning a funeral in advance <br>with either a Funeral Plan or sharing your wishes.",
             "buttonText": "Start Your Plan",
             "buttonLink": "planning-ahead.php"
         }
@@ -35,30 +41,30 @@
     },
     "family": {
         "title": "Liverpool's Independent & Family Run Funeral Service",
-        "description1": "As a family-run funeral directors, David and Helen Barrington, together with their dedicated team, understand the importance of providing families with a service that is personal, warm, and completely individual.",
-        "description2": "We believe that every farewell should reflect the unique life it celebrates, and we're honored to help families create these meaningful moments.",
+        "description1": "As a family-run funeral directors, David and Claire Barrington, together with their dedicated team, understand the importance of providing families with a service that is personal, warm, and completely individual.",
+        "description2": "We believe that every farewell should reflect the unique life it celebrates, and we're honoured to help you to create these meaningful services.",
         "image": "assets\/images\/family.jpg"
     },
     "services": {
         "title": "Services We Offer",
         "service1": {
             "title": "Arrange a Funeral",
-            "description": "Compassionate guidance through every step of planning a meaningful farewell",
+            "description": "Compassionate guidance through every step of planning a meaningful farewell for your loved one.&nbsp;",
             "image": "\/assets\/images\/uploads\/img_68d109bed49c4_1758529982.jpg"
         },
         "service2": {
             "title": "Funeral Estimator",
-            "description": "Transparent pricing to help you plan within your budget, whatever your budget",
+            "description": "Transparent pricing to help you plan within your budget, whatever your budget.",
             "image": "\/assets\/images\/uploads\/img_68d10c499c4de_1758530633.jpg"
         },
         "service3": {
             "title": "Finance for Funerals",
-            "description": "Take care of your funeral wishes in advance.",
+            "description": "Our partner Funeral Safe Finance may be of assistance if you need some extra financial help to pay for the service you want.&nbsp;",
             "image": "\/assets\/images\/uploads\/img_68d10c53f3315_1758530643.jpg"
         },
         "service4": {
             "title": "Planning Ahead",
-            "description": "Beautiful memorials to honor your loved one",
+            "description": "Information about preplanning your funeral service this can be very helpful to your loved ones providing peace of mind and financial support.&nbsp;",
             "image": "\/assets\/images\/uploads\/img_68d10c5b11df2_1758530651.jpg"
         }
     },
@@ -82,33 +88,49 @@
         "cta": {
             "text": "Need immediate assistance?",
             "phone": "Call us 24\/7 on 0151 928 1625"
-        }
+        },
+        "readMoreText": "Read More →"
     },
     "branches": {
-        "title": "Our Branches",
+        "title": "Our Funeral Homes",
         "subtitle": "Three locations across Liverpool to serve you",
+        "labels": {
+            "address": "Address:",
+            "phone": "Phone:",
+            "hours": "Hours:"
+        },
         "locations": [
             {
                 "name": "Waterloo",
                 "image": "\/assets\/images\/uploads\/img_68d0fb889e9be_1758526344.jpg",
-                "address": "23 Crosby Rd N, L22 4QF",
-                "phone": "0151 928 1625",
-                "hours": "24 Hours"
+                "address": "28 Crosby Rd North, Waterloo L22 4QF",
+                "phone": "0151 928 1625 (24 hours)",
+                "hours": "Monday - Friday, 9am - 5pm<br>"
             },
             {
                 "name": "Formby",
                 "image": "\/assets\/images\/uploads\/img_68d1008e9e115_1758527630.jpg",
-                "address": "64 Elbow Lane, L37 4AB",
-                "phone": "0151 928 1625",
-                "hours": "By Appointment"
+                "address": "49 Liverpool Road, Formby L37 6BT",
+                "phone": "01704 547851 (24 hours)",
+                "hours": "Monday - Friday, 9am - 5pm"
             },
             {
                 "name": "Netherton",
                 "image": "\/assets\/images\/uploads\/img_68d0fb8f69b65_1758526351.jpg",
-                "address": "47 Liverpool Road, L30 3QA",
-                "phone": "0151 928 1625",
-                "hours": "Mon-Fri 9am-5pm"
+                "address": "38 The Marian Square, Netherton L30 5QA",
+                "phone": "0151 329 3525 (24 hours)",
+                "hours": "Monday - Friday, 9am - 5pm"
             }
         ]
+    },
+    "blog": {
+        "title": "Latest News & Articles",
+        "subtitle": "Stay informed with our latest updates and helpful resources",
+        "coming_soon": "Blog articles coming soon. Check back for helpful resources and updates.",
+        "view_all": "View All Articles"
+    },
+    "video": {
+        "click_to_play": "Click to play video",
+        "title": "Barrington Family Video"
     }
 }

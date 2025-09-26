@@ -6,22 +6,23 @@
     },
     "about": {
         "intro": {
-            "title": "About Barrington",
+            "title": "About Barringtons",
             "subtitle": "A family caring for families",
-            "description1": "As an independent, family-owned funeral business, we've been caring for Liverpool families through these times with warmth, understanding, and genuine compassion.",
-            "description2": "Founded by Bill Barrington, our funeral service has been an integral part of Liverpool's community for generations. Now run by David and Claire Barrington, we understand that every family has a story, and every goodbye deserves to be as unique and special as the life it honors."
+            "description1": "As a strong family-run business we are committed to our families through these times with warmth, understanding, and genuine compassion.",
+            "description2": "Founded by Bill Barrington, our funeral service has been an integral part of Liverpool's community for generations. Now run by David and Claire Barrington, we understand that every family has a story, and every goodbye deserves to be as unique and special as the life it honors.",
+            "image": "\/assets\/images\/uploads\/img_68d24371d7428_1758610289.jpg"
         },
         "company": {
             "number": "07587745"
         },
         "director": {
-            "name": "David Barrington - Director",
+            "name": "David Barrington - Director<br>Claire Barrington - Director<br>",
             "title": "NAFD President 2019-2021 | NAFD Approved Tutor",
             "description": "With over 30 years in funeral care, David and Claire Barrington continue a legacy of compassion and understanding, helping families through their most difficult times with patience and respect. David's distinguished service as NAFD President and his role as an approved tutor demonstrates our commitment to the highest standards in funeral care."
         },
         "promise": {
             "title": "Our Promise to You",
-            "description": "When you choose Barringtons, you're not just another number. You're entrusting us with the privilege of celebrating your loved one's life. We promise to guide you with patience and care, always respecting your wishes, no matter how unique or traditional they may be.",
+            "description": "When you choose Barringtons, you're entrusting us with the privilege of celebrating your loved one's life. We promise to guide you with patience and care, always respecting your wishes, no matter how unique or traditional they may be.",
             "trusted_title": "Trusted Care",
             "trusted_description": "We're proud members of the National Association of Funeral Directors (NAFD), Society of Allied and Independent Funeral Directors (SAIF), Association of Green Funeral Directors, and recommended by the Good Funeral Guide for our high standards of care.",
             "growing_title": "Growing Hope",
@@ -29,27 +30,27 @@
         },
         "locations": {
             "title": "Our Three Offices - Always Close By",
-            "subtitle": "With three conveniently located offices across Liverpool, we're always nearby when you need us.",
+            "subtitle": "With three conveniently located offices across North Liverpool, we're always nearby when you need us.",
             "waterloo": {
                 "name": "Waterloo Office",
                 "tag": "Main Office - 24 Hour Support",
-                "address": "23 Crosby Rd N, Waterloo, L22 4QF",
+                "address": "23 Crosby Rd North, Waterloo, L22 4QF",
                 "hours": "Open 24 hours, 7 days a week",
                 "note": "Our main office with full facilities including chapel of rest and arrangement rooms."
             },
             "formby": {
                 "name": "Formby Office",
-                "tag": "By Appointment",
-                "address": "64 Elbow Lane, Formby, L37 4AB",
-                "hours": "By appointment only",
-                "note": "Serving the Formby community with personal, dedicated service."
+                "tag": "24hr Support on call",
+                "address": "49 Liverpool Road, Formby, L37 6BT.",
+                "hours": "Branch 10-4pm",
+                "note": "Serving the Formby community with personal, dedicated service, including chapels of rest."
             },
             "netherton": {
                 "name": "Netherton Office",
-                "tag": "Weekday Service",
-                "address": "47 Liverpool Road, Netherton, L30 3QA",
+                "tag": "24hr Support on call",
+                "address": "38 The Marian Square, Netherton, L30 5QA",
                 "hours": "Monday to Friday, 9am - 5pm",
-                "note": "Convenient location for families in North Liverpool."
+                "note": "Beautiful offices with full facilities, chapels and the coffin showroom."
             },
             "contact_banner": {
                 "text": "For immediate assistance or to arrange a visit to any of our offices:",

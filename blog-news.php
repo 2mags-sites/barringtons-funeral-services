@@ -6,9 +6,9 @@ require_once 'includes/admin-config.php';
 $content = loadContent('blog-news');
 
 // Set page meta
-$page_title = $content['meta']['title'] ?? 'News & Updates | Barringtons Funeral Services';
-$page_description = $content['meta']['description'] ?? 'Latest news, updates and helpful articles from Barringtons Funeral Services. Stay informed about our services and community involvement.';
-$page_keywords = $content['meta']['keywords'] ?? 'funeral news Liverpool, bereavement support, funeral advice, Barringtons news';
+$page_title = $content['meta']['title'] ?? '';
+$page_description = $content['meta']['description'] ?? '';
+$page_keywords = $content['meta']['keywords'] ?? '';
 
 // Include header
 require_once 'includes/header.php';
@@ -22,7 +22,7 @@ $blog_posts = fetchLatestBlogPosts(12); // Get more posts for the main blog page
 
     <!-- Page Hero -->
     <section class="page-hero">
-        <div class="hero-image" style="background-image: url('<?php echo $content['hero']['image'] ?? 'assets/images/hero-blog.jpg'; ?>');">
+        <div class="hero-image" style="background-image: url('<?php echo $content['hero']['image'] ?? ''; ?>');">
             <?php if (IS_ADMIN): ?>
                 <div class="hero-edit-overlay" onclick="editHeroImage('blog-news', 'hero.image')" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(37, 99, 235, 0.9); color: white; padding: 15px 30px; border-radius: 8px; cursor: pointer; font-weight: 500; display: none;">
                     📷 Click to Change Hero Image
@@ -31,8 +31,8 @@ $blog_posts = fetchLatestBlogPosts(12); // Get more posts for the main blog page
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content-single">
-            <h1><?php echo editable($content['hero']['title'] ?? 'News & Updates', 'hero.title'); ?></h1>
-            <p><?php echo editable($content['hero']['subtitle'] ?? 'Stay informed with the latest from Barringtons', 'hero.subtitle'); ?></p>
+            <h1><?php echo editable($content['hero']['title'] ?? '', 'hero.title'); ?></h1>
+            <p><?php echo editable($content['hero']['subtitle'] ?? '', 'hero.subtitle'); ?></p>
         </div>
     </section>
 
@@ -63,8 +63,8 @@ $blog_posts = fetchLatestBlogPosts(12); // Get more posts for the main blog page
                 </div>
             <?php else: ?>
                 <div class="no-posts">
-                    <h2>Coming Soon</h2>
-                    <p>We're currently preparing our blog content. Please check back soon for helpful articles and updates from Barringtons Funeral Services.</p>
+                    <h2><?php echo editable($content['noPosts']['title'] ?? '', 'noPosts.title'); ?></h2>
+                    <p><?php echo editable($content['noPosts']['message'] ?? '', 'noPosts.message'); ?></p>
                 </div>
             <?php endif; ?>
         </div>

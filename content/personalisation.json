@@ -52,10 +52,11 @@
     ],
     "cta": {
         "title": "Let's Create Something Special",
-        "subtitle": "Share your ideas with us, no matter how unique. We'll help bring your vision to life."
+        "subtitle": "Share your ideas with us, no matter how unique. We'll help bring your vision to life.",
+        "buttonText": "Start Planning"
     },
     "hero": {
-        "title": "Personalisation",
+        "title": "Making things personal",
         "image": "\/assets\/images\/uploads\/img_68cf9103cfafd_1758433539.jpg"
     }
 }

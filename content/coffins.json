@@ -6,23 +6,23 @@
     },
     "intro": {
         "title": "Our Coffin Range",
-        "subtitle": "From traditional solid wood to eco-friendly alternatives, we offer a wide selection to suit all preferences and budgets."
+        "subtitle": "From traditional veneered and solid wood to eco-friendly alternatives, we offer a wide selection to suit your preferences and budgets."
     },
     "options": [
         {
             "title": "Traditional Wood",
-            "description": "Classic solid wood coffins in oak, mahogany, and pine with various handle and lining options.",
-            "price": "From \u00a3495"
+            "description": "Classic veneered and solid wood coffins in oak, mahogany, and pine with various handle and lining options.",
+            "price": "From \u00a3400"
         },
         {
             "title": "Eco-Friendly",
             "description": "Biodegradable options including willow, bamboo, and cardboard for natural burials.",
-            "price": "From \u00a3395"
+            "price": "From \u00a3350"
         },
         {
             "title": "Personalised",
             "description": "Custom designs, photo wraps, and themed coffins to celebrate individuality.",
-            "price": "From \u00a3795"
+            "price": "From \u00a3550"
         }
     ],
     "hero": {
