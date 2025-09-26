@@ -42,17 +42,17 @@
                     <div class="info-item">
                         <strong>Waterloo Office (Main)</strong><br>
                         23 Crosby Rd N, Waterloo, L22 4QF<br>
-                        <span class="office-hours">Open 24 hours</span>
+                        <span class="office-hours">Monday-Friday 9am-5pm</span>
                     </div>
                     <div class="info-item">
                         <strong>Formby Office</strong><br>
                         64 Elbow Lane, Formby, L37 4AB<br>
-                        <span class="office-hours">By appointment</span>
+                        <span class="office-hours">Monday-Friday 10am-4pm</span>
                     </div>
                     <div class="info-item">
                         <strong>Netherton Office</strong><br>
                         47 Liverpool Road, Netherton, L30 3QA<br>
-                        <span class="office-hours">Mon-Fri 9am-5pm</span>
+                        <span class="office-hours">Monday-Friday 9am-5pm</span>
                     </div>
                     <div class="info-item">
                         <strong>24 Hour Support Line</strong><br>
