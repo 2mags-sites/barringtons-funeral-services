@@ -14,7 +14,7 @@ require_once __DIR__ . '/config.php';
 
 // Set default meta tags if not set by page
 if (!isset($page_title)) $page_title = SITE_TITLE;
-if (!isset($page_description)) $page_description = 'Family-run funeral directors serving Liverpool for over 100 years. Compassionate, personal service available 24/7. Waterloo, Formby & Netherton locations.';
+if (!isset($page_description)) $page_description = 'Family-run funeral directors serving Liverpool for over 75 years. Compassionate, personal service available 24/7. Waterloo, Formby & Netherton locations.';
 if (!isset($page_keywords)) $page_keywords = 'funeral directors Liverpool, independent funeral services, family funeral directors Merseyside';
 ?>
 <!DOCTYPE html>

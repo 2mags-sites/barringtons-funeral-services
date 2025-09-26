@@ -68,7 +68,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>Barringtons</h4>
-                <p>Family funeral directors serving Liverpool with compassion and dignity for over 100 years.</p>
+                <p>Family funeral directors serving Liverpool with compassion and dignity for over 75 years.</p>
                 <div class="footer-logos">
                     <img src="/assets/images/pers_nafd.png" alt="NAFD Member" />
                     <img src="/assets/images/pers_SAIF.png" alt="SAIF Member" />
