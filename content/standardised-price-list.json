@@ -67,11 +67,13 @@
         "title": "FEES YOU MUST PAY",
         "burial": {
             "title": "For an Attended or Unattended burial funeral, the burial fee.",
+            "text": "In this local area, the typical cost of the burial fee is:",
             "cost_range": "\u00a31008-\u00a31200",
             "note": "For a new grave, you will also need to pay for the plot; for an existing grave with a memorial in place, you may need to pay a removal\/replacement fee. In addition, the cemetery may charge a number of other fees."
         },
         "cremation": {
             "title": "For an Attended cremation funeral, the cremation fee.",
+            "text": "In this local area, the typical cost of a cremation is:",
             "cost_range": "\u00a3848-\u00a31125"
         },
         "notice": "Please discuss any specific religious, belief-based and\/or cultural requirements that you have with the funeral director."

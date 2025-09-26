@@ -90,14 +90,14 @@ require_once 'includes/header.php';
 
                 <div class="fee-item">
                     <p><strong><?php echo editable($content['fees']['burial']['title'] ?? '', 'fees.burial.title'); ?><sup>1</sup></strong><br>
-                    In this local area, the typical cost of the burial fee is: <strong><?php echo editable($content['fees']['burial']['cost_range'] ?? '', 'fees.burial.cost_range'); ?></strong></p>
+                    <?php echo editable($content['fees']['burial']['text'] ?? '', 'fees.burial.text'); ?> <strong><?php echo editable($content['fees']['burial']['cost_range'] ?? '', 'fees.burial.cost_range'); ?></strong></p>
 
                     <p class="fee-note"><?php echo editable($content['fees']['burial']['note'] ?? '', 'fees.burial.note'); ?></p>
                 </div>
 
                 <div class="fee-item">
                     <p><strong><?php echo editable($content['fees']['cremation']['title'] ?? '', 'fees.cremation.title'); ?></strong><br>
-                    In this local area, the typical cost of a cremation is: <strong><?php echo editable($content['fees']['cremation']['cost_range'] ?? '', 'fees.cremation.cost_range'); ?></strong></p>
+                    <?php echo editable($content['fees']['cremation']['text'] ?? '', 'fees.cremation.text'); ?> <strong><?php echo editable($content['fees']['cremation']['cost_range'] ?? '', 'fees.cremation.cost_range'); ?></strong></p>
                 </div>
 
                 <p class="notice"><?php echo editable($content['fees']['notice'] ?? '', 'fees.notice'); ?></p>
