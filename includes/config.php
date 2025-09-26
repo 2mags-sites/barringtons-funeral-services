@@ -3,14 +3,14 @@
 define('SITE_NAME', 'Barringtons');
 define('SITE_TITLE', 'Barringtons - Independent Funeral Services');
 define('SITE_URL', 'https://barringtonsfunerals.co.uk');
-define('SITE_EMAIL', 'care@barringtonsfunerals.co.uk');
+define('SITE_EMAIL', 'info@barringtonsfunerals.co.uk');
 define('SITE_PHONE', '0151 928 1625');
 
 // Business Information
 $business_info = [
     'name' => 'Barringtons Independent Funeral Services',
     'phone' => '0151 928 1625',
-    'email' => 'care@barringtonsfunerals.co.uk',
+    'email' => 'info@barringtonsfunerals.co.uk',
     'address' => '23 Crosby Rd S, Waterloo, Liverpool L22 1RG',
     'hours' => '24 hours a day, 7 days a week',
     'company_number' => '07587745'
@@ -36,7 +36,7 @@ $locations = [
 ];
 
 // Contact Form Settings
-define('CONTACT_EMAIL_TO', 'care@barringtonsfunerals.co.uk');
+define('CONTACT_EMAIL_TO', 'info@barringtonsfunerals.co.uk');
 define('CONTACT_EMAIL_FROM', 'noreply@barringtonsfunerals.co.uk');
 define('CONTACT_EMAIL_FROM_NAME', 'Barringtons Website');
 
