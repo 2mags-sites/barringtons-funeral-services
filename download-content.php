@@ -70,6 +70,29 @@ if (!file_exists($tempFile) || filesize($tempFile) == 0) {
     die('Error: Failed to create ZIP file.');
 }
 
+// Save a copy to content/backups directory on the server
+$backupDir = __DIR__ . '/content/backups/';
+if (!is_dir($backupDir)) {
+    mkdir($backupDir, 0755, true);
+}
+
+// Copy the zip to backups folder with timestamp
+$backupFile = $backupDir . $zipName;
+if (copy($tempFile, $backupFile)) {
+    // Keep only last 10 backups to prevent disk space issues
+    $backups = glob($backupDir . 'content-backup-*.zip');
+    if (count($backups) > 10) {
+        usort($backups, function($a, $b) {
+            return filemtime($a) - filemtime($b);
+        });
+        // Delete oldest backups
+        $toDelete = array_slice($backups, 0, count($backups) - 10);
+        foreach ($toDelete as $oldBackup) {
+            unlink($oldBackup);
+        }
+    }
+}
+
 // Send headers for download
 header('Content-Type: application/zip');
 header('Content-Disposition: attachment; filename="' . $zipName . '"');

@@ -1,4 +1,5 @@
     <!-- Contact Section - Appears on every page -->
+    <!-- Smart Deploy Test: <?php echo date('Y-m-d H:i:s'); ?> -->
     <section class="contact-section" id="contact">
         <div class="container">
             <h2>Contact Us</h2>

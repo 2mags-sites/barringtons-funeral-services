@@ -6,6 +6,7 @@
 # Backups
 *.backup
 *.bak
+content/backups/
 
 # System files
 .DS_Store

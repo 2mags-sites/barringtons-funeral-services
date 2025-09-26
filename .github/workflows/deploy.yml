@@ -1,4 +1,4 @@
-name: Deploy to Subdomain
+name: Smart Deploy to Subdomain
 
 on:
   push:
@@ -12,6 +12,42 @@ jobs:
     steps:
     - name: 🚀 Checkout code
       uses: actions/checkout@v3
+      with:
+        fetch-depth: 2  # Need previous commit to detect changes
+
+    - name: 🔍 Check what changed
+      id: changes
+      run: |
+        # Check if any content/*.json files were modified in this commit
+        if git diff --name-only HEAD~1 HEAD | grep -q "^content/.*\.json$"; then
+          echo "content_changed=true" >> $GITHUB_OUTPUT
+          echo "📝 Content files were modified - will deploy everything"
+        else
+          echo "content_changed=false" >> $GITHUB_OUTPUT
+          echo "🔧 Only code changes - will preserve production content"
+        fi
+
+        # List changed files for transparency
+        echo "Changed files in this commit:"
+        git diff --name-only HEAD~1 HEAD
+
+    - name: 📦 Prepare deployment (exclude content if needed)
+      run: |
+        if [[ "${{ steps.changes.outputs.content_changed }}" == "false" ]]; then
+          echo "Removing content/*.json from deployment package..."
+          # Remove JSON files from the working directory so they won't be deployed
+          rm -f content/*.json
+          echo "Content files removed from deployment package"
+        else
+          echo "Keeping content files in deployment package"
+        fi
+
+        # Always exclude backup files from deployment
+        rm -rf content/backups
+
+        # List what will be deployed
+        echo "Files to be deployed:"
+        ls -la content/
 
     - name: 📤 Deploy to barr.2magpiesseo.co.uk
       uses: appleboy/scp-action@v0.1.4
@@ -21,7 +57,7 @@ jobs:
         key: ${{ secrets.WHM_SSH_KEY }}
         source: "*"
         target: "/home/twomagseo/barr.2magpiesseo.co.uk"
-        rm: false
+        rm: false  # Never remove existing files
 
     - name: 🔒 Set correct permissions
       uses: appleboy/ssh-action@v0.1.5
@@ -44,9 +80,22 @@ jobs:
             chmod 777 /home/twomagseo/barr.2magpiesseo.co.uk/assets/images/uploads
           fi
 
+          # Make content/backups directory writable for saving backups
+          if [ -d "/home/twomagseo/barr.2magpiesseo.co.uk/content/backups" ]; then
+            chmod 777 /home/twomagseo/barr.2magpiesseo.co.uk/content/backups
+          else
+            mkdir -p /home/twomagseo/barr.2magpiesseo.co.uk/content/backups
+            chmod 777 /home/twomagseo/barr.2magpiesseo.co.uk/content/backups
+          fi
+
           # Protect .env file
           if [ -f "/home/twomagseo/barr.2magpiesseo.co.uk/.env" ]; then
             chmod 600 /home/twomagseo/barr.2magpiesseo.co.uk/.env
           fi
 
-          echo "✅ Deployment complete!"
+          # Report what was deployed
+          if [ "${{ steps.changes.outputs.content_changed }}" == "true" ]; then
+            echo "✅ Deployed: Code + Content files"
+          else
+            echo "✅ Deployed: Code only (production content preserved)"
+          fi
