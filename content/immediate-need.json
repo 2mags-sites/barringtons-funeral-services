@@ -67,13 +67,13 @@
             },
             "office": {
                 "title": "Main Office",
-                "address": "23 Crosby Rd N, Waterloo L22 4QF",
+                "address": "28 Crosby Rd N, Waterloo L22 4QF",
                 "hours": "Open 24 hours"
             },
             "email": {
                 "title": "Email Support",
                 "address": "info@barringtonsfunerals.co.uk",
-                "description": "We'll respond as quickly as possible"
+                "description": "We'll respond as quickly as possible but please note emails are not monitored at the weekend"
             }
         }
     },

@@ -199,7 +199,7 @@ require_once 'includes/header.php';
                 </div>
 
                 <div class="info-card image-section fade-in">
-                    <h2><?php echo editable($content['contact_section']['title'] ?? ''re here whenever you need us', 'contact_section.title'); ?></h2>
+                    <h2><?php echo editable($content['contact_section']['title'] ?? 'We\'re here whenever you need us', 'contact_section.title'); ?></h2>
                     <p><?php echo editable($content['contact_section']['description'] ?? '', 'contact_section.description'); ?></p>
                 </div>
             </div>
