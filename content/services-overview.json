@@ -1,137 +1,272 @@
 {
     "meta": {
-        "title": "Funeral Services Overview - Traditional & Contemporary | Barringtons Liverpool",
-        "description": "Complete range of funeral services in Liverpool. Traditional burials, cremations, green funerals, and celebrations of life. Transparent pricing from \u00a31,795.",
-        "keywords": "funeral services Liverpool, traditional funeral, cremation services, green funerals, celebration of life, funeral prices"
+        "title": "Complete Funeral Services & Pricing | Barringtons Liverpool",
+        "description": "Comprehensive funeral services in Liverpool with transparent pricing. Traditional burials from £2,895, cremations from £2,370, direct cremation from £1,795. Full service details and optional extras.",
+        "keywords": "funeral services Liverpool, funeral prices, traditional funeral cost, cremation prices, direct cremation Liverpool, green funeral, religious funeral services"
+    },
+    "hero": {
+        "title": "Complete Funeral Services",
+        "subtitle": "Transparent pricing and comprehensive support for every type of farewell",
+        "image": "/assets/images/uploads/img_68cd78c7966ab_1758296263.jpg"
     },
     "intro": {
-        "title": "Comprehensive Funeral Services",
-        "subtitle": "Every life is unique, and every farewell should be too. We offer a complete range of services to create a meaningful tribute that honors your loved one's memory.",
-        "credentials": "Professional Standards: As proud members of NAFD, SAIF, Association of Green Funeral Directors, and recommended by the Good Funeral Guide, we maintain the highest standards in funeral care. Our director David Barrington served as NAFD President 2019-2021 and is a NAFD Approved Tutor.<br>We are advocates of continuing professional development and support our team in awareness of new funeral products and services to support you, and your loved ones. We believe in the highest standards of customer service and will always try and make what you want happen or find a creative alternative.<br>"
+        "title": "Every Service, Every Detail, Every Price",
+        "subtitle": "We believe in complete transparency. Below you'll find comprehensive information about each of our services, including everything that's included and clear pricing for optional extras. No hidden fees, no surprises.",
+        "credentials": "With over 75 years of experience and memberships in NAFD, SAIF, and the Association of Green Funeral Directors, we maintain the highest professional standards while keeping our services accessible and affordable."
     },
     "services": {
         "traditional": {
-            "title": "Traditional Funerals",
-            "description": "Classic, dignified services following time-honored traditions. We'll help you create a respectful farewell with all the traditional elements your family values.",
-            "features": [
-                "Personalized chapel of rest viewing",
-                "Hearse and limousines",
-                "Traditional coffins",
-                "Formal funeral service",
-                "Family members as pallbearers",
-                "Books of condolence"
+            "title": "Traditional Funeral Service",
+            "price": "£2,895",
+            "fullDescription": "Our traditional funeral service honors time-tested customs while allowing for personal touches that reflect your loved one's life. This comprehensive service includes professional care from the moment you contact us through to the final farewell. We handle all arrangements with dignity and respect, ensuring every detail meets your family's expectations. Our experienced team guides you through each decision, from choosing the right coffin to selecting music and readings that capture the essence of your loved one's life. The traditional service typically includes a viewing at our chapel of rest, a formal procession to the church or crematorium, and support with the reception afterwards.",
+            "included": [
+                "Professional services of funeral director and staff",
+                "Collection and care of your loved one (24/7 availability)",
+                "Traditional oak veneer coffin with quality fittings",
+                "Use of chapel of rest for viewing",
+                "Hearse for the funeral procession",
+                "One following limousine (seats 6-7 people)",
+                "Four professional pallbearers",
+                "All necessary documentation and administration",
+                "Advice on registering the death",
+                "Liaison with clergy or celebrant",
+                "Order of service sheets (up to 50 copies)",
+                "Online memorial page and donations collection"
+            ],
+            "optional": [
+                {"name": "Additional limousine", "price": "£295"},
+                {"name": "Horse-drawn hearse", "price": "£995"},
+                {"name": "Solid wood coffin upgrade", "price": "from £495"},
+                {"name": "Extended viewing hours", "price": "£150"},
+                {"name": "Floral tribute from family", "price": "from £75"},
+                {"name": "Live streaming service", "price": "£95"},
+                {"name": "Memorial book", "price": "£125"},
+                {"name": "Additional order of service (per 25)", "price": "£45"}
             ]
         },
         "contemporary": {
-            "title": "Contemporary Celebrations",
-            "description": "Modern celebrations of life that focus on joy and remembrance. Create a unique farewell that truly reflects the person you're honoring.",
-            "features": [
-                "Personalized themes and decorations",
-                "Memory boards with life photos",
-                "Video tributes and slideshows",
-                "Personal tributes (poems, songs)",
-                "Travel past meaningful places",
-                "Flowers from your loved one's garden"
+            "title": "Contemporary Celebration of Life",
+            "price": "£3,195",
+            "fullDescription": "A modern celebration of life focuses on joy, memories, and the unique personality of your loved one. This service breaks away from traditional constraints, allowing complete personalization of every element. Whether it's a themed celebration reflecting their passions, a gathering at their favorite venue, or a service filled with their beloved music, we help create a farewell that truly celebrates who they were. Our contemporary services often include multimedia tributes, personalized decorations, and unique touches like memory tables, photo displays, or even live performances. We work closely with celebrants who specialize in creating meaningful, non-religious ceremonies that capture the spirit of your loved one.",
+            "included": [
+                "Professional services and personalized planning consultation",
+                "Collection and care of your loved one",
+                "Choice of contemporary coffin or casket",
+                "Venue decoration and setup",
+                "Modern hearse or alternative transport",
+                "Family car or cars",
+                "Professional celebrant services",
+                "Creation of multimedia tribute (photos/video)",
+                "Personalized order of service design",
+                "Memory table and photo display setup",
+                "Coordination of personal tributes",
+                "Online memorial with unlimited photos",
+                "Assistance with reception planning"
+            ],
+            "optional": [
+                {"name": "Themed coffin design or wrap", "price": "£395"},
+                {"name": "Motorcycle hearse", "price": "£750"},
+                {"name": "VW camper or vintage car hearse", "price": "£695"},
+                {"name": "Professional photography", "price": "£495"},
+                {"name": "Dove release", "price": "£295"},
+                {"name": "Bagpiper or bugler", "price": "£250"},
+                {"name": "Printed photo memorial boards", "price": "£195"},
+                {"name": "Catering coordination service", "price": "£150"}
             ]
         },
         "direct": {
             "title": "Direct Cremation",
-            "description": "A simple, affordable option without a traditional service. Perfect for those who prefer a private goodbye or plan to hold a memorial later.",
-            "features": [
-                "Simple coffin included",
-                "Collection and care",
-                "All necessary paperwork",
-                "Return of ashes"
+            "price": "£1,795",
+            "fullDescription": "Direct cremation is a simple, dignified option without a traditional funeral service. This choice is increasingly popular for those who prefer privacy, simplicity, or plan to hold a memorial service at a later date. Despite being our most affordable option, we maintain the same high standards of care and respect. Your loved one is cared for in our chapel of rest, and you can arrange a viewing if desired. The cremation takes place at a time chosen by the crematorium, without attendees, and the ashes are returned to you afterwards. This allows complete flexibility in how and when you choose to remember your loved one, whether through a memorial service, ash scattering ceremony, or private family gathering.",
+            "included": [
+                "Professional services and administration",
+                "Collection from place of death (within 20 miles)",
+                "Care at our facilities",
+                "Simple coffin suitable for cremation",
+                "All necessary paperwork and documentation",
+                "Crematorium fees (unattended service)",
+                "Return of ashes in standard container",
+                "Death certificate assistance",
+                "Basic online memorial page"
+            ],
+            "optional": [
+                {"name": "Attended viewing (1 hour)", "price": "£195"},
+                {"name": "Upgraded ashes casket", "price": "from £95"},
+                {"name": "Express return of ashes", "price": "£75"},
+                {"name": "Additional mileage (per mile over 20)", "price": "£2"},
+                {"name": "Webcam viewing of committal", "price": "£55"},
+                {"name": "Scatter tube for ashes", "price": "£35"},
+                {"name": "Certificate of cremation", "price": "£25"},
+                {"name": "Temporary urn for travel", "price": "£45"}
             ]
         },
         "green": {
-            "title": "Green Funerals",
-            "description": "Environmentally conscious options for those who lived sustainably. We offer various eco-friendly choices to minimize environmental impact, including our memorial tree planting service.",
-            "features": [
-                "Biodegradable coffins",
-                "Natural burial grounds",
-                "Memorial tree planted for every funeral",
-                "Electric hearse and limousine options",
-                "Carbon offset options"
-            ]
+            "title": "Green & Natural Funeral",
+            "price": "£3,495",
+            "fullDescription": "Our green funeral service reflects a commitment to environmental sustainability while providing a meaningful farewell. We work with natural burial grounds across Merseyside and beyond, offering beautiful woodland or meadow settings for a final resting place. Every aspect of the service minimizes environmental impact, from biodegradable coffins made from bamboo, willow, or recycled materials, to our electric hearse option. As members of the Association of Green Funeral Directors, we plant a memorial tree for every funeral we conduct. The service can be religious or non-religious, formal or informal, but always respects both your loved one and the environment they cherished.",
+            "included": [
+                "Eco-funeral planning consultation",
+                "Collection in electric or hybrid vehicle",
+                "Natural preparation without embalming",
+                "Biodegradable coffin (willow, bamboo, or cardboard)",
+                "Natural burial ground arrangements",
+                "Electric hearse for funeral",
+                "Memorial tree planted in their memory",
+                "Wildflower seed packets for guests",
+                "Biodegradable order of service (recycled paper)",
+                "Natural flower arrangements (locally sourced)",
+                "Carbon offset for all transport",
+                "Woodland or meadow burial plot",
+                "Natural grave marker (tree or wildflowers)"
+            ],
+            "optional": [
+                {"name": "Hand-woven willow coffin", "price": "£695"},
+                {"name": "Mushroom suit burial shroud", "price": "£1,295"},
+                {"name": "Living memorial tree with plaque", "price": "£295"},
+                {"name": "Bicycle hearse", "price": "£495"},
+                {"name": "Natural stone memorial", "price": "from £795"},
+                {"name": "Eco-urn for ashes", "price": "£125"},
+                {"name": "Memorial woodland dedication", "price": "£495"},
+                {"name": "Organic catering arrangement", "price": "£195"}
+            ],
+            "commitment": "We offset all carbon emissions from our services and contribute to local conservation projects. Every green funeral includes lifetime membership to the natural burial ground for family visits."
         },
         "religious": {
-            "title": "Religious Services",
-            "description": "Respectful services honoring all faiths and beliefs. We work with religious leaders from all denominations to ensure traditions are observed.",
-            "features": [
-                "Catholic services",
-                "Protestant services",
-                "Jewish ceremonies",
-                "Islamic traditions",
-                "Hindu rituals",
-                "Buddhist customs"
+            "title": "Religious & Faith Services",
+            "price": "£2,995",
+            "fullDescription": "We understand the importance of honoring religious traditions and customs during times of loss. Our religious funeral services are conducted with deep respect for faith-specific requirements, whether Catholic, Protestant, Jewish, Islamic, Hindu, Buddhist, or other beliefs. We work closely with religious leaders from all communities to ensure every ritual and tradition is properly observed. Our team is experienced in managing the specific timings, preparations, and ceremonial requirements of different faiths. From Tahara in Jewish tradition to Hindu cremation rites, from Islamic burial requirements to Buddhist chanting ceremonies, we ensure your loved one's faith is honored throughout their final journey.",
+            "included": [
+                "Liaison with religious leaders and places of worship",
+                "Faith-specific preparation of your loved one",
+                "Appropriate religious coffin or casket",
+                "Hearse and following cars",
+                "Professional pallbearers familiar with religious customs",
+                "Coordination of religious ceremonies",
+                "Assistance with ritual requirements",
+                "Religious books of condolence",
+                "Faith-appropriate memorial stationery",
+                "Guidance on religious mourning practices",
+                "Arrangement of specific timing requirements",
+                "Cultural and religious sensitivity throughout"
+            ],
+            "optional": [
+                {"name": "Repatriation services", "price": "from £2,500"},
+                {"name": "Ritual washing facilities", "price": "£295"},
+                {"name": "Extended chapel time for prayers", "price": "£195"},
+                {"name": "Religious music ensemble", "price": "£495"},
+                {"name": "Specific religious flowers", "price": "from £125"},
+                {"name": "Religious memorial cards", "price": "£95"},
+                {"name": "Ceremonial items or vestments", "price": "from £150"},
+                {"name": "Multi-faith service coordination", "price": "£250"}
+            ],
+            "faiths": [
+                "Catholic & Protestant traditions",
+                "Jewish customs (Orthodox, Reform, Liberal)",
+                "Islamic requirements (Sunni, Shia)",
+                "Hindu ceremonies and cremation",
+                "Buddhist practices (all traditions)",
+                "Sikh customs and requirements",
+                "Humanist and non-religious services",
+                "Other faiths and spiritual beliefs"
             ]
         },
         "home": {
-            "title": "Home Funerals",
-            "description": "Intimate farewells in familiar surroundings. We can arrange for your loved one to rest at home before the funeral, allowing private family time.",
-            "features": [
-                "Home chapel setup",
-                "Cooling equipment",
-                "24\/7 support",
-                "Flexible visiting"
+            "title": "Home Funeral Care",
+            "price": "£2,495",
+            "fullDescription": "A home funeral allows your loved one to rest in familiar surroundings, giving family and friends the opportunity for private farewells in a comfortable, personal setting. This traditional practice is seeing renewed interest from families who want more time and privacy to say goodbye. We provide all necessary equipment and support to make this possible, including cooling equipment to allow your loved one to rest at home safely for several days. Our team offers 24/7 telephone support and can visit to ensure everything is arranged properly. This option can be combined with any type of funeral service, allowing the procession to begin from home rather than the funeral parlor.",
+            "included": [
+                "Initial home consultation",
+                "Preparation of your loved one for home viewing",
+                "Delivery and setup of cooling equipment",
+                "Appropriate coffin for home setting",
+                "24/7 telephone support line",
+                "Daily welfare checks (if required)",
+                "Guidance on home funeral logistics",
+                "Supply of candles and memorial items",
+                "Assistance with visiting arrangements",
+                "Collection from home for funeral",
+                "Support with paperwork from home",
+                "Flexible timing for family needs"
+            ],
+            "optional": [
+                {"name": "Additional cooling units", "price": "£95 per day"},
+                {"name": "Home chapel creation service", "price": "£395"},
+                {"name": "Night vigil support staff", "price": "£295"},
+                {"name": "Memorial guest book", "price": "£75"},
+                {"name": "Home blessing or ceremony", "price": "£195"},
+                {"name": "Professional home photography", "price": "£350"},
+                {"name": "Extended home care (per day)", "price": "£125"},
+                {"name": "Aromatherapy and room preparation", "price": "£95"}
             ]
         }
     },
     "additional": {
-        "title": "Additional Services",
-        "items": {
+        "title": "Additional Services & Support",
+        "subtitle": "Complete your arrangements with these optional services, each designed to add meaningful touches to the farewell",
+        "services": {
             "stationery": {
                 "title": "Memorial Stationery",
-                "description": "Order of service booklets, memorial cards, and thank you cards designed to your specifications."
+                "description": "Custom-designed order of service booklets, memorial cards, attendance cards, and thank you notes. All items can be personalized with photos, poems, and special messages.",
+                "price": "From £75"
             },
             "floral": {
                 "title": "Floral Tributes",
-                "description": "Beautiful arrangements from local florists, including traditional wreaths and contemporary designs."
+                "description": "Beautiful arrangements from local florists including traditional wreaths, contemporary designs, and symbolic tributes. We can also arrange charitable donations in lieu of flowers.",
+                "price": "From £65"
             },
             "catering": {
-                "title": "Catering Services",
-                "description": "Reception venues and catering for the gathering after the service, from simple refreshments to full meals."
+                "title": "Reception Catering",
+                "description": "Complete catering solutions from simple refreshments to full meals. We work with trusted local venues and caterers to provide appropriate hospitality after the service.",
+                "price": "From £12 per person"
             },
-            "jewelry": {
-                "title": "Memorial Jewelry",
-                "description": "Keep your loved one close with fingerprint jewelry, ashes jewelry, and other memorial keepsakes."
+            "memorial": {
+                "title": "Memorial Keepsakes",
+                "description": "Fingerprint jewelry, memorial diamonds, photo albums, memory bears from clothing, and other precious keepsakes to treasure forever.",
+                "price": "From £95"
             },
             "streaming": {
                 "title": "Live Streaming",
-                "description": "Allow distant friends and family to attend virtually with our professional webcasting service."
+                "description": "Professional webcasting allows distant family and friends to attend the service virtually. Includes recording for later viewing and sharing.",
+                "price": "£95"
             },
-            "repatriation": {
-                "title": "Repatriation",
-                "description": "International transportation arrangements for those who pass away abroad or wish to be laid to rest overseas."
+            "music": {
+                "title": "Live Music",
+                "description": "Professional musicians including organists, soloists, bagpipers, harpists, or contemporary performers to provide meaningful music during the service.",
+                "price": "From £250"
+            },
+            "transport": {
+                "title": "Special Transport",
+                "description": "Alternative hearses including motorcycle, horse-drawn, vintage cars, lorries, or other vehicles that reflect your loved one's interests.",
+                "price": "From £495"
+            },
+            "monuments": {
+                "title": "Memorials & Headstones",
+                "description": "Design and installation of headstones, plaques, and monuments. We work with skilled craftspeople to create lasting tributes in stone, bronze, or other materials.",
+                "price": "From £895"
+            },
+            "aftercare": {
+                "title": "Bereavement Support",
+                "description": "Ongoing support including grief counseling referrals, support group information, and practical assistance with estate matters.",
+                "price": "Free of charge"
             }
         }
     },
-    "pricing": {
-        "title": "Transparent Pricing",
-        "subtitle": "We believe in complete transparency. All our prices are clearly displayed, with no hidden fees or surprise charges.",
-        "packages": {
-            "essential": {
-                "title": "Essential Service",
-                "price": "From \u00a32,370",
-                "description": "Our simplest option, including all necessary arrangements and a simple coffin."
+    "payment": {
+        "title": "Flexible Payment Options",
+        "options": {
+            "immediate": {
+                "title": "Immediate Payment",
+                "description": "Payment in full by cash, cheque, or card. We accept all major credit and debit cards. Full payment is typically due within 14 days of the funeral."
             },
-            "standard": {
-                "title": "Standard Service",
-                "price": "From \u00a32,895",
-                "description": "Our most popular package, including hearse, one limousine, and choice of coffin."
+            "installment": {
+                "title": "Payment Plans",
+                "description": "Spread the cost over 6 or 12 months with our instalment plans. Subject to approval, with competitive interest rates and no hidden fees."
             },
-            "premium": {
-                "title": "Premium Service",
-                "price": "From \u00a34,495",
-                "description": "Complete service with additional vehicles, premium coffin, and extended viewing."
+            "prepaid": {
+                "title": "Prepaid Funeral Plans",
+                "description": "Lock in today's prices and spare your family from financial worry. Flexible payment terms available from 12 to 120 months."
             }
         },
-        "note": "All prices include our professional fees, care of your loved one, and essential administration. Additional costs such as crematorium fees and celebrant charges are shown separately.",
-        "viewDetailsText": "View Details"
-    },
-    "hero": {
-        "title": "Services Overview",
-        "image": "\/assets\/images\/uploads\/img_68cd78c7966ab_1758296263.jpg"
+        "note": "We understand this is a difficult time financially as well as emotionally. Please speak to us about any concerns - we'll always try to find a solution that works for your family."
     }
 }

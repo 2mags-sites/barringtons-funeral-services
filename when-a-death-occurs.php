@@ -74,7 +74,7 @@ require_once 'includes/header.php';
                     </div>
 
                     <div class="sub-section">
-                        <h3><?php echo editable($content['sections']['registration']['documents']['title'] ?? ''ll receive:', 'sections.registration.documents.title'); ?></h3>
+                        <h3><?php echo editable($content['sections']['registration']['documents']['title'] ?? 'Documents you\'ll receive:', 'sections.registration.documents.title'); ?></h3>
                         <ul>
                             <?php if (isset($content['sections']['registration']['documents']['list']) && is_array($content['sections']['registration']['documents']['list'])): ?>
                                 <?php foreach ($content['sections']['registration']['documents']['list'] as $index => $document): ?>

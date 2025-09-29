@@ -1,5 +1,5 @@
 <?php
-// Services Overview Page
+// Comprehensive Services Page
 require_once 'includes/admin-config.php';
 
 // Load page content
@@ -25,6 +25,7 @@ require_once 'includes/header.php';
         <div class="hero-overlay"></div>
         <div class="hero-content-single">
             <h1><?php echo editable($content['hero']['title'] ?? '', 'hero.title'); ?></h1>
+            <p class="hero-subtitle"><?php echo editable($content['hero']['subtitle'] ?? '', 'hero.subtitle'); ?></p>
         </div>
     </section>
 
@@ -38,143 +39,571 @@ require_once 'includes/header.php';
                 </div>
             </div>
 
-            <div class="services-list-grid">
-                <div class="service-box fade-in">
-                    <div class="service-icon">
-                        <?php echo editableImage($content['services']['traditional']['image'] ?? '', 'services.traditional.image', 'Traditional chapel service with formal seating', 'Traditional Funeral Service'); ?>
+            <!-- Full-width service sections -->
+            <div class="services-comprehensive">
+
+                <!-- Traditional Funeral Service -->
+                <div class="service-section fade-in" id="traditional-funeral">
+                    <div class="service-content">
+                        <div class="service-header">
+                            <h2><?php echo editable($content['services']['traditional']['title'] ?? '', 'services.traditional.title'); ?></h2>
+                            <div class="service-price">
+                                <span class="from-text">From</span>
+                                <span class="price-amount"><?php echo editable($content['services']['traditional']['price'] ?? '', 'services.traditional.price'); ?></span>
+                            </div>
+                        </div>
+
+                        <div class="service-description">
+                            <?php echo editable($content['services']['traditional']['fullDescription'] ?? '', 'services.traditional.fullDescription'); ?>
+                        </div>
+
+                        <div class="service-details-grid">
+                            <div class="service-included">
+                                <h3>What's Included:</h3>
+                                <ul>
+                                    <?php foreach(($content['services']['traditional']['included'] ?? []) as $index => $item): ?>
+                                    <li><?php echo editable($item, "services.traditional.included.$index"); ?></li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div>
+
+                            <div class="service-optional">
+                                <h3>Optional Extras:</h3>
+                                <ul>
+                                    <?php foreach(($content['services']['traditional']['optional'] ?? []) as $index => $item): ?>
+                                    <li><?php echo editable($item['name'] ?? '', "services.traditional.optional.$index.name"); ?> -
+                                        <span class="price"><?php echo editable($item['price'] ?? '', "services.traditional.optional.$index.price"); ?></span>
+                                    </li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="service-cta">
+                            <a href="immediate-need.php" class="btn-primary">Arrange This Service</a>
+                            <a href="standardised-price-list.php" class="btn-outline">View Full Price List</a>
+                        </div>
                     </div>
-                    <h3><?php echo editable($content['services']['traditional']['title'] ?? '', 'services.traditional.title'); ?></h3>
-                    <p><?php echo editable($content['services']['traditional']['description'] ?? '', 'services.traditional.description'); ?></p>
-                    <ul>
-                        <?php foreach(($content['services']['traditional']['features'] ?? []) as $featureIndex => $feature): ?>
-                        <li><?php echo editable($feature, "services.traditional.features.$featureIndex"); ?></li>
-                        <?php endforeach; ?>
-                    </ul>
                 </div>
 
-                <div class="service-box fade-in">
-                    <div class="service-icon">
-                        <?php echo editableImage($content['services']['contemporary']['image'] ?? '', 'services.contemporary.image', 'Modern celebration of life gathering', 'Contemporary Celebration Service'); ?>
+                <!-- Contemporary Celebration Service -->
+                <div class="service-section fade-in" id="contemporary-celebration">
+                    <div class="service-content">
+                        <div class="service-header">
+                            <h2><?php echo editable($content['services']['contemporary']['title'] ?? '', 'services.contemporary.title'); ?></h2>
+                            <div class="service-price">
+                                <span class="from-text">From</span>
+                                <span class="price-amount"><?php echo editable($content['services']['contemporary']['price'] ?? '', 'services.contemporary.price'); ?></span>
+                            </div>
+                        </div>
+
+                        <div class="service-description">
+                            <?php echo editable($content['services']['contemporary']['fullDescription'] ?? '', 'services.contemporary.fullDescription'); ?>
+                        </div>
+
+                        <div class="service-details-grid">
+                            <div class="service-included">
+                                <h3>What's Included:</h3>
+                                <ul>
+                                    <?php foreach(($content['services']['contemporary']['included'] ?? []) as $index => $item): ?>
+                                    <li><?php echo editable($item, "services.contemporary.included.$index"); ?></li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div>
+
+                            <div class="service-optional">
+                                <h3>Personalisation Options:</h3>
+                                <ul>
+                                    <?php foreach(($content['services']['contemporary']['optional'] ?? []) as $index => $item): ?>
+                                    <li><?php echo editable($item['name'] ?? '', "services.contemporary.optional.$index.name"); ?> -
+                                        <span class="price"><?php echo editable($item['price'] ?? '', "services.contemporary.optional.$index.price"); ?></span>
+                                    </li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="service-cta">
+                            <a href="immediate-need.php" class="btn-primary">Arrange This Service</a>
+                            <a href="personalisation.php" class="btn-outline">Explore Personalisation</a>
+                        </div>
                     </div>
-                    <h3><?php echo editable($content['services']['contemporary']['title'] ?? '', 'services.contemporary.title'); ?></h3>
-                    <p><?php echo editable($content['services']['contemporary']['description'] ?? '', 'services.contemporary.description'); ?></p>
-                    <ul>
-                        <?php foreach(($content['services']['contemporary']['features'] ?? []) as $featureIndex => $feature): ?>
-                        <li><?php echo editable($feature, "services.contemporary.features.$featureIndex"); ?></li>
-                        <?php endforeach; ?>
-                    </ul>
                 </div>
 
-                <div class="service-box fade-in">
-                    <div class="service-icon">
-                        <?php echo editableImage($content['services']['direct']['image'] ?? '', 'services.direct.image', 'Simple and dignified cremation service', 'Direct Cremation Service'); ?>
+                <!-- Direct Cremation Service -->
+                <div class="service-section fade-in" id="direct-cremation">
+                    <div class="service-content">
+                        <div class="service-header">
+                            <h2><?php echo editable($content['services']['direct']['title'] ?? '', 'services.direct.title'); ?></h2>
+                            <div class="service-price">
+                                <span class="from-text">From</span>
+                                <span class="price-amount"><?php echo editable($content['services']['direct']['price'] ?? '', 'services.direct.price'); ?></span>
+                            </div>
+                        </div>
+
+                        <div class="service-description">
+                            <?php echo editable($content['services']['direct']['fullDescription'] ?? '', 'services.direct.fullDescription'); ?>
+                        </div>
+
+                        <div class="service-details-grid">
+                            <div class="service-included">
+                                <h3>What's Included:</h3>
+                                <ul>
+                                    <?php foreach(($content['services']['direct']['included'] ?? []) as $index => $item): ?>
+                                    <li><?php echo editable($item, "services.direct.included.$index"); ?></li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div>
+
+                            <div class="service-optional">
+                                <h3>Additional Options:</h3>
+                                <ul>
+                                    <?php foreach(($content['services']['direct']['optional'] ?? []) as $index => $item): ?>
+                                    <li><?php echo editable($item['name'] ?? '', "services.direct.optional.$index.name"); ?> -
+                                        <span class="price"><?php echo editable($item['price'] ?? '', "services.direct.optional.$index.price"); ?></span>
+                                    </li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="service-cta">
+                            <a href="immediate-need.php" class="btn-primary">Arrange Direct Cremation</a>
+                            <a href="#contact" class="btn-outline">Discuss Options</a>
+                        </div>
                     </div>
-                    <h3><?php echo editable($content['services']['direct']['title'] ?? '', 'services.direct.title'); ?></h3>
-                    <p><?php echo editable($content['services']['direct']['description'] ?? '', 'services.direct.description'); ?></p>
-                    <ul>
-                        <?php foreach(($content['services']['direct']['features'] ?? []) as $featureIndex => $feature): ?>
-                        <li><?php echo editable($feature, "services.direct.features.$featureIndex"); ?></li>
-                        <?php endforeach; ?>
-                    </ul>
                 </div>
 
-                <div class="service-box fade-in">
-                    <div class="service-icon">
-                        <?php echo editableImage($content['services']['green']['image'] ?? '', 'services.green.image', 'Natural woodland burial ground', 'Green Funeral Service'); ?>
+                <!-- Green Funeral Service -->
+                <div class="service-section fade-in" id="green-funeral">
+                    <div class="service-content">
+                        <div class="service-header">
+                            <h2><?php echo editable($content['services']['green']['title'] ?? '', 'services.green.title'); ?></h2>
+                            <div class="service-price">
+                                <span class="from-text">From</span>
+                                <span class="price-amount"><?php echo editable($content['services']['green']['price'] ?? '', 'services.green.price'); ?></span>
+                            </div>
+                        </div>
+
+                        <div class="service-description">
+                            <?php echo editable($content['services']['green']['fullDescription'] ?? '', 'services.green.fullDescription'); ?>
+                        </div>
+
+                        <div class="service-details-grid">
+                            <div class="service-included">
+                                <h3>Eco-Friendly Features:</h3>
+                                <ul>
+                                    <?php foreach(($content['services']['green']['included'] ?? []) as $index => $item): ?>
+                                    <li><?php echo editable($item, "services.green.included.$index"); ?></li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div>
+
+                            <div class="service-optional">
+                                <h3>Green Options:</h3>
+                                <ul>
+                                    <?php foreach(($content['services']['green']['optional'] ?? []) as $index => $item): ?>
+                                    <li><?php echo editable($item['name'] ?? '', "services.green.optional.$index.name"); ?> -
+                                        <span class="price"><?php echo editable($item['price'] ?? '', "services.green.optional.$index.price"); ?></span>
+                                    </li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="green-certification">
+                            <p><strong>Environmental Commitment:</strong> <?php echo editable($content['services']['green']['commitment'] ?? '', 'services.green.commitment'); ?></p>
+                        </div>
+
+                        <div class="service-cta">
+                            <a href="immediate-need.php" class="btn-primary">Arrange Green Funeral</a>
+                            <a href="#contact" class="btn-outline">Learn More</a>
+                        </div>
                     </div>
-                    <h3><?php echo editable($content['services']['green']['title'] ?? '', 'services.green.title'); ?></h3>
-                    <p><?php echo editable($content['services']['green']['description'] ?? '', 'services.green.description'); ?></p>
-                    <ul>
-                        <?php foreach(($content['services']['green']['features'] ?? []) as $featureIndex => $feature): ?>
-                        <li><?php echo editable($feature, "services.green.features.$featureIndex"); ?></li>
-                        <?php endforeach; ?>
-                    </ul>
                 </div>
 
-                <div class="service-box fade-in">
-                    <div class="service-icon">
-                        <?php echo editableImage($content['services']['religious']['image'] ?? '', 'services.religious.image', 'Multi-faith chapel for religious services', 'Religious Funeral Service'); ?>
+                <!-- Religious Service -->
+                <div class="service-section fade-in" id="religious-service">
+                    <div class="service-content">
+                        <div class="service-header">
+                            <h2><?php echo editable($content['services']['religious']['title'] ?? '', 'services.religious.title'); ?></h2>
+                            <div class="service-price">
+                                <span class="from-text">From</span>
+                                <span class="price-amount"><?php echo editable($content['services']['religious']['price'] ?? '', 'services.religious.price'); ?></span>
+                            </div>
+                        </div>
+
+                        <div class="service-description">
+                            <?php echo editable($content['services']['religious']['fullDescription'] ?? '', 'services.religious.fullDescription'); ?>
+                        </div>
+
+                        <div class="service-details-grid">
+                            <div class="service-included">
+                                <h3>Service Includes:</h3>
+                                <ul>
+                                    <?php foreach(($content['services']['religious']['included'] ?? []) as $index => $item): ?>
+                                    <li><?php echo editable($item, "services.religious.included.$index"); ?></li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div>
+
+                            <div class="service-optional">
+                                <h3>Faith-Specific Options:</h3>
+                                <ul>
+                                    <?php foreach(($content['services']['religious']['faiths'] ?? []) as $index => $faith): ?>
+                                    <li><?php echo editable($faith, "services.religious.faiths.$index"); ?></li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="service-cta">
+                            <a href="immediate-need.php" class="btn-primary">Arrange Religious Service</a>
+                            <a href="#contact" class="btn-outline">Discuss Requirements</a>
+                        </div>
                     </div>
-                    <h3><?php echo editable($content['services']['religious']['title'] ?? '', 'services.religious.title'); ?></h3>
-                    <p><?php echo editable($content['services']['religious']['description'] ?? '', 'services.religious.description'); ?></p>
-                    <ul>
-                        <?php foreach(($content['services']['religious']['features'] ?? []) as $featureIndex => $feature): ?>
-                        <li><?php echo editable($feature, "services.religious.features.$featureIndex"); ?></li>
-                        <?php endforeach; ?>
-                    </ul>
                 </div>
 
-                <div class="service-box fade-in">
-                    <div class="service-icon">
-                        <?php echo editableImage($content['services']['home']['image'] ?? '', 'services.home.image', 'Family home with peaceful setting', 'Home Funeral Service'); ?>
+                <!-- Home Funeral Service -->
+                <div class="service-section fade-in" id="home-funeral">
+                    <div class="service-content">
+                        <div class="service-header">
+                            <h2><?php echo editable($content['services']['home']['title'] ?? '', 'services.home.title'); ?></h2>
+                            <div class="service-price">
+                                <span class="from-text">From</span>
+                                <span class="price-amount"><?php echo editable($content['services']['home']['price'] ?? '', 'services.home.price'); ?></span>
+                            </div>
+                        </div>
+
+                        <div class="service-description">
+                            <?php echo editable($content['services']['home']['fullDescription'] ?? '', 'services.home.fullDescription'); ?>
+                        </div>
+
+                        <div class="service-details-grid">
+                            <div class="service-included">
+                                <h3>Support Provided:</h3>
+                                <ul>
+                                    <?php foreach(($content['services']['home']['included'] ?? []) as $index => $item): ?>
+                                    <li><?php echo editable($item, "services.home.included.$index"); ?></li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div>
+
+                            <div class="service-optional">
+                                <h3>Additional Support:</h3>
+                                <ul>
+                                    <?php foreach(($content['services']['home']['optional'] ?? []) as $index => $item): ?>
+                                    <li><?php echo editable($item['name'] ?? '', "services.home.optional.$index.name"); ?> -
+                                        <span class="price"><?php echo editable($item['price'] ?? '', "services.home.optional.$index.price"); ?></span>
+                                    </li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="service-cta">
+                            <a href="immediate-need.php" class="btn-primary">Arrange Home Funeral</a>
+                            <a href="#contact" class="btn-outline">Get Guidance</a>
+                        </div>
                     </div>
-                    <h3><?php echo editable($content['services']['home']['title'] ?? '', 'services.home.title'); ?></h3>
-                    <p><?php echo editable($content['services']['home']['description'] ?? '', 'services.home.description'); ?></p>
-                    <ul>
-                        <?php foreach(($content['services']['home']['features'] ?? []) as $featureIndex => $feature): ?>
-                        <li><?php echo editable($feature, "services.home.features.$featureIndex"); ?></li>
-                        <?php endforeach; ?>
-                    </ul>
                 </div>
             </div>
 
-            <div class="additional-services fade-in">
+            <!-- Additional Services Section -->
+            <div class="additional-services-comprehensive fade-in">
                 <h2><?php echo editable($content['additional']['title'] ?? '', 'additional.title'); ?></h2>
-                <div class="additional-grid">
-                    <div class="additional-item">
-                        <h4><?php echo editable($content['additional']['items']['stationery']['title'] ?? '', 'additional.items.stationery.title'); ?></h4>
-                        <p><?php echo editable($content['additional']['items']['stationery']['description'] ?? '', 'additional.items.stationery.description'); ?></p>
+                <p class="section-subtitle"><?php echo editable($content['additional']['subtitle'] ?? '', 'additional.subtitle'); ?></p>
+
+                <div class="additional-services-grid">
+                    <?php foreach(($content['additional']['services'] ?? []) as $key => $service): ?>
+                    <div class="additional-service-card">
+                        <h3><?php echo editable($service['title'] ?? '', "additional.services.$key.title"); ?></h3>
+                        <p><?php echo editable($service['description'] ?? '', "additional.services.$key.description"); ?></p>
+                        <p class="service-price"><?php echo editable($service['price'] ?? '', "additional.services.$key.price"); ?></p>
                     </div>
-                    <div class="additional-item">
-                        <h4><?php echo editable($content['additional']['items']['floral']['title'] ?? '', 'additional.items.floral.title'); ?></h4>
-                        <p><?php echo editable($content['additional']['items']['floral']['description'] ?? '', 'additional.items.floral.description'); ?></p>
-                    </div>
-                    <div class="additional-item">
-                        <h4><?php echo editable($content['additional']['items']['catering']['title'] ?? '', 'additional.items.catering.title'); ?></h4>
-                        <p><?php echo editable($content['additional']['items']['catering']['description'] ?? '', 'additional.items.catering.description'); ?></p>
-                    </div>
-                    <div class="additional-item">
-                        <h4><?php echo editable($content['additional']['items']['jewelry']['title'] ?? '', 'additional.items.jewelry.title'); ?></h4>
-                        <p><?php echo editable($content['additional']['items']['jewelry']['description'] ?? '', 'additional.items.jewelry.description'); ?></p>
-                    </div>
-                    <div class="additional-item">
-                        <h4><?php echo editable($content['additional']['items']['streaming']['title'] ?? '', 'additional.items.streaming.title'); ?></h4>
-                        <p><?php echo editable($content['additional']['items']['streaming']['description'] ?? '', 'additional.items.streaming.description'); ?></p>
-                    </div>
-                    <div class="additional-item">
-                        <h4><?php echo editable($content['additional']['items']['repatriation']['title'] ?? '', 'additional.items.repatriation.title'); ?></h4>
-                        <p><?php echo editable($content['additional']['items']['repatriation']['description'] ?? '', 'additional.items.repatriation.description'); ?></p>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
 
-            <div class="pricing-section fade-in">
-                <h2><?php echo editable($content['pricing']['title'] ?? '', 'pricing.title'); ?></h2>
-                <p><?php echo editable($content['pricing']['subtitle'] ?? '', 'pricing.subtitle'); ?></p>
-                <div class="pricing-cards">
-                    <div class="pricing-card">
-                        <h3><?php echo editable($content['pricing']['packages']['essential']['title'] ?? '', 'pricing.packages.essential.title'); ?></h3>
-                        <p class="price"><?php echo editable($content['pricing']['packages']['essential']['price'] ?? '', 'pricing.packages.essential.price'); ?></p>
-                        <p><?php echo editable($content['pricing']['packages']['essential']['description'] ?? '', 'pricing.packages.essential.description'); ?></p>
-                        <a href="standardised-price-list.php" class="btn-outline"><?php echo $content['pricing']['viewDetailsText'] ?? ''; ?></a>
+            <!-- Payment Options -->
+            <div class="payment-options fade-in">
+                <h2><?php echo editable($content['payment']['title'] ?? '', 'payment.title'); ?></h2>
+                <div class="payment-grid">
+                    <div class="payment-option">
+                        <h3><?php echo editable($content['payment']['options']['immediate']['title'] ?? '', 'payment.options.immediate.title'); ?></h3>
+                        <p><?php echo editable($content['payment']['options']['immediate']['description'] ?? '', 'payment.options.immediate.description'); ?></p>
                     </div>
-                    <div class="pricing-card featured">
-                        <h3><?php echo editable($content['pricing']['packages']['standard']['title'] ?? '', 'pricing.packages.standard.title'); ?></h3>
-                        <p class="price"><?php echo editable($content['pricing']['packages']['standard']['price'] ?? '', 'pricing.packages.standard.price'); ?></p>
-                        <p><?php echo editable($content['pricing']['packages']['standard']['description'] ?? '', 'pricing.packages.standard.description'); ?></p>
-                        <a href="standardised-price-list.php" class="btn-primary"><?php echo $content['pricing']['viewDetailsText'] ?? ''; ?></a>
+                    <div class="payment-option">
+                        <h3><?php echo editable($content['payment']['options']['installment']['title'] ?? '', 'payment.options.installment.title'); ?></h3>
+                        <p><?php echo editable($content['payment']['options']['installment']['description'] ?? '', 'payment.options.installment.description'); ?></p>
                     </div>
-                    <div class="pricing-card">
-                        <h3><?php echo editable($content['pricing']['packages']['premium']['title'] ?? '', 'pricing.packages.premium.title'); ?></h3>
-                        <p class="price"><?php echo editable($content['pricing']['packages']['premium']['price'] ?? '', 'pricing.packages.premium.price'); ?></p>
-                        <p><?php echo editable($content['pricing']['packages']['premium']['description'] ?? '', 'pricing.packages.premium.description'); ?></p>
-                        <a href="standardised-price-list.php" class="btn-outline"><?php echo $content['pricing']['viewDetailsText'] ?? ''; ?></a>
+                    <div class="payment-option">
+                        <h3><?php echo editable($content['payment']['options']['prepaid']['title'] ?? '', 'payment.options.prepaid.title'); ?></h3>
+                        <p><?php echo editable($content['payment']['options']['prepaid']['description'] ?? '', 'payment.options.prepaid.description'); ?></p>
                     </div>
                 </div>
-                <p class="pricing-note"><?php echo editable($content['pricing']['note'] ?? '', 'pricing.note'); ?></p>
+                <p class="payment-note"><?php echo editable($content['payment']['note'] ?? '', 'payment.note'); ?></p>
             </div>
         </div>
     </section>
+
+    <style>
+    /* Comprehensive services page styles */
+    .hero-subtitle {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+        opacity: 0.95;
+    }
+
+    .services-comprehensive {
+        margin-top: 3rem;
+    }
+
+    .service-section {
+        background: #fff;
+        border-radius: 12px;
+        padding: 3rem;
+        margin-bottom: 3rem;
+        box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+        border: 1px solid #f0f0f0;
+    }
+
+    .service-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 2px solid #f0f0f0;
+    }
+
+    .service-header h2 {
+        color: var(--primary-navy);
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    .service-price {
+        text-align: right;
+    }
+
+    .from-text {
+        display: block;
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 0.25rem;
+    }
+
+    .price-amount {
+        font-size: 2rem;
+        font-weight: 600;
+        color: var(--pink);
+    }
+
+    .service-description {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #555;
+        margin-bottom: 2.5rem;
+    }
+
+    .service-details-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .service-included h3,
+    .service-optional h3 {
+        color: var(--primary-navy);
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .service-included ul,
+    .service-optional ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .service-included li,
+    .service-optional li {
+        padding: 0.75rem 0;
+        padding-left: 2rem;
+        position: relative;
+        border-bottom: 1px solid #f5f5f5;
+    }
+
+    .service-included li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #28a745;
+        font-weight: bold;
+    }
+
+    .service-optional li:before {
+        content: "+";
+        position: absolute;
+        left: 0;
+        color: var(--pink);
+        font-weight: bold;
+    }
+
+    .service-optional .price {
+        color: var(--pink);
+        font-weight: 600;
+    }
+
+    .service-cta {
+        display: flex;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .btn-primary,
+    .btn-outline {
+        padding: 0.875rem 2rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s;
+        display: inline-block;
+    }
+
+    .btn-primary {
+        background: var(--pink);
+        color: white;
+        border: 2px solid var(--pink);
+    }
+
+    .btn-primary:hover {
+        background: #d14872;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(226, 103, 138, 0.3);
+    }
+
+    .btn-outline {
+        background: transparent;
+        color: var(--primary-navy);
+        border: 2px solid var(--primary-navy);
+    }
+
+    .btn-outline:hover {
+        background: var(--primary-navy);
+        color: white;
+    }
+
+    .green-certification {
+        background: #f0f9f4;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+        border-left: 4px solid #28a745;
+    }
+
+    .additional-services-comprehensive {
+        background: #fafafa;
+        padding: 3rem;
+        border-radius: 12px;
+        margin-top: 3rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.1rem;
+        color: #666;
+        margin-bottom: 2rem;
+    }
+
+    .additional-services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .additional-service-card {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .additional-service-card h3 {
+        color: var(--primary-navy);
+        font-size: 1.2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .additional-service-card .service-price {
+        color: var(--pink);
+        font-weight: 600;
+        margin-top: 0.75rem;
+    }
+
+    .payment-options {
+        margin-top: 3rem;
+        padding: 3rem;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+    }
+
+    .payment-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .payment-option {
+        padding: 1.5rem;
+        background: #fafafa;
+        border-radius: 8px;
+    }
+
+    .payment-option h3 {
+        color: var(--primary-navy);
+        margin-bottom: 0.75rem;
+    }
+
+    .payment-note {
+        margin-top: 2rem;
+        padding: 1rem;
+        background: #fff9e6;
+        border-radius: 8px;
+        color: #856404;
+        text-align: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .service-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .service-price {
+            text-align: left;
+            margin-top: 1rem;
+        }
+
+        .service-details-grid,
+        .additional-services-grid,
+        .payment-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .service-cta {
+            flex-direction: column;
+        }
+
+        .service-section {
+            padding: 2rem 1.5rem;
+        }
+    }
+    </style>
 
 <?php
 // Include footer (which now includes the contact form)
