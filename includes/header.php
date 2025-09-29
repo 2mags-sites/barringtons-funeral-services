@@ -116,9 +116,9 @@ if (!isset($page_keywords)) $page_keywords = 'funeral directors Liverpool, indep
                 </div>
                 <a href="our-location.php">Locations</a>
                 <a href="#contact">Contact Us</a>
-                <a href="#estimator" class="contact-btn mobile-estimator">Funeral Estimator</a>
+                <a href="https://estimator.barringtonsfunerals.com/" target="_blank" class="contact-btn mobile-estimator">Funeral Estimator</a>
             </nav>
-            <a href="#estimator" class="contact-btn desktop-estimator">Funeral Estimator</a>
+            <a href="https://estimator.barringtonsfunerals.com/" target="_blank" class="contact-btn desktop-estimator">Funeral Estimator</a>
         </div>
     </header>
 
