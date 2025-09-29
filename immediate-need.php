@@ -62,6 +62,10 @@ require_once 'includes/header.php';
                 </ul>
 
                 <p class="highlight-text"><?php echo editable($content['remember']['highlight'] ?? '', 'remember.highlight'); ?></p>
+
+                <p class="services-link">
+                    <a href="services-overview.php"><?php echo editable($content['remember']['servicesLinkText'] ?? 'For all of our services and prices, click here', 'remember.servicesLinkText'); ?></a>
+                </p>
             </div>
 
             <div class="cta-section fade-in">
@@ -194,6 +198,28 @@ require_once 'includes/header.php';
             .steps-container .info-card h3 {
                 font-size: 1.2rem;
             }
+        }
+
+        /* Services link styling */
+        .services-link {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e0e0e0;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        .services-link a {
+            color: var(--pink, #de3280);
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .services-link a:hover {
+            color: #c02970;
+            border-bottom-color: var(--pink, #de3280);
         }
     </style>
 

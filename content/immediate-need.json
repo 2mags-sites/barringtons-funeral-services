@@ -54,7 +54,8 @@
             "You don't have to remember everything \u2013 we'll remind you what's needed",
             "It's okay to ask for help from family and friends"
         ],
-        "highlight": "Your first call to us is often the hardest. Once you've made it, we'll be with you every step of the way."
+        "highlight": "Your first call to us is often the hardest. Once you've made it, we'll be with you every step of the way.",
+        "servicesLinkText": "For all of our services and prices, click here"
     },
     "cta": {
         "title": "We're Here to Help",
