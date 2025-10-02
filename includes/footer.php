@@ -101,6 +101,7 @@
         </div>
         <div class="footer-bottom">
             <p>&copy; <?php echo date('Y'); ?> Barringtons Funerals. All Rights Reserved | <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-service">Terms of Service</a></p>
+            <p style="text-align: center; margin-top: 10px;">Barringtons Funeral Services Ltd is an appointed representative of Ecclesiastical Planning Services Ltd which is authorised and regulated by the Financial Conduct Authority (FRN:958152).</p>
         </div>
     </footer>
 
