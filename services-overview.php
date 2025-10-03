@@ -53,8 +53,13 @@ require_once 'includes/header.php';
                             </div>
                         </div>
 
-                        <div class="service-description">
-                            <?php echo editable($content['services']['traditional']['fullDescription'] ?? '', 'services.traditional.fullDescription'); ?>
+                        <div class="service-description-with-image">
+                            <div class="service-description">
+                                <?php echo editable($content['services']['traditional']['fullDescription'] ?? '', 'services.traditional.fullDescription'); ?>
+                            </div>
+                            <div class="service-description-image">
+                                <?php echo editableImage($content['services']['traditional']['image'] ?? '', 'services.traditional.image', 'Traditional Funeral Service', 'Traditional Funeral'); ?>
+                            </div>
                         </div>
 
                         <div class="service-details-grid">
@@ -81,7 +86,7 @@ require_once 'includes/header.php';
 
                         <div class="service-cta">
                             <a href="immediate-need.php" class="btn-primary">Arrange This Service</a>
-                            <a href="standardised-price-list.php" class="btn-outline">View Full Price List</a>
+                            <a href="https://estimator.barringtonsfunerals.com/#/" class="btn-outline" target="_blank">Launch Funeral Cost Estimator</a>
                         </div>
                     </div>
                 </div>
@@ -97,8 +102,13 @@ require_once 'includes/header.php';
                             </div>
                         </div>
 
-                        <div class="service-description">
-                            <?php echo editable($content['services']['contemporary']['fullDescription'] ?? '', 'services.contemporary.fullDescription'); ?>
+                        <div class="service-description-with-image">
+                            <div class="service-description">
+                                <?php echo editable($content['services']['contemporary']['fullDescription'] ?? '', 'services.contemporary.fullDescription'); ?>
+                            </div>
+                            <div class="service-description-image">
+                                <?php echo editableImage($content['services']['contemporary']['image'] ?? '', 'services.contemporary.image', 'Contemporary Celebration Service', 'Contemporary Celebration'); ?>
+                            </div>
                         </div>
 
                         <div class="service-details-grid">
@@ -125,51 +135,7 @@ require_once 'includes/header.php';
 
                         <div class="service-cta">
                             <a href="immediate-need.php" class="btn-primary">Arrange This Service</a>
-                            <a href="personalisation.php" class="btn-outline">Explore Personalisation</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Direct Cremation Service -->
-                <div class="service-section fade-in" id="direct-cremation">
-                    <div class="service-content">
-                        <div class="service-header">
-                            <h2><?php echo editable($content['services']['direct']['title'] ?? '', 'services.direct.title'); ?></h2>
-                            <div class="service-price">
-                                <span class="from-text">From</span>
-                                <span class="price-amount"><?php echo editable($content['services']['direct']['price'] ?? '', 'services.direct.price'); ?></span>
-                            </div>
-                        </div>
-
-                        <div class="service-description">
-                            <?php echo editable($content['services']['direct']['fullDescription'] ?? '', 'services.direct.fullDescription'); ?>
-                        </div>
-
-                        <div class="service-details-grid">
-                            <div class="service-included">
-                                <h3>What's Included:</h3>
-                                <ul>
-                                    <?php foreach(($content['services']['direct']['included'] ?? []) as $index => $item): ?>
-                                    <li><?php echo editable($item, "services.direct.included.$index"); ?></li>
-                                    <?php endforeach; ?>
-                                </ul>
-                            </div>
-
-                            <div class="service-optional">
-                                <h3>Additional Options:</h3>
-                                <ul>
-                                    <?php foreach(($content['services']['direct']['optional'] ?? []) as $index => $item): ?>
-                                    <li><?php echo editable($item['name'] ?? '', "services.direct.optional.$index.name"); ?> -
-                                        <span class="price"><?php echo editable($item['price'] ?? '', "services.direct.optional.$index.price"); ?></span>
-                                    </li>
-                                    <?php endforeach; ?>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="service-cta">
-                            <a href="immediate-need.php" class="btn-primary">Arrange Direct Cremation</a>
-                            <a href="#contact" class="btn-outline">Discuss Options</a>
+                            <a href="https://estimator.barringtonsfunerals.com/#/" class="btn-outline" target="_blank">Launch Funeral Cost Estimator</a>
                         </div>
                     </div>
                 </div>
@@ -185,8 +151,13 @@ require_once 'includes/header.php';
                             </div>
                         </div>
 
-                        <div class="service-description">
-                            <?php echo editable($content['services']['green']['fullDescription'] ?? '', 'services.green.fullDescription'); ?>
+                        <div class="service-description-with-image">
+                            <div class="service-description">
+                                <?php echo editable($content['services']['green']['fullDescription'] ?? '', 'services.green.fullDescription'); ?>
+                            </div>
+                            <div class="service-description-image">
+                                <?php echo editableImage($content['services']['green']['image'] ?? '', 'services.green.image', 'Green Funeral Service', 'Green Funeral'); ?>
+                            </div>
                         </div>
 
                         <div class="service-details-grid">
@@ -217,7 +188,7 @@ require_once 'includes/header.php';
 
                         <div class="service-cta">
                             <a href="immediate-need.php" class="btn-primary">Arrange Green Funeral</a>
-                            <a href="#contact" class="btn-outline">Learn More</a>
+                            <a href="https://estimator.barringtonsfunerals.com/#/" class="btn-outline" target="_blank">Launch Funeral Cost Estimator</a>
                         </div>
                     </div>
                 </div>
@@ -233,8 +204,13 @@ require_once 'includes/header.php';
                             </div>
                         </div>
 
-                        <div class="service-description">
-                            <?php echo editable($content['services']['religious']['fullDescription'] ?? '', 'services.religious.fullDescription'); ?>
+                        <div class="service-description-with-image">
+                            <div class="service-description">
+                                <?php echo editable($content['services']['religious']['fullDescription'] ?? '', 'services.religious.fullDescription'); ?>
+                            </div>
+                            <div class="service-description-image">
+                                <?php echo editableImage($content['services']['religious']['image'] ?? '', 'services.religious.image', 'Religious Funeral Service', 'Religious Service'); ?>
+                            </div>
                         </div>
 
                         <div class="service-details-grid">
@@ -259,7 +235,7 @@ require_once 'includes/header.php';
 
                         <div class="service-cta">
                             <a href="immediate-need.php" class="btn-primary">Arrange Religious Service</a>
-                            <a href="#contact" class="btn-outline">Discuss Requirements</a>
+                            <a href="https://estimator.barringtonsfunerals.com/#/" class="btn-outline" target="_blank">Launch Funeral Cost Estimator</a>
                         </div>
                     </div>
                 </div>
@@ -275,8 +251,13 @@ require_once 'includes/header.php';
                             </div>
                         </div>
 
-                        <div class="service-description">
-                            <?php echo editable($content['services']['home']['fullDescription'] ?? '', 'services.home.fullDescription'); ?>
+                        <div class="service-description-with-image">
+                            <div class="service-description">
+                                <?php echo editable($content['services']['home']['fullDescription'] ?? '', 'services.home.fullDescription'); ?>
+                            </div>
+                            <div class="service-description-image">
+                                <?php echo editableImage($content['services']['home']['image'] ?? '', 'services.home.image', 'Home Funeral Service', 'Home Funeral'); ?>
+                            </div>
                         </div>
 
                         <div class="service-details-grid">
@@ -303,7 +284,7 @@ require_once 'includes/header.php';
 
                         <div class="service-cta">
                             <a href="immediate-need.php" class="btn-primary">Arrange Home Funeral</a>
-                            <a href="#contact" class="btn-outline">Get Guidance</a>
+                            <a href="https://estimator.barringtonsfunerals.com/#/" class="btn-outline" target="_blank">Launch Funeral Cost Estimator</a>
                         </div>
                     </div>
                 </div>
@@ -316,11 +297,19 @@ require_once 'includes/header.php';
 
                 <div class="additional-services-grid">
                     <?php foreach(($content['additional']['services'] ?? []) as $key => $service): ?>
+                    <?php if (isset($service['link'])): ?>
+                    <a href="<?php echo $service['link']; ?>" class="additional-service-card additional-service-link">
+                        <h3><?php echo editable($service['title'] ?? '', "additional.services.$key.title"); ?></h3>
+                        <p><?php echo editable($service['description'] ?? '', "additional.services.$key.description"); ?></p>
+                        <p class="service-price"><?php echo editable($service['price'] ?? '', "additional.services.$key.price"); ?></p>
+                    </a>
+                    <?php else: ?>
                     <div class="additional-service-card">
                         <h3><?php echo editable($service['title'] ?? '', "additional.services.$key.title"); ?></h3>
                         <p><?php echo editable($service['description'] ?? '', "additional.services.$key.description"); ?></p>
                         <p class="service-price"><?php echo editable($service['price'] ?? '', "additional.services.$key.price"); ?></p>
                     </div>
+                    <?php endif; ?>
                     <?php endforeach; ?>
                 </div>
             </div>
@@ -378,7 +367,7 @@ require_once 'includes/header.php';
     }
 
     .service-header h2 {
-        color: var(--primary-navy);
+        color: var(--navy);
         font-size: 2rem;
         margin: 0;
     }
@@ -395,16 +384,31 @@ require_once 'includes/header.php';
     }
 
     .price-amount {
-        font-size: 2rem;
-        font-weight: 600;
-        color: var(--pink);
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #666;
+    }
+
+    .service-description-with-image {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+        margin-bottom: 2.5rem;
+        align-items: start;
     }
 
     .service-description {
         font-size: 1.1rem;
         line-height: 1.8;
         color: #555;
-        margin-bottom: 2.5rem;
+    }
+
+    .service-description-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+        max-height: 300px;
     }
 
     .service-details-grid {
@@ -416,7 +420,7 @@ require_once 'includes/header.php';
 
     .service-included h3,
     .service-optional h3 {
-        color: var(--primary-navy);
+        color: var(--navy);
         font-size: 1.3rem;
         margin-bottom: 1rem;
     }
@@ -452,8 +456,9 @@ require_once 'includes/header.php';
     }
 
     .service-optional .price {
-        color: var(--pink);
-        font-weight: 600;
+        color: #666;
+        font-weight: 700;
+        font-size: 1rem;
     }
 
     .service-cta {
@@ -484,15 +489,18 @@ require_once 'includes/header.php';
         box-shadow: 0 4px 12px rgba(226, 103, 138, 0.3);
     }
 
-    .btn-outline {
-        background: transparent;
-        color: var(--primary-navy);
-        border: 2px solid var(--primary-navy);
+    .service-cta .btn-outline {
+        background: white !important;
+        color: var(--navy) !important;
+        border: 2px solid var(--navy) !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
     }
 
-    .btn-outline:hover {
-        background: var(--primary-navy);
-        color: white;
+    .service-cta .btn-outline:hover {
+        background: white !important;
+        color: var(--navy) !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(44, 85, 48, 0.3) !important;
     }
 
     .green-certification {
@@ -528,17 +536,30 @@ require_once 'includes/header.php';
         padding: 1.5rem;
         border-radius: 8px;
         box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        display: block;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .additional-service-link {
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .additional-service-link:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 20px rgba(0,0,0,0.15);
     }
 
     .additional-service-card h3 {
-        color: var(--primary-navy);
+        color: var(--navy);
         font-size: 1.2rem;
         margin-bottom: 0.75rem;
     }
 
     .additional-service-card .service-price {
-        color: var(--pink);
-        font-weight: 600;
+        color: #666;
+        font-weight: 700;
         margin-top: 0.75rem;
     }
 
@@ -564,7 +585,7 @@ require_once 'includes/header.php';
     }
 
     .payment-option h3 {
-        color: var(--primary-navy);
+        color: var(--navy);
         margin-bottom: 0.75rem;
     }
 
@@ -589,6 +610,7 @@ require_once 'includes/header.php';
             margin-top: 1rem;
         }
 
+        .service-description-with-image,
         .service-details-grid,
         .additional-services-grid,
         .payment-grid {

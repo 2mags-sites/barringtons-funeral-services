@@ -47,18 +47,60 @@ require_once 'includes/header.php';
                         </div>
                     </div>
 
+                    <!-- David Barrington -->
                     <div class="info-card fade-in">
                         <div class="card-content">
                             <div class="card-image">
-                                <?php echo editableImage($content['about']['director']['image'] ?? '', 'about.director.image', 'David Barrington Director', 'David Barrington - Director'); ?>
+                                <?php echo editableImage($content['about']['david']['image'] ?? '', 'about.david.image', 'David Barrington Director', 'David Barrington - Director'); ?>
                             </div>
                             <div class="card-text">
-                                <h3><?php echo editable($content['about']['director']['name'] ?? '', 'about.director.name'); ?></h3>
-                                <p><strong><?php echo editable($content['about']['director']['title'] ?? '', 'about.director.title'); ?></strong></p>
-                                <p><?php echo editable($content['about']['director']['description'] ?? '', 'about.director.description'); ?></p>
+                                <h3><?php echo editable($content['about']['david']['name'] ?? '', 'about.david.name'); ?></h3>
+                                <p><strong><?php echo editable($content['about']['david']['title'] ?? '', 'about.david.title'); ?></strong></p>
+                                <p><?php echo editable($content['about']['david']['description'] ?? '', 'about.david.description'); ?></p>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Claire Barrington -->
+                    <div class="info-card fade-in">
+                        <div class="card-content card-content-reverse">
+                            <div class="card-text">
+                                <h3><?php echo editable($content['about']['claire']['name'] ?? '', 'about.claire.name'); ?></h3>
+                                <p><strong><?php echo editable($content['about']['claire']['title'] ?? '', 'about.claire.title'); ?></strong></p>
+                                <p><?php echo editable($content['about']['claire']['description'] ?? '', 'about.claire.description'); ?></p>
+                            </div>
+                            <div class="card-image">
+                                <?php echo editableImage($content['about']['claire']['image'] ?? '', 'about.claire.image', 'Claire Barrington Director', 'Claire Barrington - Director'); ?>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Staff Members -->
+                    <?php
+                    $staff_members = $content['about']['staff'] ?? [];
+                    foreach ($staff_members as $index => $staff):
+                        $is_reverse = ($index % 2 !== 0);
+                    ?>
+                    <div class="info-card fade-in">
+                        <div class="card-content <?php echo $is_reverse ? 'card-content-reverse' : ''; ?>">
+                            <?php if (!$is_reverse): ?>
+                            <div class="card-image">
+                                <?php echo editableImage($staff['image'] ?? '', "about.staff.$index.image", $staff['name'] ?? 'Staff Member', $staff['name'] ?? 'Staff Member'); ?>
+                            </div>
+                            <?php endif; ?>
+                            <div class="card-text">
+                                <h3><?php echo editable($staff['name'] ?? '', "about.staff.$index.name"); ?></h3>
+                                <p><strong><?php echo editable($staff['title'] ?? '', "about.staff.$index.title"); ?></strong></p>
+                                <p><?php echo editable($staff['description'] ?? '', "about.staff.$index.description"); ?></p>
+                            </div>
+                            <?php if ($is_reverse): ?>
+                            <div class="card-image">
+                                <?php echo editableImage($staff['image'] ?? '', "about.staff.$index.image", $staff['name'] ?? 'Staff Member', $staff['name'] ?? 'Staff Member'); ?>
+                            </div>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                    <?php endforeach; ?>
 
                     <div class="promise-section fade-in">
                         <h2><?php echo editable($content['about']['promise']['title'] ?? '', 'about.promise.title'); ?></h2>

@@ -9,24 +9,70 @@
             "title": "About Barringtons",
             "subtitle": "A family caring for families",
             "description1": "As a strong family-run business we are committed to our families through these times with warmth, understanding, and genuine compassion.",
-            "description2": "Founded by Bill Barrington, our funeral service has been an integral part of Liverpool's community for generations. Now run by David and Claire Barrington, we understand that every family has a story, and every goodbye deserves to be as unique and special as the life it honors.",
+            "description2": "Founded by Bill Barrington, our funeral service has been an integral part of Liverpool's community for many years. Now, wholly owned and run by David and Claire Barrington, we understand that every family has a story, and every goodbye deserves to be as unique and special as the life it honours.",
             "image": "\/assets\/images\/uploads\/img_68d24371d7428_1758610289.jpg"
         },
         "company": {
             "number": "07587745"
         },
-        "director": {
-            "name": "David Barrington - Director<br>Claire Barrington - Director<br>",
-            "title": "NAFD President 2019-2021 | NAFD Approved Tutor",
-            "description": "With over 30 years in funeral care, David and Claire Barrington continue a legacy of compassion and understanding, helping families through their most difficult times with patience and respect. David's distinguished service as NAFD President and his role as an approved tutor demonstrates our commitment to the highest standards in funeral care."
+        "david": {
+            "name": "David Barrington",
+            "title": "Director | NAFD President 2019-2021 | NAFD Approved Tutor",
+            "description": "David continues a legacy of compassion and understanding, helping families through their most difficult times with patience and respect. His distinguished service as NAFD President and his role as an approved tutor demonstrates our commitment to the highest standards in funeral care.",
+            "image": "\/assets\/images\/uploads\/img_68dfa0ef077d7_1759486191.jpg"
         },
+        "claire": {
+            "name": "Claire Barrington",
+            "title": "Director | BA.Hons, Dip FD",
+            "description": "Claire brings a wealth of knowledge and genuine care to every family she works with. Her dedication to providing personal, thoughtful service ensures that each family receives the compassionate support they deserve during difficult times.",
+            "image": "assets\/images\/placeholder-person.jpg"
+        },
+        "staff": [
+            {
+                "name": "Sarah Mitchell",
+                "title": "Funeral Director",
+                "description": "With over 10 years of experience, Sarah provides compassionate guidance to families during their most difficult times. She is dedicated to ensuring every detail is handled with care and respect.",
+                "image": "assets\/images\/placeholder-person.jpg"
+            },
+            {
+                "name": "James Thompson",
+                "title": "Senior Funeral Arranger",
+                "description": "James has been with Barringtons for 8 years, bringing warmth and professionalism to every arrangement. His attention to detail ensures that each service is truly personal and meaningful.",
+                "image": "assets\/images\/placeholder-person.jpg"
+            },
+            {
+                "name": "Helen Roberts",
+                "title": "Funeral Administrator",
+                "description": "Helen manages the administrative side of our services with efficiency and care. Her organizational skills and gentle approach help families navigate the practical aspects of funeral arrangements.",
+                "image": "assets\/images\/placeholder-person.jpg"
+            },
+            {
+                "name": "Michael Davies",
+                "title": "Funeral Director",
+                "description": "Michael's calm and reassuring presence helps families feel supported throughout the entire process. With 15 years in the profession, he brings both expertise and genuine compassion to his role.",
+                "image": "assets\/images\/placeholder-person.jpg"
+            },
+            {
+                "name": "Emma Wilson",
+                "title": "Bereavement Support Coordinator",
+                "description": "Emma provides ongoing support to families, offering guidance and resources during the grieving process. Her empathetic nature and professional training make her an invaluable member of our team.",
+                "image": "assets\/images\/placeholder-person.jpg"
+            },
+            {
+                "name": "Thomas Baker",
+                "title": "Funeral Operative",
+                "description": "Thomas ensures that every aspect of our services runs smoothly behind the scenes. His dedication to maintaining the highest standards reflects the care and respect we have for every family we serve.",
+                "image": "assets\/images\/placeholder-person.jpg"
+            }
+        ],
         "promise": {
             "title": "Our Promise to You",
-            "description": "When you choose Barringtons, you're entrusting us with the privilege of celebrating your loved one's life. We promise to guide you with patience and care, always respecting your wishes, no matter how unique or traditional they may be.",
+            "description": "When you choose Barringtons, you're entrusting us with the privilege of celebrating your loved one's life. We promise to guide you with patience and care, always respecting your wishes, no matter how unique or traditional they may be.&nbsp;",
             "trusted_title": "Trusted Care",
-            "trusted_description": "We're proud members of the National Association of Funeral Directors (NAFD), Society of Allied and Independent Funeral Directors (SAIF), Association of Green Funeral Directors, and recommended by the Good Funeral Guide for our high standards of care.",
+            "trusted_description": "As a company we are proud members of the National Association of Funeral Directors (NAFD), Society of Allied and Independent Funeral Directors (SAIF), Association of Green Funeral Directors, and recommended by the Good Funeral Guide for our high standards of care.<br>We also pledge to be as environmentally sound as we can be and we hold a Gold Standard from the Greener Globe Funeral Standard for our continuing ethos to help the planet.&nbsp;<br>",
             "growing_title": "Growing Hope",
-            "growing_description": "For every funeral we arrange, we plant a memorial tree - over 3,000 planted so far. It's our way of creating something lasting and positive from moments of loss, providing families with a living tribute to their loved one."
+            "growing_description": "For every funeral we arrange, we plant a memorial tree - over 3,000 planted so far. It's our way of creating something lasting and positive from moments of loss, providing families with a living tribute to their loved one. Our partners plant trees in and around the UK and have&nbsp;",
+            "growing_image": "\/assets\/images\/uploads\/img_68dfa02a705f3_1759485994.jpg"
         },
         "locations": {
             "title": "Our Three Offices - Always Close By",
@@ -35,14 +81,14 @@
                 "name": "Waterloo Office",
                 "tag": "Main Office - 24 Hour Support",
                 "address": "23 Crosby Rd North, Waterloo, L22 4QF",
-                "hours": "Open 24 hours, 7 days a week",
+                "hours": "Monday - Friday, 9am - 5pm",
                 "note": "Our main office with full facilities including chapel of rest and arrangement rooms."
             },
             "formby": {
                 "name": "Formby Office",
                 "tag": "24hr Support on call",
                 "address": "49 Liverpool Road, Formby, L37 6BT.",
-                "hours": "Branch 10-4pm",
+                "hours": "Monday - Friday, 10am -4pm",
                 "note": "Serving the Formby community with personal, dedicated service, including chapels of rest."
             },
             "netherton": {

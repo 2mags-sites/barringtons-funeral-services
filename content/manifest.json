@@ -1,0 +1,28 @@
+{
+    "site": "barr.2magpiesseo.co.uk",
+    "backup_date": "2025-10-03 12:12:46",
+    "file_count": 21,
+    "files": [
+        "about-us.json",
+        "blog-news.json",
+        "coffins.json",
+        "etiquette.json",
+        "frequently-asked-questions.json",
+        "funeral-notices.json",
+        "helpful-links.json",
+        "immediate-need.json",
+        "index.json",
+        "muchloved-tributes.json",
+        "our-facilities.json",
+        "our-location.json",
+        "personalisation.json",
+        "pet-products.json",
+        "planning-ahead.json",
+        "repatriation.json",
+        "services-overview.json",
+        "social-security-benefits.json",
+        "standardised-price-list.json",
+        "transport.json",
+        "when-a-death-occurs.json"
+    ]
+}

@@ -17,22 +17,22 @@
         {
             "number": "Step 2",
             "title": "Call for Help",
-            "description": "Call us first at 0151 928 1625 \u2013 we have a funeral director available at all times. We'll guide you through everything that needs to happen and take as much of the burden as possible, allowing you time to collect your thoughts. <br><br>If the person who has died is at home or in a nursing home a medic will need to verify the death has occurred before we can transfer them into our care.&nbsp;"
+            "description": "Call us first at 0151 928 1625 \u2013 we have a funeral director available at all times. <br>We'll guide you through everything that needs to happen and take as much of the burden as possible, allowing you time to collect your thoughts.<br>If the person who has died is at home or in a nursing home a suitably qualified medic will need to verify the death has occurred before we can transfer them into our care.&nbsp;"
         },
         {
             "number": "Step 3",
             "title": "Medical Certification",
             "description": "A doctor will need to certify the death.:",
             "list": [
-                "The doctor who treated your loved one will complete a Medical Certificate of Cause of Death",
-                "A Medical Examiner will review this and call you to discuss any concerns",
-                "Once approved, the information goes to the Registrar"
+                "A doctor who treated your loved one will complete a Medical Certificate of Cause of Death.",
+                "A Medical Examiner will review this and call you to discuss any concerns and explain the cause of death.",
+                "Once discussed and approved, the information is sent to the Registrar."
             ]
         },
         {
             "number": "Step 4",
             "title": "Register the Death",
-            "description": "You'll need to make an appointment at the Register Office. Don't worry if you can't do this immediately.",
+            "description": "You'll need to make an appointment at the Register Office. Don't worry if you can't do this immediately, you will need to take some personal items with you.",
             "subtitle": "What to bring (if available):",
             "list": [
                 "Birth certificate or passport of your loved one",
@@ -43,18 +43,18 @@
         {
             "number": "Step 5",
             "title": "Special Circumstances",
-            "description": "If the death was unexpected, sudden, or occurred in certain circumstances, the Coroner may be involved. This is routine procedure \u2013 we'll support you through this process if needed."
+            "description": "If the death was unexpected, sudden, or occurred in certain circumstances, the Coroner may be involved. This is routine procedure and nothing to worry about \u2013 we'll support you through this process if needed."
         }
     ],
     "remember": {
         "title": "Remember:",
         "points": [
-            "There's no need to rush",
-            "We're available 24\/7 to guide you",
-            "You don't have to remember everything \u2013 we'll remind you what's needed",
-            "It's okay to ask for help from family and friends"
+            "There's no need to rush.",
+            "We're available 24\/7 to guide you.",
+            "You don't have to remember everything \u2013 we'll remind you what's needed.",
+            "It's okay to ask for help from family and friends."
         ],
-        "highlight": "Your first call to us is often the hardest. Once you've made it, we'll be with you every step of the way.",
+        "highlight": "Your first call to us is often the hardest. Once you've called us, we'll be with you every step of the way.",
         "servicesLinkText": "For all of our services and prices, click here"
     },
     "cta": {

@@ -1418,6 +1418,10 @@ footer {
     align-items: start;
 }
 
+.card-content-reverse {
+    grid-template-columns: 1fr 400px;
+}
+
 .card-image img {
     width: 100%;
     border-radius: 10px;

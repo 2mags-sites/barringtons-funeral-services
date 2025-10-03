@@ -159,26 +159,6 @@ require_once 'includes/header.php';
         </div>
     </section>
 
-    <!-- The rest of the sections remain the same -->
-    <section class="news-section">
-        <div class="news-content">
-            <h2><?php echo editable($content['news']['title'] ?? '', 'news.title'); ?></h2>
-            <p><?php echo editable($content['news']['subtitle'] ?? '', 'news.subtitle'); ?></p>
-            <?php foreach(($content['news']['articles'] ?? []) as $index => $article): ?>
-            <div class="news-card fade-in">
-                <div class="news-date"><?php echo editable($article['date'] ?? '', "news.articles.$index.date"); ?></div>
-                <h3><?php echo editable($article['title'] ?? '', "news.articles.$index.title"); ?></h3>
-                <p><?php echo editable($article['excerpt'] ?? '', "news.articles.$index.excerpt"); ?></p>
-                <a href="<?php echo $article['link'] ?? '#'; ?>" class="read-more"><?php echo $content['news']['readMoreText'] ?? ''; ?></a>
-            </div>
-            <?php endforeach; ?>
-            <div class="news-cta">
-                <p><?php echo editable($content['news']['cta']['text'] ?? '', 'news.cta.text'); ?></p>
-                <h3><?php echo editable($content['news']['cta']['phone'] ?? '', 'news.cta.phone'); ?></h3>
-            </div>
-        </div>
-    </section>
-
     <section class="branches-section">
         <div class="container">
             <h2><?php echo editable($content['branches']['title'] ?? '', 'branches.title'); ?></h2>

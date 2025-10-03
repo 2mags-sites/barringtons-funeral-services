@@ -6,26 +6,26 @@
     },
     "intro": {
         "title": "Our Coffin Range",
-        "subtitle": "From traditional veneered and solid wood to eco-friendly alternatives, we offer a wide selection to suit your preferences and budgets."
+        "subtitle": "Barrington's can offer a wide selection of coffins to suit your preferences and budget. We can fully advise and discuss materials, design and ideas to fulfil a simple last request or create a strong reflection of someone's life.&nbsp;"
     },
     "options": [
         {
             "title": "Traditional Wood",
             "description": "Classic veneered and solid wood coffins in oak, mahogany, and pine with various handle and lining options.",
-            "price": "From £400",
-            "image": "https://via.placeholder.com/400x300/f5f5f5/666666?text=Traditional+Wood+Coffins"
+            "price": "From \u00a3400",
+            "image": "\/assets\/images\/uploads\/img_68dfb2223560e_1759490594.jpg"
         },
         {
-            "title": "Eco-Friendly",
+            "title": "Environmentally Friendly",
             "description": "Biodegradable options including willow, bamboo, and cardboard for natural burials.",
-            "price": "From £350",
-            "image": "https://via.placeholder.com/400x300/e8f4e8/666666?text=Eco-Friendly+Coffins"
+            "price": "From \u00a3350",
+            "image": "\/assets\/images\/uploads\/img_68dfb1f9715a9_1759490553.jpg"
         },
         {
-            "title": "Personalised",
+            "title": "Personalised Designs",
             "description": "Custom designs, photo wraps, and themed coffins to celebrate individuality.",
-            "price": "From £550",
-            "image": "https://via.placeholder.com/400x300/fce4ec/666666?text=Personalised+Coffins"
+            "price": "From \u00a3550",
+            "image": "\/assets\/images\/uploads\/img_68dfb8bc3a968_1759492284.jpg"
         }
     ],
     "cta": {

@@ -13,7 +13,7 @@
     "hero": {
         "card1": {
             "title": "Immediate Need",
-            "description": "Our caring team is here to guide you through <br>every step in making funeral arrangements..&nbsp;",
+            "description": "Our warm and friendly team is here to guide you <br>through every step in making funeral arrangements..&nbsp;",
             "buttonText": "Begin Planning",
             "buttonLink": "immediate-need.php"
         },
@@ -46,7 +46,7 @@
         "image": "assets\/images\/family.jpg"
     },
     "services": {
-        "title": "Services We Offer",
+        "title": "Services we offer",
         "service1": {
             "title": "Arrange a Funeral",
             "description": "Compassionate guidance through every step of planning a meaningful farewell for your loved one.&nbsp;",
@@ -54,46 +54,23 @@
         },
         "service2": {
             "title": "Funeral Estimator",
-            "description": "Transparent pricing to help you plan within your budget, whatever your budget.",
+            "description": "Transparent pricing to help you plan within your budget, whatever your budget.<br><a href=\"https:\/\/estimator.barringtonsfunerals.com\/#\/\">Barringtons Funeral Calculator<\/a><br>",
             "image": "\/assets\/images\/uploads\/img_68d10c499c4de_1758530633.jpg"
         },
         "service3": {
             "title": "Finance for Funerals",
-            "description": "Our partner Funeral Safe Finance may be of assistance if you need some extra financial help to pay for the service you want.&nbsp;",
-            "image": "\/assets\/images\/uploads\/img_68d10c53f3315_1758530643.jpg"
+            "description": "Our partner Funeral Safe Finance may be of assistance if you need some extra financial help to pay for the service you want.&nbsp;<br>https:\/\/funeralsafe.co.uk\/barringtons",
+            "image": "\/assets\/images\/uploads\/img_68dfaf38bdee6_1759489848.webp"
         },
         "service4": {
             "title": "Planning Ahead",
-            "description": "Information about preplanning your funeral service this can be very helpful to your loved ones providing peace of mind and financial support.&nbsp;",
-            "image": "\/assets\/images\/uploads\/img_68d10c5b11df2_1758530651.jpg"
+            "description": "Information about preplanning your funeral service this can be very helpful to your loved ones providing peace of mind and financial support.&nbsp;<br><a href=\"https:\/\/barr.2magpiesseo.co.uk\/planning-ahead\">Plan Ahead - Funeral Pre-Planning | Barringtons Liverpool<\/a>",
+            "image": "\/assets\/images\/uploads\/img_68dfaa3c045e0_1759488572.jpg"
         }
-    },
-    "news": {
-        "title": "Latest News & Support",
-        "subtitle": "Updates and helpful resources for our community",
-        "articles": [
-            {
-                "date": "March 2024",
-                "title": "Understanding Grief: A Guide for Families",
-                "excerpt": "Grief is a natural response to loss, and everyone experiences it differently...",
-                "link": "helpful-links.php"
-            },
-            {
-                "date": "February 2024",
-                "title": "New Eco-Friendly Options Available",
-                "excerpt": "We're pleased to announce expanded green funeral options...",
-                "link": "services-overview.php"
-            }
-        ],
-        "cta": {
-            "text": "Need immediate assistance?",
-            "phone": "Call us 24\/7 on 0151 928 1625"
-        },
-        "readMoreText": "Read More →"
     },
     "branches": {
         "title": "Our Funeral Homes",
-        "subtitle": "Three locations across Liverpool to serve you",
+        "subtitle": "Our 3 locations across North Liverpool to serve you",
         "labels": {
             "address": "Address:",
             "phone": "Phone:",
@@ -103,21 +80,21 @@
             {
                 "name": "Waterloo",
                 "image": "\/assets\/images\/uploads\/img_68d0fb889e9be_1758526344.jpg",
-                "address": "28 Crosby Rd North, Waterloo L22 4QF",
+                "address": "&nbsp; &nbsp; &nbsp; &nbsp;28 Crosby Rd North, Waterloo L22 4QF",
                 "phone": "0151 928 1625 (24 hours)",
                 "hours": "Monday - Friday, 9am - 5pm<br>"
             },
             {
                 "name": "Formby",
                 "image": "\/assets\/images\/uploads\/img_68d1008e9e115_1758527630.jpg",
-                "address": "49 Liverpool Road, Formby L37 6BT",
-                "phone": "01704 547851 (24 hours)",
-                "hours": "Monday - Friday, 9am - 5pm"
+                "address": "&nbsp; &nbsp; &nbsp; &nbsp;49 Liverpool Road, Formby L37 6BT",
+                "phone": "01704 461511 (24 hours)",
+                "hours": "Monday - Friday, 10am - 4pm"
             },
             {
                 "name": "Netherton",
-                "image": "\/assets\/images\/uploads\/img_68d0fb8f69b65_1758526351.jpg",
-                "address": "38 The Marian Square, Netherton L30 5QA",
+                "image": "\/assets\/images\/uploads\/img_68dfa57552724_1759487349.jpg",
+                "address": "&nbsp; &nbsp; &nbsp; &nbsp;38 The Marian Square, Netherton L30 5QA",
                 "phone": "0151 329 3525 (24 hours)",
                 "hours": "Monday - Friday, 9am - 5pm"
             }

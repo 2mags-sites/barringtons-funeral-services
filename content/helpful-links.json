@@ -10,27 +10,27 @@
     },
     "resources": [
         {
-            "title": "Bereavement Support",
+            "title": "Help &amp; Further Bereavement Support",
             "links": [
                 {
                     "name": "Cruse Bereavement Care",
                     "url": "https:\/\/www.cruse.org.uk",
-                    "description": "Free support for bereaved people"
+                    "description": "www.cruse.org.uk<br>"
                 },
                 {
                     "name": "At A Loss",
                     "url": "https:\/\/www.ataloss.org",
-                    "description": "Signposting to bereavement support services"
+                    "description": "Targeted bereavement resources for navigating the journey after a funeral."
                 },
                 {
                     "name": "Grief Encounter",
                     "url": "https:\/\/www.griefencounter.org.uk",
-                    "description": "Support for bereaved children and young people"
+                    "description": "Support for bereaved children and young people."
                 }
             ]
         },
         {
-            "title": "Practical Help",
+            "title": "Practical Help&nbsp;",
             "links": [
                 {
                     "name": "GOV.UK",
@@ -68,7 +68,7 @@
         }
     ],
     "hero": {
-        "title": "Helpful Links",
+        "title": "After the service",
         "image": "\/assets\/images\/uploads\/img_68cfc793efef2_1758447507.jpg"
     }
 }
