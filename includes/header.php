@@ -97,6 +97,7 @@ if (!isset($page_keywords)) $page_keywords = 'funeral directors Liverpool, indep
                         <a href="when-a-death-occurs.php">When a Death Occurs</a>
                         <a href="standardised-price-list.php">Standardised Price List</a>
                         <a href="services-overview.php">Services Overview</a>
+                        <a href="direct-cremation.php">Direct Cremation</a>
                         <a href="coffins.php">Coffins & Caskets</a>
                         <a href="personalisation.php">Personalisation</a>
                         <a href="transport.php">Transport</a>

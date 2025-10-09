@@ -93,6 +93,39 @@ require_once 'includes/header.php';
                 </div>
             </div>
 
+            <!-- Comparison Table Section -->
+            <div class="comparison-section fade-in">
+                <h2><?php echo editable($content['comparison']['title'] ?? '', 'comparison.title'); ?></h2>
+                <p class="comparison-subtitle"><?php echo editable($content['comparison']['subtitle'] ?? '', 'comparison.subtitle'); ?></p>
+
+                <div class="comparison-table-wrapper">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <?php foreach(($content['comparison']['table']['headers'] ?? []) as $index => $header): ?>
+                                <th class="<?php echo $index === 0 ? 'service-col' : ($index === 1 ? 'online-col' : 'local-col'); ?>">
+                                    <?php echo editable($header, "comparison.table.headers.$index"); ?>
+                                </th>
+                                <?php endforeach; ?>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach(($content['comparison']['table']['rows'] ?? []) as $index => $row): ?>
+                            <tr>
+                                <td class="service-col"><?php echo editable($row['service'] ?? '', "comparison.table.rows.$index.service"); ?></td>
+                                <td class="online-col">
+                                    <span class="comparison-no"><?php echo editable($row['online'] ?? '', "comparison.table.rows.$index.online"); ?></span>
+                                </td>
+                                <td class="local-col">
+                                    <span class="comparison-yes"><?php echo editable($row['local'] ?? '', "comparison.table.rows.$index.local"); ?></span>
+                                </td>
+                            </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
             <!-- FAQ Section -->
             <div class="faq-section fade-in">
                 <h2><?php echo editable($content['faq']['title'] ?? '', 'faq.title'); ?></h2>
@@ -310,6 +343,92 @@ require_once 'includes/header.php';
         margin-bottom: 1rem;
     }
 
+    .comparison-section {
+        background: white;
+        padding: 3rem;
+        border-radius: 12px;
+        margin-bottom: 3rem;
+        box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+    }
+
+    .comparison-section h2 {
+        text-align: center;
+        color: var(--navy);
+        margin-bottom: 1rem;
+    }
+
+    .comparison-subtitle {
+        text-align: center;
+        color: #666;
+        font-size: 1.1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .comparison-table-wrapper {
+        overflow-x: auto;
+    }
+
+    .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0 auto;
+    }
+
+    .comparison-table thead th {
+        background: var(--navy);
+        color: white;
+        padding: 1.25rem;
+        text-align: left;
+        font-weight: 600;
+        font-size: 1.1rem;
+    }
+
+    .comparison-table thead th.online-col {
+        background: #dc3545;
+        text-align: center;
+    }
+
+    .comparison-table thead th.local-col {
+        background: #28a745;
+        text-align: center;
+    }
+
+    .comparison-table tbody tr {
+        border-bottom: 1px solid #f0f0f0;
+        transition: background-color 0.2s;
+    }
+
+    .comparison-table tbody tr:hover {
+        background-color: #f8f9fa;
+    }
+
+    .comparison-table tbody td {
+        padding: 1.25rem;
+        color: #333;
+        font-size: 1rem;
+    }
+
+    .comparison-table tbody td.service-col {
+        font-weight: 500;
+        color: var(--navy);
+    }
+
+    .comparison-table tbody td.online-col,
+    .comparison-table tbody td.local-col {
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .comparison-no {
+        color: #dc3545;
+        font-size: 1.1rem;
+    }
+
+    .comparison-yes {
+        color: #28a745;
+        font-size: 1.1rem;
+    }
+
     .faq-section {
         background: white;
         padding: 3rem;
@@ -408,9 +527,24 @@ require_once 'includes/header.php';
 
         .service-section,
         .info-section,
+        .comparison-section,
         .faq-section,
         .next-steps {
             padding: 2rem 1.5rem;
+        }
+
+        .comparison-table thead th,
+        .comparison-table tbody td {
+            padding: 0.875rem 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .comparison-table tbody td.service-col {
+            font-size: 0.85rem;
+        }
+
+        .comparison-subtitle {
+            font-size: 1rem;
         }
     }
     </style>

@@ -81,6 +81,65 @@
             }
         ]
     },
+    "comparison": {
+        "title": "Barringtons vs Online Cremation",
+        "subtitle": "Why choose a local, family-run funeral service over an online cremation provider?",
+        "table": {
+            "headers": ["Service", "Online", "Local"],
+            "rows": [
+                {
+                    "service": "Will the cremation take place at your local crematorium – not miles away?",
+                    "online": "No",
+                    "local": "Yes"
+                },
+                {
+                    "service": "Will your loved one be cared for locally, not transported across the country?",
+                    "online": "No",
+                    "local": "Yes"
+                },
+                {
+                    "service": "Will you be told the date, time and location of the committal?",
+                    "online": "No",
+                    "local": "Yes"
+                },
+                {
+                    "service": "Will you have personal face to face contact with the funeral team caring for your loved one?",
+                    "online": "No",
+                    "local": "Yes"
+                },
+                {
+                    "service": "Will the ashes be available locally shortly after the cremation?",
+                    "online": "No",
+                    "local": "Yes"
+                },
+                {
+                    "service": "Can you customise or upgrade elements of the funeral plan if your needs change?",
+                    "online": "No",
+                    "local": "Yes"
+                },
+                {
+                    "service": "Can you place personal items or keepsakes in the coffin?",
+                    "online": "No",
+                    "local": "Yes"
+                },
+                {
+                    "service": "Will the cremation happen promptly without unnecessary delay?",
+                    "online": "No",
+                    "local": "Yes"
+                },
+                {
+                    "service": "Can you choose to witness the committal or attend in a simple way if you wish?",
+                    "online": "No",
+                    "local": "Yes"
+                },
+                {
+                    "service": "Will you be supporting a local family run business?",
+                    "online": "No",
+                    "local": "Yes"
+                }
+            ]
+        }
+    },
     "faq": {
         "title": "Frequently Asked Questions",
         "questions": [
