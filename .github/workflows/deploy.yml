@@ -19,17 +19,24 @@ jobs:
       id: changes
       run: |
         # Check if any content/*.json files were modified in this commit
-        if git diff --name-only HEAD~1 HEAD | grep -q "^content/.*\.json$"; then
-          echo "content_changed=true" >> $GITHUB_OUTPUT
-          echo "📝 Content files were modified - will deploy everything"
-        else
-          echo "content_changed=false" >> $GITHUB_OUTPUT
-          echo "🔧 Only code changes - will preserve production content"
-        fi
+        # Handle initial commit (no HEAD~1)
+        if git rev-parse HEAD~1 >/dev/null 2>&1; then
+          if git diff --name-only HEAD~1 HEAD | grep -q "^content/.*\.json$"; then
+            echo "content_changed=true" >> $GITHUB_OUTPUT
+            echo "📝 Content files were modified - will deploy everything"
+          else
+            echo "content_changed=false" >> $GITHUB_OUTPUT
+            echo "🔧 Only code changes - will preserve production content"
+          fi
 
-        # List changed files for transparency
-        echo "Changed files in this commit:"
-        git diff --name-only HEAD~1 HEAD
+          # List changed files for transparency
+          echo "Changed files in this commit:"
+          git diff --name-only HEAD~1 HEAD
+        else
+          # Initial commit - deploy everything
+          echo "content_changed=true" >> $GITHUB_OUTPUT
+          echo "🎉 Initial commit - deploying all files"
+        fi
 
     - name: 📦 Prepare deployment (exclude content if needed)
       run: |
@@ -55,7 +62,7 @@ jobs:
         host: ${{ secrets.WHM_HOST }}
         username: ${{ secrets.WHM_USERNAME }}
         key: ${{ secrets.WHM_SSH_KEY }}
-        source: "*"
+        source: "*.php,*.html,.htaccess,.github,assets,content,includes,blog"
         target: "/home/twomagseo/barr.2magpiesseo.co.uk"
         rm: false  # Never remove existing files
 
