@@ -18,8 +18,8 @@
             "buttonLink": "immediate-need.php"
         },
         "card2": {
-            "title": "Plan For The Future",
-            "description": "Information about planning a funeral in advance <br>with either a Funeral Plan or sharing your wishes.",
+            "title": "Buy a Plan For The Future",
+            "description": "Information about planning a funeral in advance <br>by buying a Funeral Plan or sharing your wishes.",
             "buttonText": "Start Your Plan",
             "buttonLink": "planning-ahead.php"
         }
@@ -79,21 +79,21 @@
         "locations": [
             {
                 "name": "Waterloo",
-                "image": "\/assets\/images\/uploads\/img_68d0fb889e9be_1758526344.jpg",
+                "image": "\/assets\/images\/uploads\/img_68e8cfff62da2_1760088063.jpg",
                 "address": "&nbsp; &nbsp; &nbsp; &nbsp;28 Crosby Rd North, Waterloo L22 4QF",
                 "phone": "0151 928 1625 (24 hours)",
                 "hours": "Monday - Friday, 9am - 5pm<br>"
             },
             {
                 "name": "Formby",
-                "image": "\/assets\/images\/uploads\/img_68d1008e9e115_1758527630.jpg",
+                "image": "\/assets\/images\/uploads\/img_68e8d00c9be93_1760088076.jpeg",
                 "address": "&nbsp; &nbsp; &nbsp; &nbsp;49 Liverpool Road, Formby L37 6BT",
                 "phone": "01704 461511 (24 hours)",
                 "hours": "Monday - Friday, 10am - 4pm"
             },
             {
                 "name": "Netherton",
-                "image": "\/assets\/images\/uploads\/img_68dfa57552724_1759487349.jpg",
+                "image": "\/assets\/images\/uploads\/img_68e8d0134fa62_1760088083.jpg",
                 "address": "&nbsp; &nbsp; &nbsp; &nbsp;38 The Marian Square, Netherton L30 5QA",
                 "phone": "0151 329 3525 (24 hours)",
                 "hours": "Monday - Friday, 9am - 5pm"

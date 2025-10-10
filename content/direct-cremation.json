@@ -1,18 +1,18 @@
 {
     "meta": {
         "title": "Direct Cremation Liverpool | Simple, Dignified & Affordable | Barringtons",
-        "description": "Direct cremation from £1,600. A simple, dignified option without a traditional funeral service. Flexible memorial options. Call 0151 928 1625 for more information.",
+        "description": "Direct cremation from \u00a31,600. A simple, dignified option without a traditional funeral service. Flexible memorial options. Call 0151 928 1625 for more information.",
         "keywords": "direct cremation Liverpool, simple cremation, affordable cremation, unattended cremation, cremation without service"
     },
     "hero": {
         "title": "Direct Cremation",
         "subtitle": "Simple, dignified, and affordable - giving you complete flexibility",
-        "image": "/assets/images/uploads/img_68cd78c7966ab_1758296263.jpg"
+        "image": "\/assets\/images\/uploads\/img_68cd78c7966ab_1758296263.jpg"
     },
     "service": {
         "title": "Direct Cremation",
-        "price": "£1,600",
-        "image": "https://placehold.co/600x400/2c5530/white?text=Direct+Cremation",
+        "price": "\u00a31,600",
+        "image": "https:\/\/placehold.co\/600x400\/2c5530\/white?text=Direct+Cremation",
         "fullDescription": "Direct cremation is a simple, dignified option without a traditional funeral service. This choice is increasingly popular for those who prefer privacy, simplicity, or plan to hold a memorial service at a later date. Despite being our most affordable option, we maintain the same high standards of care and respect. Your loved one is cared for in our funeral home, and you can arrange a viewing if desired as an additional option. The cremation takes place at a time chosen by the crematorium, without attendees, and the ashes are returned to you afterwards. This allows complete flexibility in how and when you choose to remember your loved one, whether through a memorial service, ash scattering ceremony, or private family gathering.",
         "included": [
             "Professional services and administration",
@@ -21,42 +21,42 @@
             "Simple coffin suitable for cremation",
             "All necessary paperwork and documentation",
             "Crematorium fees (unattended service)",
-            "Return of ashes in standard container",
-            "Death certificate assistance",
-            "Basic online memorial page"
+            "Return of ashes in a decorative scatter tube",
+            "Death certification assistance",
+            "Online MuchLoved memorial page"
         ],
         "optional": [
             {
-                "name": "Attended viewing, including dressing visiting for up to 1.5hours - maybe play some music, have a cup of tea",
-                "price": "£200"
+                "name": "Attended viewing, including dressing <br>visiting for up to 1.5hours - maybe play some music, <br>have a cup of tea or a drink with your loved one.",
+                "price": "\u00a3200"
             },
             {
-                "name": "Upgraded ashes casket",
-                "price": "from £125"
-            },
-            {
-                "name": "Express return of ashes",
-                "price": "£75"
+                "name": "Embalming if required",
+                "price": "\u00a3125"
             },
             {
                 "name": "Additional mileage (per mile over 20)",
-                "price": "£1.50"
+                "price": "\u00a31.50"
+            },
+            {
+                "name": "Attendance at committal service including viewing<br>service mentioned above.&nbsp;<br>",
+                "price": "\u00a3400"
             },
             {
                 "name": "Webcam viewing of committal",
-                "price": "from £90"
+                "price": "from \u00a390"
             },
             {
                 "name": "Scatter tube for ashes",
-                "price": "£35"
+                "price": "included"
             },
             {
                 "name": "Certificate of cremation",
-                "price": "£25"
+                "price": "included"
             },
             {
                 "name": "Temporary urn for travel",
-                "price": "£45"
+                "price": "included"
             }
         ]
     },
@@ -83,12 +83,16 @@
     },
     "comparison": {
         "title": "Barringtons vs Online Cremation",
-        "subtitle": "Why choose a local, family-run funeral service over an online cremation provider?",
+        "subtitle": "Why choose our local, family-run funeral service over an online cremation provider?",
         "table": {
-            "headers": ["Service", "Online", "Local"],
+            "headers": [
+                "Service",
+                "Online",
+                "Barringtons"
+            ],
             "rows": [
                 {
-                    "service": "Will the cremation take place at your local crematorium – not miles away?",
+                    "service": "Will the cremation take place at your local crematorium \u2013 not miles away?",
                     "online": "No",
                     "local": "Yes"
                 },
@@ -157,20 +161,20 @@
             },
             {
                 "question": "What happens during an unattended cremation?",
-                "answer": "Your loved one is cremated at a time scheduled by the crematorium, without family or friends in attendance. However, the same care, dignity, and respect is shown as with any cremation service."
+                "answer": "Your loved one is cremated at a time scheduled by the crematorium, without family or friends in attendance. However, the same care, dignity, and respect is shown as with any cremation service. We will tell you the date and time of the committal at the crematorium.&nbsp;"
             },
             {
                 "question": "Can we scatter or keep the ashes?",
-                "answer": "Yes, the ashes are yours to keep, scatter, bury, or place in a memorial location of your choice. We can provide guidance on scattering locations and memorial options."
+                "answer": "Yes, the ashes are yours to keep, scatter, bury, or place in a memorial location of your choice. We can provide guidance on scattering locations and memorial options. Or if you prefer we can arrange for them to be scattered in the garden of remembrance in the crematorium.&nbsp;"
             },
             {
                 "question": "Is direct cremation right for everyone?",
-                "answer": "Direct cremation is a personal choice. It's ideal for those who prefer simplicity, want to plan their own memorial, or are on a limited budget. However, if a traditional funeral service is important to you or your family, we offer comprehensive traditional options as well."
+                "answer": "Direct cremation is a personal choice. It's ideal for those who prefer simplicity, want to plan their own memorial, or are on a limited budget. However, if a traditional funeral service is important to you or your family, we offer comprehensive bespoke options as well."
             }
         ]
     },
     "next_steps": {
         "title": "Ready to Learn More?",
-        "description": "Our compassionate team is available 24/7 to discuss direct cremation and answer any questions you may have. There's no obligation - we're here to help you make the right choice for your family."
+        "description": "Our compassionate team is available 24\/7 to discuss direct cremation and answer any questions you may have. <br>There's no obligation - we're here to help you make the right choice for your family."
     }
 }
