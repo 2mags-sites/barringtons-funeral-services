@@ -10,9 +10,19 @@ if (!isset($_SESSION['csrf_token'])) {
 // Load environment variables
 require_once __DIR__ . '/env-loader.php';
 
-// Admin Secret Key from .env file
-define('ADMIN_SECRET_KEY', EnvLoader::get('ADMIN_SECRET_KEY', 'barringtons_admin_2024_secure'));
-define('CACHE_CLEAR_KEY', EnvLoader::get('CACHE_CLEAR_KEY', 'clear_cache_2024'));
+// Admin Secret Key from .env file (NO defaults for security)
+$adminKey = EnvLoader::get('ADMIN_SECRET_KEY');
+$cacheKey = EnvLoader::get('CACHE_CLEAR_KEY');
+
+if (empty($adminKey) || empty($cacheKey)) {
+    error_log('SECURITY WARNING: Admin keys not set in .env file');
+    // Use secure random keys that change every request if .env is missing
+    $adminKey = $adminKey ?: bin2hex(random_bytes(16));
+    $cacheKey = $cacheKey ?: bin2hex(random_bytes(16));
+}
+
+define('ADMIN_SECRET_KEY', $adminKey);
+define('CACHE_CLEAR_KEY', $cacheKey);
 
 // Check if admin mode should be activated
 if (isset($_GET['admin']) && $_GET['admin'] === ADMIN_SECRET_KEY) {
