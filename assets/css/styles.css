@@ -2477,6 +2477,17 @@ footer {
     width: 100%;
 }
 
+.location-content {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 2rem;
+    align-items: start;
+}
+
+.location-text {
+    flex: 1;
+}
+
 .location-card h3 {
     color: var(--soft-navy);
     margin-bottom: 0.5rem;
@@ -2488,6 +2499,25 @@ footer {
     font-size: 0.9rem;
     font-style: italic;
     margin-bottom: 1rem;
+}
+
+.location-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+
+.location-image {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.location-image img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
 }
 
 .location-note {
@@ -2523,6 +2553,19 @@ footer {
 
     .locations-section {
         padding: 2rem 1.5rem;
+    }
+
+    .location-content {
+        grid-template-columns: 1fr;
+    }
+
+    .location-images {
+        order: -1;
+        margin-bottom: 1rem;
+    }
+
+    .location-image img {
+        height: 160px;
     }
 }
 

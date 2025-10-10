@@ -126,27 +126,63 @@ require_once 'includes/header.php';
 
                         <div class="locations-grid">
                             <div class="location-card">
-                                <h3><?php echo editable($content['about']['locations']['waterloo']['name'] ?? '', 'about.locations.waterloo.name'); ?></h3>
-                                <p class="location-tag"><?php echo editable($content['about']['locations']['waterloo']['tag'] ?? '', 'about.locations.waterloo.tag'); ?></p>
-                                <p><strong>Address:</strong><br><?php echo editable($content['about']['locations']['waterloo']['address'] ?? '', 'about.locations.waterloo.address'); ?></p>
-                                <p><strong>Opening Hours:</strong><br><?php echo editable($content['about']['locations']['waterloo']['hours'] ?? '', 'about.locations.waterloo.hours'); ?></p>
-                                <p class="location-note"><?php echo editable($content['about']['locations']['waterloo']['note'] ?? '', 'about.locations.waterloo.note'); ?></p>
+                                <div class="location-content">
+                                    <div class="location-text">
+                                        <h3><?php echo editable($content['about']['locations']['waterloo']['name'] ?? '', 'about.locations.waterloo.name'); ?></h3>
+                                        <p class="location-tag"><?php echo editable($content['about']['locations']['waterloo']['tag'] ?? '', 'about.locations.waterloo.tag'); ?></p>
+                                        <p><strong>Address:</strong><br><?php echo editable($content['about']['locations']['waterloo']['address'] ?? '', 'about.locations.waterloo.address'); ?></p>
+                                        <p><strong>Opening Hours:</strong><br><?php echo editable($content['about']['locations']['waterloo']['hours'] ?? '', 'about.locations.waterloo.hours'); ?></p>
+                                        <p class="location-note"><?php echo editable($content['about']['locations']['waterloo']['note'] ?? '', 'about.locations.waterloo.note'); ?></p>
+                                    </div>
+                                    <div class="location-images">
+                                        <div class="location-image">
+                                            <?php echo editableImage($content['about']['locations']['waterloo']['exterior_image'] ?? 'assets/images/Waterloo Exterior (1).jpg', 'about.locations.waterloo.exterior_image', 'Waterloo Office Exterior', 'Waterloo Office - Exterior'); ?>
+                                        </div>
+                                        <div class="location-image">
+                                            <?php echo editableImage($content['about']['locations']['waterloo']['interior_image'] ?? 'assets/images/waterloo_interior_s.jpg', 'about.locations.waterloo.interior_image', 'Waterloo Office Interior', 'Waterloo Office - Interior'); ?>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="location-card">
-                                <h3><?php echo editable($content['about']['locations']['formby']['name'] ?? '', 'about.locations.formby.name'); ?></h3>
-                                <p class="location-tag"><?php echo editable($content['about']['locations']['formby']['tag'] ?? '', 'about.locations.formby.tag'); ?></p>
-                                <p><strong>Address:</strong><br><?php echo editable($content['about']['locations']['formby']['address'] ?? '', 'about.locations.formby.address'); ?></p>
-                                <p><strong>Opening Hours:</strong><br><?php echo editable($content['about']['locations']['formby']['hours'] ?? '', 'about.locations.formby.hours'); ?></p>
-                                <p class="location-note"><?php echo editable($content['about']['locations']['formby']['note'] ?? '', 'about.locations.formby.note'); ?></p>
+                                <div class="location-content">
+                                    <div class="location-text">
+                                        <h3><?php echo editable($content['about']['locations']['formby']['name'] ?? '', 'about.locations.formby.name'); ?></h3>
+                                        <p class="location-tag"><?php echo editable($content['about']['locations']['formby']['tag'] ?? '', 'about.locations.formby.tag'); ?></p>
+                                        <p><strong>Address:</strong><br><?php echo editable($content['about']['locations']['formby']['address'] ?? '', 'about.locations.formby.address'); ?></p>
+                                        <p><strong>Opening Hours:</strong><br><?php echo editable($content['about']['locations']['formby']['hours'] ?? '', 'about.locations.formby.hours'); ?></p>
+                                        <p class="location-note"><?php echo editable($content['about']['locations']['formby']['note'] ?? '', 'about.locations.formby.note'); ?></p>
+                                    </div>
+                                    <div class="location-images">
+                                        <div class="location-image">
+                                            <?php echo editableImage($content['about']['locations']['formby']['exterior_image'] ?? 'assets/images/FormbyExterior2025.jpg', 'about.locations.formby.exterior_image', 'Formby Office Exterior', 'Formby Office - Exterior'); ?>
+                                        </div>
+                                        <div class="location-image">
+                                            <?php echo editableImage($content['about']['locations']['formby']['interior_image'] ?? 'assets/images/Formby interior (1).jpg', 'about.locations.formby.interior_image', 'Formby Office Interior', 'Formby Office - Interior'); ?>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="location-card">
-                                <h3><?php echo editable($content['about']['locations']['netherton']['name'] ?? '', 'about.locations.netherton.name'); ?></h3>
-                                <p class="location-tag"><?php echo editable($content['about']['locations']['netherton']['tag'] ?? '', 'about.locations.netherton.tag'); ?></p>
-                                <p><strong>Address:</strong><br><?php echo editable($content['about']['locations']['netherton']['address'] ?? '', 'about.locations.netherton.address'); ?></p>
-                                <p><strong>Opening Hours:</strong><br><?php echo editable($content['about']['locations']['netherton']['hours'] ?? '', 'about.locations.netherton.hours'); ?></p>
-                                <p class="location-note"><?php echo editable($content['about']['locations']['netherton']['note'] ?? '', 'about.locations.netherton.note'); ?></p>
+                                <div class="location-content">
+                                    <div class="location-text">
+                                        <h3><?php echo editable($content['about']['locations']['netherton']['name'] ?? '', 'about.locations.netherton.name'); ?></h3>
+                                        <p class="location-tag"><?php echo editable($content['about']['locations']['netherton']['tag'] ?? '', 'about.locations.netherton.tag'); ?></p>
+                                        <p><strong>Address:</strong><br><?php echo editable($content['about']['locations']['netherton']['address'] ?? '', 'about.locations.netherton.address'); ?></p>
+                                        <p><strong>Opening Hours:</strong><br><?php echo editable($content['about']['locations']['netherton']['hours'] ?? '', 'about.locations.netherton.hours'); ?></p>
+                                        <p class="location-note"><?php echo editable($content['about']['locations']['netherton']['note'] ?? '', 'about.locations.netherton.note'); ?></p>
+                                    </div>
+                                    <div class="location-images">
+                                        <div class="location-image">
+                                            <?php echo editableImage($content['about']['locations']['netherton']['exterior_image'] ?? 'assets/images/Netherton_Exterior_s.jpg', 'about.locations.netherton.exterior_image', 'Netherton Office Exterior', 'Netherton Office - Exterior'); ?>
+                                        </div>
+                                        <div class="location-image">
+                                            <?php echo editableImage($content['about']['locations']['netherton']['interior_image'] ?? 'assets/images/Netherton_Interior_s.jpg', 'about.locations.netherton.interior_image', 'Netherton Office Interior', 'Netherton Office - Interior'); ?>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
