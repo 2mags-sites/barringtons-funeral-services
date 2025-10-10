@@ -38,22 +38,15 @@ jobs:
           echo "🎉 Initial commit - deploying all files"
         fi
 
-    - name: 📦 Prepare deployment (exclude content if needed)
+    - name: 📦 Prepare deployment
       run: |
-        if [[ "${{ steps.changes.outputs.content_changed }}" == "false" ]]; then
-          echo "Removing content/*.json from deployment package..."
-          # Remove JSON files from the working directory so they won't be deployed
-          rm -f content/*.json
-          echo "Content files removed from deployment package"
-        else
-          echo "Keeping content files in deployment package"
-        fi
+        echo "Preparing files for deployment..."
 
         # Always exclude backup files from deployment
-        rm -rf content/backups
+        rm -rf content/backups 2>/dev/null || true
 
         # List what will be deployed
-        echo "Files to be deployed:"
+        echo "Content files to deploy:"
         ls -la content/
 
     - name: 📤 Deploy to barr.2magpiesseo.co.uk
