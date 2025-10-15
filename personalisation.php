@@ -38,12 +38,17 @@ require_once 'includes/header.php';
             <div class="personalisation-grid">
                 <?php foreach(($content['options'] ?? []) as $index => $option): ?>
                 <div class="personalisation-card fade-in">
-                    <h3><?php echo editable($option['title'] ?? '', "options.$index.title"); ?></h3>
-                    <ul>
-                        <?php foreach(($option['items'] ?? []) as $itemIndex => $item): ?>
-                        <li><?php echo editable($item, "options.$index.items.$itemIndex"); ?></li>
-                        <?php endforeach; ?>
-                    </ul>
+                    <div class="card-content">
+                        <h3><?php echo editable($option['title'] ?? '', "options.$index.title"); ?></h3>
+                        <ul>
+                            <?php foreach(($option['items'] ?? []) as $itemIndex => $item): ?>
+                            <li><?php echo editable($item, "options.$index.items.$itemIndex"); ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                    <div class="card-image">
+                        <?php echo editableImage($option['image'] ?? '', "options.$index.image", $option['title'] ?? 'Personalisation option', 'Add Image'); ?>
+                    </div>
                 </div>
                 <?php endforeach; ?>
             </div>

@@ -7,7 +7,7 @@
     "hero": {
         "title": "Complete Funeral Services",
         "subtitle": "Transparent pricing and comprehensive support for every type of farewell",
-        "image": "\/assets\/images\/uploads\/img_68cd78c7966ab_1758296263.jpg"
+        "image": "\/assets\/images\/uploads\/img_68e91620046d0_1760106016.jpg"
     },
     "intro": {
         "title": "Every Service, Every Detail, Every Price",
@@ -18,7 +18,7 @@
         "traditional": {
             "title": "Bespoke Funeral Service",
             "price": "\u00a32,995",
-            "image": "https:\/\/placehold.co\/600x400\/2c5530\/white?text=Traditional+Funeral",
+            "image": "\/assets\/images\/uploads\/img_68ef909ee796f_1760530590.jpg",
             "fullDescription": "Our bespoke funeral service honours time-tested customs while allowing for personal touches that reflect your loved one's life. This comprehensive service includes professional care from the moment you contact us through to the final farewell. We handle all arrangements with dignity and respect, ensuring every detail meets your family's expectations. Our experienced team guides you through each decision, from choosing the right coffin to selecting music and readings that capture the essence of your loved one's life. The traditional service typically includes a viewing at our chapel of rest, a formal procession to the service venue or crematorium, and support with the reception afterwards. Options can be added or removed. Use our flexible Funeral Estimator to help check any costs here&nbsp;<a href=\"https:\/\/estimator.barringtonsfunerals.com\/#\/\">Barringtons Funeral Calculator<\/a>",
             "included": [
                 "Professional services of funeral director and staff",
@@ -72,7 +72,7 @@
         "contemporary": {
             "title": "Contemporary Celebration of Life",
             "price": "\u00a33,195",
-            "image": "https:\/\/placehold.co\/600x400\/2c5530\/white?text=Contemporary+Celebration",
+            "image": "\/assets\/images\/uploads\/img_68ef94140c998_1760531476.JPG",
             "fullDescription": "A modern celebration of life focuses on joy, memories, and the unique personality of your loved one. This service breaks away from traditional constraints, allowing complete personalization of every element. Whether it's a themed celebration reflecting their passions, a gathering at their favorite venue, or a service filled with their beloved music, we help create a farewell that truly celebrates who they were. Our contemporary services often include multimedia tributes, personalized decorations, and unique touches like memory tables, photo displays, or even live performances. We work closely with celebrants who specialize in creating meaningful, non-religious ceremonies that capture the spirit of your loved one.&nbsp;<span style=\"font-size: 17.6px;\">Use our flexible Funeral Estimator to help check any costs here&nbsp;<\/span><a href=\"https:\/\/estimator.barringtonsfunerals.com\/#\/\" style=\"font-size: 17.6px;\">Barringtons Funeral Calculator<\/a>",
             "included": [
                 "Professional services and personalized planning consultation",
@@ -177,7 +177,7 @@
         "green": {
             "title": "Green & Natural Funeral",
             "price": "\u00a33,495",
-            "image": "https:\/\/placehold.co\/600x400\/2c5530\/white?text=Green+Funeral",
+            "image": "\/assets\/images\/uploads\/img_68ef8e9c8fa99_1760530076.webp",
             "fullDescription": "Our green funeral service reflects a commitment to environmental sustainability while providing a meaningful farewell. We work with natural burial grounds across Merseyside and beyond, offering beautiful woodland or meadow settings for a final resting place. Every aspect of the service minimizes environmental impact, from biodegradable coffins made from bamboo, willow, or recycled materials, to our electric hearse option. As members of the Association of Green Funeral Directors, we plant a memorial tree for every funeral we conduct. The service can be religious or non-religious, formal or informal, but always respects both your loved one and the environment they cherished.&nbsp;<span style=\"font-size: 17.6px;\">Use our flexible Funeral Estimator to help check any costs here&nbsp;<\/span><a href=\"https:\/\/estimator.barringtonsfunerals.com\/#\/\" style=\"font-size: 17.6px;\">Barringtons Funeral Calculator<\/a>",
             "included": [
                 "Eco-funeral planning consultation",
@@ -233,7 +233,7 @@
         "religious": {
             "title": "Religious & Faith Services",
             "price": "\u00a32,995",
-            "image": "https:\/\/placehold.co\/600x400\/2c5530\/white?text=Religious+Service",
+            "image": "\/assets\/images\/uploads\/img_68ef8eb3756db_1760530099.jpg",
             "fullDescription": "We understand the importance of honoring religious traditions and customs during times of loss. Our religious funeral services are conducted with deep respect for faith-specific requirements, whether Catholic, Protestant, Jewish, Islamic, Hindu, Buddhist, or other beliefs. We work closely with religious leaders from all communities to ensure every ritual and tradition is properly observed. Our team is experienced in managing the specific timings, preparations, and ceremonial requirements of different faiths. From Tahara in Jewish tradition to Hindu cremation rites, from Islamic burial requirements to Buddhist chanting ceremonies, we ensure your loved one's faith is honored throughout their final journey.&nbsp;<span style=\"font-size: 17.6px;\">Use our flexible Funeral Estimator to help check any costs here&nbsp;<\/span><a href=\"https:\/\/estimator.barringtonsfunerals.com\/#\/\" style=\"font-size: 17.6px;\">Barringtons Funeral Calculator<\/a>",
             "included": [
                 "Liaison with religious leaders and places of worship",
@@ -297,7 +297,7 @@
         "home": {
             "title": "Home Funeral Care",
             "price": "\u00a32,495",
-            "image": "https:\/\/placehold.co\/600x400\/2c5530\/white?text=Home+Funeral",
+            "image": "\/assets\/images\/uploads\/img_68ef92c240b86_1760531138.jpg",
             "fullDescription": "A home funeral allows your loved one to rest in familiar surroundings, giving family and friends the opportunity for private farewells in a comfortable, personal setting. This traditional practice is seeing renewed interest from families who want more time and privacy to say goodbye. We provide all necessary equipment and support to make this possible, including cooling equipment to allow your loved one to rest at home safely for several days. Our team offers 24\/7 telephone support and can visit to ensure everything is arranged properly. This option can be combined with any type of funeral service, allowing the procession to begin from home rather than the funeral parlor.&nbsp;<span style=\"font-size: 17.6px;\">Use our flexible Funeral Estimator to help check any costs here&nbsp;<\/span><a href=\"https:\/\/estimator.barringtonsfunerals.com\/#\/\" style=\"font-size: 17.6px;\">Barringtons Funeral Calculator<\/a>",
             "included": [
                 "Initial home consultation",
@@ -409,11 +409,11 @@
                 "description": "Payment in full by cash, cheque, or card. We accept all major credit and debit cards. Full payment is typically due within 14 days of the funeral."
             },
             "installment": {
-                "title": "Payment Plans",
+                "title": "Payment Plans with Funeral Safe&nbsp;",
                 "description": "Spread the cost over 6 or 12 months with our instalment plans. Subject to approval, with competitive interest rates and no hidden fees."
             },
             "prepaid": {
-                "title": "Prepaid Funeral Plans",
+                "title": "Prepaid Funeral Plans with Ecclesiastical Planning Services&nbsp;",
                 "description": "Lock in today's prices and spare your family from financial worry. Flexible payment terms available from 12 to 120 months."
             }
         },

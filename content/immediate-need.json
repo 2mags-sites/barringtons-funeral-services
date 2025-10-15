@@ -12,7 +12,7 @@
         {
             "number": "Step 1",
             "title": "Take a Moment",
-            "description": "If the death has just occurred, there's no immediate rush. Take time to be with your loved one if you wish. When you're ready, move to the next steps."
+            "description": "If the death has just occurred, there's no immediate rush. Take time to be with your loved one if you wish. Stay still and when you're ready, move to the next steps."
         },
         {
             "number": "Step 2",
@@ -67,14 +67,14 @@
                 "description": "Available any time, day or night"
             },
             "office": {
-                "title": "Main Office",
-                "address": "28 Crosby Rd N, Waterloo L22 4QF",
-                "hours": "Open 24 hours"
+                "title": "3 Offices to help",
+                "address": "28 Crosby Rd N, Waterloo L22 4QF<br>30 The Marian Square L30 5QA<br>49 Liverpool Road, Formby L37 6BT<br>",
+                "hours": "All 24 hours on call"
             },
             "email": {
                 "title": "Email Support",
                 "address": "info@barringtonsfunerals.co.uk",
-                "description": "We'll respond as quickly as possible but please note emails are not monitored at the weekend"
+                "description": "We'll respond as quickly as possible but please note emails are not monitored at the weekend - please call."
             }
         }
     },

@@ -12,10 +12,10 @@
     "service": {
         "title": "Direct Cremation",
         "price": "\u00a31,600",
-        "image": "https:\/\/placehold.co\/600x400\/2c5530\/white?text=Direct+Cremation",
+        "image": "\/assets\/images\/uploads\/img_68ef80e2494a3_1760526562.jpeg",
         "fullDescription": "Direct cremation is a simple, dignified option without a traditional funeral service. This choice is increasingly popular for those who prefer privacy, simplicity, or plan to hold a memorial service at a later date. Despite being our most affordable option, we maintain the same high standards of care and respect. Your loved one is cared for in our funeral home, and you can arrange a viewing if desired as an additional option. The cremation takes place at a time chosen by the crematorium, without attendees, and the ashes are returned to you afterwards. This allows complete flexibility in how and when you choose to remember your loved one, whether through a memorial service, ash scattering ceremony, or private family gathering.",
         "included": [
-            "Professional services and administration",
+            "Professional services and administration. Including a professional vehicle for transport to the crematorium.<br>",
             "Collection from place of death (within 20 miles)",
             "Care at our facilities",
             "Simple coffin suitable for cremation",
@@ -47,15 +47,15 @@
                 "price": "from \u00a390"
             },
             {
-                "name": "Scatter tube for ashes",
-                "price": "included"
+                "name": "Changing to a traditional hearse for travel on the day of the cremation",
+                "price": "\u00a3350"
             },
             {
                 "name": "Certificate of cremation",
                 "price": "included"
             },
             {
-                "name": "Temporary urn for travel",
+                "name": "Scatter tube for ashes afterwards",
                 "price": "included"
             }
         ]
@@ -157,7 +157,7 @@
             },
             {
                 "question": "How long does it take to receive the ashes?",
-                "answer": "Typically, ashes are returned within 7-10 working days. We offer an express service if you need them sooner."
+                "answer": "Typically, ashes are returned within 7 working days. We offer an express service if you need them sooner."
             },
             {
                 "question": "What happens during an unattended cremation?",
