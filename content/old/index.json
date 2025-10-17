@@ -18,8 +18,8 @@
             "buttonLink": "immediate-need.php"
         },
         "card2": {
-            "title": "Buy a Plan For The Future",
-            "description": "Information about planning a funeral in advance <br>by buying a Funeral Plan or sharing your wishes.",
+            "title": "Plan For The Future",
+            "description": "Information about planning a funeral in advance <br>with either a Funeral Plan or sharing your wishes.",
             "buttonText": "Start Your Plan",
             "buttonLink": "planning-ahead.php"
         }
@@ -28,7 +28,7 @@
         "title": "Our Family Caring for Your Family",
         "review1": {
             "stars": 5,
-            "text": "David and Claire were absolutely wonderful during the most difficult time of our lives. Their compassion and attention to detail made everything so much easier. They treated our mum with such dignity and respect.",
+            "text": "David and Helen were absolutely wonderful during the most difficult time of our lives. Their compassion and attention to detail made everything so much easier. They treated our mum with such dignity and respect.",
             "author": "Sarah Mitchell",
             "source": "Google Review"
         },
@@ -41,7 +41,7 @@
     },
     "family": {
         "title": "Liverpool's Independent & Family Run Funeral Service",
-        "description1": "Barringtons is a family owned funeral directors, run by David and Claire Barrington together with our dedicated team, we understand the importance of providing you and your family with a service that is personal, warm, and completely individual.",
+        "description1": "As a family-run funeral directors, David and Claire Barrington, together with their dedicated team, understand the importance of providing families with a service that is personal, warm, and completely individual.",
         "description2": "We believe that every farewell should reflect the unique life it celebrates, and we're honoured to help you to create these meaningful services.",
         "image": "assets\/images\/family.jpg"
     },
@@ -79,21 +79,21 @@
         "locations": [
             {
                 "name": "Waterloo",
-                "image": "\/assets\/images\/uploads\/img_68e8cfff62da2_1760088063.jpg",
+                "image": "\/assets\/images\/uploads\/img_68d0fb889e9be_1758526344.jpg",
                 "address": "&nbsp; &nbsp; &nbsp; &nbsp;28 Crosby Rd North, Waterloo L22 4QF",
                 "phone": "0151 928 1625 (24 hours)",
                 "hours": "Monday - Friday, 9am - 5pm<br>"
             },
             {
                 "name": "Formby",
-                "image": "\/assets\/images\/uploads\/img_68e8d00c9be93_1760088076.jpeg",
+                "image": "\/assets\/images\/uploads\/img_68d1008e9e115_1758527630.jpg",
                 "address": "&nbsp; &nbsp; &nbsp; &nbsp;49 Liverpool Road, Formby L37 6BT",
                 "phone": "01704 461511 (24 hours)",
                 "hours": "Monday - Friday, 10am - 4pm"
             },
             {
                 "name": "Netherton",
-                "image": "\/assets\/images\/uploads\/img_68e8d0134fa62_1760088083.jpg",
+                "image": "\/assets\/images\/uploads\/img_68dfa57552724_1759487349.jpg",
                 "address": "&nbsp; &nbsp; &nbsp; &nbsp;38 The Marian Square, Netherton L30 5QA",
                 "phone": "0151 329 3525 (24 hours)",
                 "hours": "Monday - Friday, 9am - 5pm"

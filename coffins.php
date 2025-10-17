@@ -103,6 +103,8 @@ require_once 'includes/header.php';
                 <button class="slider-nav next" onclick="changeSlide(1)">&#10095;</button>
             </div>
 
+            <div class="slider-description" id="sliderDescription"></div>
+
             <div class="slider-dots" id="sliderDots"></div>
 
             <div class="lightbox-footer">
@@ -359,6 +361,18 @@ require_once 'includes/header.php';
             right: 10px;
         }
 
+        .slider-description {
+            text-align: center;
+            padding: 1rem 2rem;
+            margin: 1rem 0;
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.6;
+            min-height: 50px;
+            background: #f9f9f9;
+            border-radius: 6px;
+        }
+
         .slider-dots {
             display: flex;
             justify-content: center;
@@ -470,11 +484,17 @@ require_once 'includes/header.php';
                 padding: 0.6rem 1.5rem;
                 font-size: 0.9rem;
             }
+
+            .slider-description {
+                padding: 0.75rem 1rem;
+                font-size: 0.9rem;
+                margin: 0.75rem 0;
+            }
         }
     </style>
 
     <script>
-        // Coffin image collections
+        // Coffin image collections with descriptions
         const coffinImages = {
             traditional: [
                 'assets/images/coffins/traditional/light_oak_york_traditional_coffin.jpg',
@@ -490,6 +510,24 @@ require_once 'includes/header.php';
                 'assets/images/coffins/personalised/Sweetpeas.jpg',
                 'assets/images/coffins/personalised/Horse Racing.jpg',
                 'assets/images/coffins/personalised/My Rosemary.jpg'
+            ]
+        };
+
+        const coffinDescriptions = {
+            traditional: [
+                'York Coffin in light oak veneer with simple flat lid and flat sides with Gold coloured handles, wreath holders and appropriate furniture.',
+                'Camberry Coffin in light mahogany veneer with double raised lid and panelled sides. Silver coloured handles and wreath holders and appropriate furniture.',
+                'Hardwick Coffin in medium oak veneer with double mouldings and bead on lid. Gold coloured handles and wreath holders with appropriate furniture.'
+            ],
+            eco: [
+                'White wicker teardrop shaped casket with rope handles.',
+                'Golden wicker traditional shaped coffin with rope handles.',
+                'Light coloured bamboo coffin with bamboo handles and different coloured bands.'
+            ],
+            personalised: [
+                'Cardboard Colourful Coffin with a blue sky and wildflowers in a field.',
+                'Wrapped Colourful coffin with a horse racing theme.',
+                'Wrapped Colourful coffin with a rose theme.'
             ]
         };
 
@@ -533,8 +571,12 @@ require_once 'includes/header.php';
 
         function updateSlide() {
             const images = coffinImages[currentType];
+            const descriptions = coffinDescriptions[currentType];
             const img = document.getElementById('lightboxImage');
+            const descElement = document.getElementById('sliderDescription');
+
             img.src = images[currentIndex];
+            descElement.textContent = descriptions[currentIndex];
 
             // Update dots
             const dots = document.querySelectorAll('.dot');

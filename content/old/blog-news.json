@@ -1,0 +1,19 @@
+{
+    "meta": {
+        "title": "Blog & News | Helpful Articles & Updates | Barringtons",
+        "description": "Read our latest articles on grief support, funeral planning advice, and community news. Helpful resources from Barringtons Funeral Services Liverpool.",
+        "keywords": "funeral blog, grief support, funeral planning, bereavement advice, Liverpool funeral news"
+    },
+    "hero": {
+        "title": "Blog & News",
+        "image": "assets/images/hero-background.jpg"
+    },
+    "intro": {
+        "title": "News & Articles",
+        "subtitle": "Stay informed with our latest updates, helpful guides, and community news"
+    },
+    "noPosts": {
+        "title": "Coming Soon",
+        "message": "We're currently preparing our blog content. Please check back soon for helpful articles and updates from Barringtons Funeral Services."
+    }
+}

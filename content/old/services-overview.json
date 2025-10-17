@@ -7,7 +7,7 @@
     "hero": {
         "title": "Complete Funeral Services",
         "subtitle": "Transparent pricing and comprehensive support for every type of farewell",
-        "image": "\/assets\/images\/uploads\/img_68e91620046d0_1760106016.jpg"
+        "image": "\/assets\/images\/uploads\/img_68cd78c7966ab_1758296263.jpg"
     },
     "intro": {
         "title": "Every Service, Every Detail, Every Price",
@@ -17,27 +17,27 @@
     "services": {
         "traditional": {
             "title": "Bespoke Funeral Service",
-            "price": "\u00a32,645",
-            "image": "\/assets\/images\/uploads\/img_68ef909ee796f_1760530590.jpg",
-            "fullDescription": "Our bespoke funeral service honours time-tested customs while allowing for personal touches that reflect your loved one's life. This comprehensive service includes professional care from the moment you contact us through to the final farewell. We handle all arrangements with dignity and respect, ensuring every detail meets your family's expectations. Our experienced team guides you through each decision, from choosing the right coffin to selecting music and readings that capture the essence of your loved one's life. The traditional service typically includes a viewing at our chapel of rest, a formal procession to the service venue or crematorium, and support with the reception afterwards. Options can be added or removed.&nbsp;",
+            "price": "\u00a32,995",
+            "image": "https:\/\/placehold.co\/600x400\/2c5530\/white?text=Traditional+Funeral",
+            "fullDescription": "Our bespoke funeral service honours time-tested customs while allowing for personal touches that reflect your loved one's life. This comprehensive service includes professional care from the moment you contact us through to the final farewell. We handle all arrangements with dignity and respect, ensuring every detail meets your family's expectations. Our experienced team guides you through each decision, from choosing the right coffin to selecting music and readings that capture the essence of your loved one's life. The traditional service typically includes a viewing at our chapel of rest, a formal procession to the service venue or crematorium, and support with the reception afterwards. Options can be added or removed. Use our flexible Funeral Estimator to help check any costs here&nbsp;<a href=\"https:\/\/estimator.barringtonsfunerals.com\/#\/\">Barringtons Funeral Calculator<\/a>",
             "included": [
                 "Professional services of funeral director and staff",
-                "Collection of the person who has died<br>&nbsp;in working hours.",
-                "Traditional oak or mahogany veneered coffin <br>with quality fittings",
-                "Use of chapel of rest for visiting your loved one.",
-                "Preparation and dressing of the person who has died. Including embalming.&nbsp;",
-                "Care of the deceased until the funeral service.&nbsp;",
-                "&nbsp;Hearse for the funeral procession and four professional pallbearers.",
+                "Collection and care of your loved one (24\/7 availability)",
+                "Traditional oak veneer coffin with quality fittings",
+                "Use of chapel of rest for viewing",
+                "Hearse for the funeral procession",
+                "One following limousine (seats 6-7 people)",
+                "Four professional pallbearers",
                 "All necessary documentation and administration",
                 "Advice on registering the death",
-                "Liaison with officiants",
-                "Liaison with creative partners including Audio Visual, Music and printed stationery and florists.&nbsp;",
-                "Online memorial page and donations collection&nbsp;"
+                "Liaison with clergy or celebrant",
+                "Order of service sheets (up to 50 copies)",
+                "Online memorial page and donations collection"
             ],
             "optional": [
                 {
-                    "name": "Additional limousines",
-                    "price": "\u00a3250 each"
+                    "name": "Additional limousine",
+                    "price": "\u00a3250"
                 },
                 {
                     "name": "Horse-drawn hearse",
@@ -72,39 +72,39 @@
         "contemporary": {
             "title": "Contemporary Celebration of Life",
             "price": "\u00a33,195",
-            "image": "\/assets\/images\/uploads\/img_68ef94140c998_1760531476.JPG",
-            "fullDescription": "A modern celebration of life focuses on joy, memories, and the unique personality of your loved one. This service breaks away from traditional constraints, allowing complete personalization of every element. Whether it's a themed celebration reflecting their passions, a gathering at their favorite venue, or a service filled with their beloved music, we can help you create a farewell that truly celebrates who they were. Our contemporary services often include multimedia tributes, personalized decorations, and unique touches like memory tables, photo displays, or even live performances. We work closely with celebrants who specialize in creating meaningful, non-religious ceremonies that capture the spirit of your loved one. We have put some typical options below.&nbsp;",
+            "image": "https:\/\/placehold.co\/600x400\/2c5530\/white?text=Contemporary+Celebration",
+            "fullDescription": "A modern celebration of life focuses on joy, memories, and the unique personality of your loved one. This service breaks away from traditional constraints, allowing complete personalization of every element. Whether it's a themed celebration reflecting their passions, a gathering at their favorite venue, or a service filled with their beloved music, we help create a farewell that truly celebrates who they were. Our contemporary services often include multimedia tributes, personalized decorations, and unique touches like memory tables, photo displays, or even live performances. We work closely with celebrants who specialize in creating meaningful, non-religious ceremonies that capture the spirit of your loved one.&nbsp;<span style=\"font-size: 17.6px;\">Use our flexible Funeral Estimator to help check any costs here&nbsp;<\/span><a href=\"https:\/\/estimator.barringtonsfunerals.com\/#\/\" style=\"font-size: 17.6px;\">Barringtons Funeral Calculator<\/a>",
             "included": [
                 "Professional services and personalized planning consultation",
                 "Collection and care of your loved one",
                 "Choice of cardboard contemporary coffin or casket",
                 "Venue decoration and setup",
                 "Modern hearse or alternative transport",
-                "Limousine<br>",
+                "Family car or cars",
                 "Professional celebrant services",
                 "Creation of multimedia tribute (photos\/video)",
                 "Personalized order of service design",
                 "Memory table and photo display setup",
                 "Coordination of personal tributes",
-                "Online memorial with photos",
+                "Online memorial with unlimited photos",
                 "Assistance with reception planning"
             ],
             "optional": [
                 {
                     "name": "Themed coffin design or wrap",
-                    "price": "From \u00a3450"
+                    "price": "\u00a3395"
                 },
                 {
                     "name": "Motorcycle hearse",
-                    "price": "\u00a31400"
+                    "price": "\u00a3750"
                 },
                 {
                     "name": "VW camper or vintage car hearse",
-                    "price": "\u00a31400"
+                    "price": "\u00a3695"
                 },
                 {
                     "name": "Professional photography",
-                    "price": "From \u00a3495"
+                    "price": "\u00a3495"
                 },
                 {
                     "name": "Dove release",
@@ -112,11 +112,11 @@
                 },
                 {
                     "name": "Bagpiper or bugler",
-                    "price": "\u00a3150"
+                    "price": "\u00a3250"
                 },
                 {
-                    "name": "Printed photo memorial boards up to A1",
-                    "price": "\u00a3100"
+                    "name": "Printed photo memorial boards",
+                    "price": "\u00a3195"
                 },
                 {
                     "name": "Catering coordination service",
@@ -176,56 +176,56 @@
         },
         "green": {
             "title": "Green & Natural Funeral",
-            "price": "\u00a33,040",
-            "image": "\/assets\/images\/uploads\/img_68ef8e9c8fa99_1760530076.webp",
-            "fullDescription": "Our green funeral service reflects a commitment to environmental sustainability while providing a meaningful farewell. We work with natural burial grounds across Merseyside and beyond, offering beautiful woodland or meadow settings for a final resting place. Every aspect of the service minimizes environmental impact, from biodegradable coffins made from bamboo, willow, or recycled materials, to our electric hearse option. As members of the Association of Green Funeral Directors, we plant a memorial tree for every funeral we conduct. The service can be religious or non-religious, formal or informal, but always respects both your loved one and the environment they cherished.",
+            "price": "\u00a33,495",
+            "image": "https:\/\/placehold.co\/600x400\/2c5530\/white?text=Green+Funeral",
+            "fullDescription": "Our green funeral service reflects a commitment to environmental sustainability while providing a meaningful farewell. We work with natural burial grounds across Merseyside and beyond, offering beautiful woodland or meadow settings for a final resting place. Every aspect of the service minimizes environmental impact, from biodegradable coffins made from bamboo, willow, or recycled materials, to our electric hearse option. As members of the Association of Green Funeral Directors, we plant a memorial tree for every funeral we conduct. The service can be religious or non-religious, formal or informal, but always respects both your loved one and the environment they cherished.&nbsp;<span style=\"font-size: 17.6px;\">Use our flexible Funeral Estimator to help check any costs here&nbsp;<\/span><a href=\"https:\/\/estimator.barringtonsfunerals.com\/#\/\" style=\"font-size: 17.6px;\">Barringtons Funeral Calculator<\/a>",
             "included": [
                 "Eco-funeral planning consultation",
                 "Collection in electric or hybrid vehicle",
                 "Natural preparation without embalming",
-                "Biodegradable LifeArt cardboard coffin&nbsp;",
+                "Biodegradable coffin (willow, bamboo, or cardboard)",
                 "Natural burial ground arrangements",
                 "Electric hearse for funeral",
                 "Memorial tree planted in their memory",
-                "Wildflower seed packets for guests (50 packs)",
-                "Biodegradable order of service",
+                "Wildflower seed packets for guests",
+                "Biodegradable order of service (recycled paper)",
                 "Natural flower arrangements (locally sourced)",
                 "Carbon offset for all transport",
                 "Woodland or meadow burial plot",
-                "Natural grave marker (Wood)"
+                "Natural grave marker (tree or wildflowers)"
             ],
             "optional": [
                 {
-                    "name": "Hand-woven basket style coffin",
-                    "price": "From \u00a3795"
+                    "name": "Hand-woven willow coffin",
+                    "price": "\u00a3695"
                 },
                 {
-                    "name": "Loop Mushroom coffin",
-                    "price": "\u00a31,995"
+                    "name": "Mushroom suit burial shroud",
+                    "price": "\u00a31,295"
                 },
                 {
-                    "name": "Eco-Pillow for ashes",
-                    "price": "\u00a375"
+                    "name": "Living memorial tree with plaque",
+                    "price": "\u00a3295"
                 },
                 {
-                    "name": "",
-                    "price": ""
+                    "name": "Bicycle hearse",
+                    "price": "\u00a3495"
                 },
                 {
-                    "name": "",
-                    "price": ""
+                    "name": "Natural stone memorial",
+                    "price": "from \u00a3795"
                 },
                 {
-                    "name": "",
-                    "price": ""
+                    "name": "Eco-urn for ashes",
+                    "price": "\u00a3125"
                 },
                 {
-                    "name": "",
-                    "price": ""
+                    "name": "Memorial woodland dedication",
+                    "price": "\u00a3495"
                 },
                 {
-                    "name": "",
-                    "price": ""
+                    "name": "Organic catering arrangement",
+                    "price": "\u00a3195"
                 }
             ],
             "commitment": "We offset all carbon emissions from our services and contribute to local conservation projects. Every green funeral includes lifetime membership to the natural burial ground for family visits."
@@ -233,8 +233,8 @@
         "religious": {
             "title": "Religious & Faith Services",
             "price": "\u00a32,995",
-            "image": "\/assets\/images\/uploads\/img_68ef8eb3756db_1760530099.jpg",
-            "fullDescription": "We understand the importance of honoring religious traditions and customs during times of loss. Our religious funeral services are conducted with deep respect for faith-specific requirements, whether Roman Catholic, Protestant, Jewish, Islamic, Hindu, Buddhist, or other beliefs. We work closely with religious leaders from all communities to ensure every ritual and tradition is properly observed. Our team is experienced in managing the specific timings, preparations, and ceremonial requirements of different faiths. From Tahara in Jewish tradition to Hindu cremation rites, from Islamic burial requirements to Buddhist chanting ceremonies, we ensure your loved one's faith is honoured throughout their final journey.",
+            "image": "https:\/\/placehold.co\/600x400\/2c5530\/white?text=Religious+Service",
+            "fullDescription": "We understand the importance of honoring religious traditions and customs during times of loss. Our religious funeral services are conducted with deep respect for faith-specific requirements, whether Catholic, Protestant, Jewish, Islamic, Hindu, Buddhist, or other beliefs. We work closely with religious leaders from all communities to ensure every ritual and tradition is properly observed. Our team is experienced in managing the specific timings, preparations, and ceremonial requirements of different faiths. From Tahara in Jewish tradition to Hindu cremation rites, from Islamic burial requirements to Buddhist chanting ceremonies, we ensure your loved one's faith is honored throughout their final journey.&nbsp;<span style=\"font-size: 17.6px;\">Use our flexible Funeral Estimator to help check any costs here&nbsp;<\/span><a href=\"https:\/\/estimator.barringtonsfunerals.com\/#\/\" style=\"font-size: 17.6px;\">Barringtons Funeral Calculator<\/a>",
             "included": [
                 "Liaison with religious leaders and places of worship",
                 "Faith-specific preparation of your loved one",
@@ -243,7 +243,7 @@
                 "Professional pallbearers familiar with religious customs",
                 "Coordination of religious ceremonies",
                 "Assistance with ritual requirements",
-                "Books of condolence",
+                "Religious books of condolence",
                 "Faith-appropriate memorial stationery",
                 "Guidance on religious mourning practices",
                 "Arrangement of specific timing requirements",
@@ -297,17 +297,17 @@
         "home": {
             "title": "Home Funeral Care",
             "price": "\u00a32,495",
-            "image": "\/assets\/images\/uploads\/img_68ef92c240b86_1760531138.jpg",
-            "fullDescription": "A home funeral allows your loved one to rest in familiar surroundings, giving family and friends the opportunity for private farewells in a comfortable, personal setting. This traditional practice is seeing renewed interest from families who want more time and privacy to say goodbye. We provide all necessary equipment and support to make this possible, including cooling equipment to allow your loved one to rest at home safely for several days. Our team offers 24\/7 telephone support and can visit to ensure everything is arranged properly. This option can be combined with any type of funeral service, allowing the procession to begin from home rather than the funeral home.",
+            "image": "https:\/\/placehold.co\/600x400\/2c5530\/white?text=Home+Funeral",
+            "fullDescription": "A home funeral allows your loved one to rest in familiar surroundings, giving family and friends the opportunity for private farewells in a comfortable, personal setting. This traditional practice is seeing renewed interest from families who want more time and privacy to say goodbye. We provide all necessary equipment and support to make this possible, including cooling equipment to allow your loved one to rest at home safely for several days. Our team offers 24\/7 telephone support and can visit to ensure everything is arranged properly. This option can be combined with any type of funeral service, allowing the procession to begin from home rather than the funeral parlor.&nbsp;<span style=\"font-size: 17.6px;\">Use our flexible Funeral Estimator to help check any costs here&nbsp;<\/span><a href=\"https:\/\/estimator.barringtonsfunerals.com\/#\/\" style=\"font-size: 17.6px;\">Barringtons Funeral Calculator<\/a>",
             "included": [
                 "Initial home consultation",
                 "Preparation of your loved one for home viewing",
+                "Delivery and setup of cooling equipment",
                 "Appropriate coffin for home setting",
-                "&nbsp;Delivery and setup of cooling equipment",
                 "24\/7 telephone support line",
                 "Daily welfare checks (if required)",
                 "Guidance on home funeral logistics",
-                "Supply of memorial items",
+                "Supply of candles and memorial items",
                 "Assistance with visiting arrangements",
                 "Collection from home for funeral",
                 "Support with paperwork from home",
@@ -323,6 +323,10 @@
                     "price": "\u00a3395"
                 },
                 {
+                    "name": "Night vigil support staff",
+                    "price": "\u00a3295"
+                },
+                {
                     "name": "Memorial guest book",
                     "price": "\u00a375"
                 },
@@ -332,19 +336,15 @@
                 },
                 {
                     "name": "Professional home photography",
-                    "price": "From \u00a3350"
+                    "price": "\u00a3350"
+                },
+                {
+                    "name": "Extended home care (per day)",
+                    "price": "\u00a3125"
                 },
                 {
                     "name": "Aromatherapy and room preparation",
                     "price": "\u00a395"
-                },
-                {
-                    "name": "",
-                    "price": ""
-                },
-                {
-                    "name": "",
-                    "price": ""
                 }
             ]
         }
@@ -367,7 +367,7 @@
             "floral": {
                 "title": "Floral Tributes",
                 "description": "Beautiful arrangements from local florists including traditional wreaths, contemporary designs, and symbolic tributes. We can also arrange charitable donations in lieu of flowers.",
-                "price": "From \u00a350"
+                "price": "From \u00a365"
             },
             "memorial": {
                 "title": "Memorial Keepsakes",
@@ -377,26 +377,26 @@
             "streaming": {
                 "title": "Live Streaming",
                 "description": "Professional webcasting allows distant family and friends to attend the service virtually. Includes recording for later viewing and sharing.",
-                "price": "&nbsp;From \u00a395"
+                "price": "\u00a395"
             },
             "music": {
                 "title": "Live Music",
                 "description": "Professional musicians including organists, soloists, bagpipers, harpists, or contemporary performers to provide meaningful music during the service.",
-                "price": "From \u00a3150"
+                "price": "From \u00a3250"
             },
             "transport": {
                 "title": "Special Transport",
                 "description": "Alternative hearses including motorcycle, horse-drawn, vintage cars, lorries, or other vehicles that reflect your loved one's interests.",
-                "price": "From \u00a3795"
+                "price": "From \u00a3495"
             },
             "monuments": {
-                "title": "Attendance Cards<br>",
-                "description": "When requested we will send an usher to the venue to give out attendance cards. You may find this very useful to know who has attended the service and can contact them afterwards.&nbsp;",
-                "price": "Free of charge"
+                "title": "Memorials & Headstones",
+                "description": "Design and installation of headstones, plaques, and monuments. We work with skilled craftspeople to create lasting tributes in stone, bronze, or other materials.",
+                "price": "From \u00a3895"
             },
             "aftercare": {
                 "title": "Bereavement Support",
-                "description": "Ongoing support including grief counselling referrals, support group information, and practical assistance with estate matters. After the funeral we also help with sign-posting onwards to specialists and further teams.",
+                "description": "Ongoing support including grief counseling referrals, support group information, and practical assistance with estate matters.",
                 "price": "Free of charge"
             }
         }
@@ -409,11 +409,11 @@
                 "description": "Payment in full by cash, cheque, or card. We accept all major credit and debit cards. Full payment is typically due within 14 days of the funeral."
             },
             "installment": {
-                "title": "Payment Plans with Funeral Safe Finance",
+                "title": "Payment Plans",
                 "description": "Spread the cost over 6 or 12 months with our instalment plans. Subject to approval, with competitive interest rates and no hidden fees."
             },
             "prepaid": {
-                "title": "Prepaid Funeral Plans with Ecclesiastical Planning Services&nbsp;",
+                "title": "Prepaid Funeral Plans",
                 "description": "Lock in today's prices and spare your family from financial worry. Flexible payment terms available from 12 to 120 months."
             }
         },

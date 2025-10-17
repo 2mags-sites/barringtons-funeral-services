@@ -10,8 +10,7 @@
     },
     "options": [
         {
-            "title": "Music &amp; Sound",
-            "image": "\/assets\/images\/uploads\/img_68f0e77c6552b_1760618364.png",
+            "title": "Music & Sound",
             "items": [
                 "Favorite songs or genres",
                 "Live musicians or singers",
@@ -22,7 +21,6 @@
         },
         {
             "title": "Visual Tributes",
-            "image": "\/assets\/images\/uploads\/img_68f0e9bacb333_1760618938.png",
             "items": [
                 "Photo displays and memory boards",
                 "Video montages of life moments",
@@ -33,7 +31,6 @@
         },
         {
             "title": "Unique Touches",
-            "image": "\/assets\/images\/uploads\/img_68f0ea53cbf2b_1760619091.jpg",
             "items": [
                 "Released doves or butterflies",
                 "Fireworks display",
@@ -44,7 +41,6 @@
         },
         {
             "title": "Personal Involvement",
-            "image": "\/assets\/images\/uploads\/img_68f13ce4b4bb9_1760640228.png",
             "items": [
                 "Family members as pallbearers",
                 "Children's drawings or letters",
@@ -61,6 +57,6 @@
     },
     "hero": {
         "title": "Making things personal",
-        "image": "\/assets\/images\/uploads\/img_68ea659b51fb2_1760191899.jpg"
+        "image": "\/assets\/images\/uploads\/img_68cf9103cfafd_1758433539.jpg"
     }
 }

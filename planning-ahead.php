@@ -123,6 +123,23 @@ require_once 'includes/header.php';
                 </div>
             </div>
 
+            <div class="ecclesiastical-section fade-in">
+                <div class="ecclesiastical-content">
+                    <div class="ecclesiastical-logo">
+                        <img src="/assets/images/ecclesiastical.jpg" alt="Ecclesiastical Planning Services">
+                    </div>
+                    <div class="ecclesiastical-text">
+                        <h3>Our Funeral Plan Provider</h3>
+                        <p>We work with Ecclesiastical Planning Services, part of the award-winning Benefact Group. All funeral plans are regulated by the Financial Conduct Authority (FCA), giving you complete peace of mind.</p>
+                        <p>Download their comprehensive brochure to learn more about how funeral plans work, what's included, and answers to common questions.</p>
+                        <a href="/assets/files/EPS-Funeral-Plans-Brochure.pdf" class="btn-download" download>
+                            <span class="download-icon">📄</span>
+                            Download Funeral Plans Brochure
+                        </a>
+                    </div>
+                </div>
+            </div>
+
             <div class="cta-section fade-in">
                 <h2><?php echo editable($content['cta']['title'] ?? '', 'cta.title'); ?></h2>
                 <p><?php echo editable($content['cta']['subtitle'] ?? '', 'cta.subtitle'); ?></p>

@@ -7,9 +7,9 @@
     "intro": {
         "title": "Transparent Pricing for Your Peace of Mind",
         "paragraphs": [
-            "Following the Competition and Market Authority's (CMA) market investigation into the funeral sector it is compulsory that every funeral director has a Standardised Price List. The price list should be available on their website, in the window of their branch, and available to be taken away for reflection.",
-            "The Standardised Price List should enable you to compare funeral directors on a like-for-like basis based on the CMA's attended funeral service and unattended funeral service specifications.",
-            "The Standardised Funeral Service is a set funeral package that includes all of the basic needs to make funeral arrangements. There are additional options that can be added to the service which are included in the Additional Options Price List at the bottom of the page. To avoid confusion all our prices are in line with this."
+            "Following the Competition and Market Authority's (CMA) market investigation into the funeral sector it is compulsory that every funeral director has a Standard Price List. The price list should be available on their website, in the window of their branch, and available to be taken away for reflection.",
+            "The Standard Price List should enable you to compare funeral directors on a like-for-like basis based on the CMA's attended funeral service and unattended funeral service specifications.",
+            "The Standard Funeral Service is a set funeral package that includes all of the basic needs to make funeral arrangements, however it is not a flexible package. There are additional options that can be added to the service which are included in the Additional Options Price List at the bottom of the page. In most cases however if you do not want the fixed Standard Funeral Option the best value is achieved by choosing our bespoke service. To avoid confusion our prices are in sync with the standardised price list.&nbsp;"
         ]
     },
     "price_notice": {
@@ -59,7 +59,7 @@
             },
             {
                 "description": "Cremation (funeral director's charges plus the cremation fee)",
-                "price": "\u00a31600"
+                "price": "\u00a31590"
             }
         ]
     },
@@ -114,6 +114,6 @@
     },
     "hero": {
         "title": "Standardised Price List",
-        "image": "\/assets\/images\/uploads\/img_68e916478646d_1760106055.jpg"
+        "image": "\/assets\/images\/uploads\/img_68cd764f87273_1758295631.jpg"
     }
 }

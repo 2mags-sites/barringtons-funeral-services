@@ -2181,6 +2181,75 @@ footer {
     color: white;
 }
 
+/* Ecclesiastical Section */
+.ecclesiastical-section {
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.ecclesiastical-content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.ecclesiastical-logo {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ecclesiastical-logo img {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+}
+
+.ecclesiastical-text h3 {
+    color: var(--soft-navy);
+    margin-bottom: 1rem;
+    font-weight: normal;
+    font-size: 1.6rem;
+}
+
+.ecclesiastical-text p {
+    color: var(--text-body);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--soft-navy);
+    color: white;
+    padding: 0.9rem 1.8rem;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+.btn-download:hover {
+    background: var(--navy);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(58, 77, 99, 0.3);
+}
+
+.download-icon {
+    font-size: 1.2rem;
+}
+
 @media (max-width: 768px) {
     .benefits-grid,
     .plan-cards,
@@ -2204,6 +2273,24 @@ footer {
     .process-step:not(:last-child):after {
         left: 50%;
         transform: translateX(-50%);
+    }
+
+    .ecclesiastical-section {
+        padding: 2rem 1.5rem;
+    }
+
+    .ecclesiastical-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .ecclesiastical-logo {
+        padding: 1.5rem;
+    }
+
+    .btn-download {
+        width: 100%;
+        justify-content: center;
     }
 }
 

@@ -1,0 +1,85 @@
+{
+    "meta": {
+        "title": "Immediate Need - 24 Hour Support | Barringtons Funeral Services",
+        "description": "We're here for you 24\/7 when you need immediate funeral support. Compassionate guidance through every step. Call 0151 928 1625 anytime.",
+        "keywords": "immediate funeral need Liverpool, 24 hour funeral support, emergency funeral services, death registration Liverpool, what to do when someone dies"
+    },
+    "intro": {
+        "title": "When Someone Dies: Your First Steps",
+        "subtitle": "We understand this is an overwhelming time. Take a deep breath \u2013 you don't have to do everything at once, and we're here to help you through each step."
+    },
+    "steps": [
+        {
+            "number": "Step 1",
+            "title": "Take a Moment",
+            "description": "If the death has just occurred, there's no immediate rush. Take time to be with your loved one if you wish. When you're ready, move to the next steps."
+        },
+        {
+            "number": "Step 2",
+            "title": "Call for Help",
+            "description": "Call us first at 0151 928 1625 \u2013 we have a funeral director available at all times. <br>We'll guide you through everything that needs to happen and take as much of the burden as possible, allowing you time to collect your thoughts.<br>If the person who has died is at home or in a nursing home a suitably qualified medic will need to verify the death has occurred before we can transfer them into our care.&nbsp;"
+        },
+        {
+            "number": "Step 3",
+            "title": "Medical Certification",
+            "description": "A doctor will need to certify the death.:",
+            "list": [
+                "A doctor who treated your loved one will complete a Medical Certificate of Cause of Death.",
+                "A Medical Examiner will review this and call you to discuss any concerns and explain the cause of death.",
+                "Once discussed and approved, the information is sent to the Registrar."
+            ]
+        },
+        {
+            "number": "Step 4",
+            "title": "Register the Death",
+            "description": "You'll need to make an appointment at the Register Office. Don't worry if you can't do this immediately, you will need to take some personal items with you.",
+            "subtitle": "What to bring (if available):",
+            "list": [
+                "Birth certificate or passport of your loved one",
+                "Their medical card",
+                "Details about their occupation and pension"
+            ]
+        },
+        {
+            "number": "Step 5",
+            "title": "Special Circumstances",
+            "description": "If the death was unexpected, sudden, or occurred in certain circumstances, the Coroner may be involved. This is routine procedure and nothing to worry about \u2013 we'll support you through this process if needed."
+        }
+    ],
+    "remember": {
+        "title": "Remember:",
+        "points": [
+            "There's no need to rush.",
+            "We're available 24\/7 to guide you.",
+            "You don't have to remember everything \u2013 we'll remind you what's needed.",
+            "It's okay to ask for help from family and friends."
+        ],
+        "highlight": "Your first call to us is often the hardest. Once you've called us, we'll be with you every step of the way.",
+        "servicesLinkText": "For all of our services and prices, click here"
+    },
+    "cta": {
+        "title": "We're Here to Help",
+        "subtitle": "Our experienced team is available 24 hours a day, 7 days a week to provide immediate assistance and support.",
+        "contacts": {
+            "phone": {
+                "title": "24 Hour Support Line",
+                "number": "0151 928 1625",
+                "description": "Available any time, day or night"
+            },
+            "office": {
+                "title": "Main Office",
+                "address": "28 Crosby Rd N, Waterloo L22 4QF",
+                "hours": "Open 24 hours"
+            },
+            "email": {
+                "title": "Email Support",
+                "address": "info@barringtonsfunerals.co.uk",
+                "description": "We'll respond as quickly as possible but please note emails are not monitored at the weekend"
+            }
+        }
+    },
+    "hero": {
+        "title": "Immediate Need",
+        "image": "\/assets\/images\/uploads\/img_68cd745e181d3_1758295134.jpg"
+    }
+}

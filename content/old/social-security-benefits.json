@@ -15,7 +15,7 @@
     "guide_sections": [
         {
             "title": "Funeral Expenses Payment",
-            "description": "If you qualify for certain benefits, you may be able to get help with funeral costs from the DWP.<br>The qualifying benefits are Universal Credit, Income Support, Pension Credit, Housing Benefit, Income-based Jobseeker's Allowance, Income-related Employment and Support Allowance. Your award may depend on income and savings.&nbsp;<br><a href=\"https:\/\/www.gov.uk\/funeral-payments\">Get help with funeral costs (Funeral Expenses Payment): How it works - GOV.UK<\/a>",
+            "description": "If you qualify for certain benefits, you may be able to get help with funeral costs from the DWP.<br>The qualifying benefits are Universal Credit, Income Support, Pension Credit, Housing Benefit, Income-based Jobseeker's Allowance, Income-related Employment and Support Allowance. Your award may depend on income and savings.&nbsp;<br>",
             "points": [
                 "This may mean up to \u00a31,000 towards the funeral expenses",
                 "The cost of the burial or cremation fees",
@@ -25,7 +25,7 @@
         },
         {
             "title": "Bereavement Support Payment",
-            "description": "For those whose spouse or civil partner died on or after 6 April 2017.<br><a href=\"https:\/\/www.gov.uk\/bereavement-support-payment?step-by-step-nav=4f1fe77d-f43b-4581-baf9-e2600e2a2b7a\">Bereavement Support Payment: How it works - GOV.UK<\/a>",
+            "description": "For those whose spouse or civil partner died on or after 6 April 2017.",
             "points": [
                 "Initial lump sum payment",
                 "Monthly payments for up to 18 months",
@@ -37,8 +37,8 @@
             "title": "Other Support",
             "description": "",
             "points": [
-                "Widowed Parent's Allowance&nbsp;",
-                "War Widow(er) Pension&nbsp;",
+                "Widowed Parent's Allowance",
+                "War Widow(er) Pension",
                 "Child Benefit (guardian claims)",
                 "Housing Benefit adjustments",
                 "Council Tax reductions"
