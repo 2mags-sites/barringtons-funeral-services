@@ -100,10 +100,136 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; <?php echo date('Y'); ?> Barringtons Funerals. All Rights Reserved | <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-service">Terms of Service</a></p>
+            <p>&copy; <?php echo date('Y'); ?> Barringtons Funerals. All Rights Reserved | <a href="/privacy-policy.php">Privacy Policy</a> | <a href="/terms-conditions.php">Terms & Conditions</a> | <a href="/cookie-policy.php">Cookie Policy</a> | <a href="#" onclick="showCookieBanner(); return false;">Cookie Preferences</a></p>
             <p style="text-align: center; margin-top: 10px;">Barringtons Funeral Services Ltd is an appointed representative of Ecclesiastical Planning Services Ltd which is authorised and regulated by the Financial Conduct Authority (FRN:958152).</p>
         </div>
     </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieBanner" class="cookie-banner" style="display: none;">
+        <div class="cookie-banner-content">
+            <div class="cookie-banner-text">
+                <h3>We Use Cookies</h3>
+                <p>We use essential cookies to make our website work and optional analytics cookies to understand how you use our site. You can choose which cookies to accept.</p>
+                <a href="/cookie-policy.php" class="cookie-policy-link">Learn more about cookies</a>
+            </div>
+            <div class="cookie-banner-actions">
+                <button onclick="acceptEssentialOnly()" class="cookie-btn cookie-btn-secondary">Essential Only</button>
+                <button onclick="acceptAllCookies()" class="cookie-btn cookie-btn-primary">Accept All</button>
+            </div>
+        </div>
+    </div>
+
+    <style>
+    .cookie-banner {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: white;
+        box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+        z-index: 9999;
+        animation: slideUp 0.4s ease-out;
+    }
+
+    @keyframes slideUp {
+        from {
+            transform: translateY(100%);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    .cookie-banner-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1.5rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .cookie-banner-text h3 {
+        color: var(--navy);
+        margin: 0 0 0.5rem 0;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    .cookie-banner-text p {
+        margin: 0 0 0.5rem 0;
+        color: #555;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .cookie-policy-link {
+        color: var(--soft-navy);
+        text-decoration: underline;
+        font-size: 0.9rem;
+    }
+
+    .cookie-policy-link:hover {
+        color: var(--navy);
+    }
+
+    .cookie-banner-actions {
+        display: flex;
+        gap: 1rem;
+        flex-shrink: 0;
+    }
+
+    .cookie-btn {
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: all 0.3s;
+        white-space: nowrap;
+    }
+
+    .cookie-btn-primary {
+        background: var(--soft-navy);
+        color: white;
+    }
+
+    .cookie-btn-primary:hover {
+        background: var(--navy);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(58, 77, 99, 0.3);
+    }
+
+    .cookie-btn-secondary {
+        background: #f0f0f0;
+        color: var(--text-dark);
+        border: 2px solid #ddd;
+    }
+
+    .cookie-btn-secondary:hover {
+        background: #e5e5e5;
+    }
+
+    @media (max-width: 768px) {
+        .cookie-banner-content {
+            flex-direction: column;
+            align-items: stretch;
+            padding: 1.5rem;
+        }
+
+        .cookie-banner-actions {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .cookie-btn {
+            width: 100%;
+        }
+    }
+    </style>
 
     <!-- JavaScript -->
     <script>
@@ -214,7 +340,67 @@
                 });
             });
         });
+
+        // Cookie Consent Management
+        function checkCookieConsent() {
+            const consent = localStorage.getItem('cookieConsent');
+            if (!consent) {
+                // Show banner after a short delay
+                setTimeout(() => {
+                    document.getElementById('cookieBanner').style.display = 'block';
+                }, 1000);
+            } else if (consent === 'all') {
+                loadGoogleAnalytics();
+            }
+        }
+
+        // Check on page load
+        checkCookieConsent();
     });
+
+    function showCookieBanner() {
+        document.getElementById('cookieBanner').style.display = 'block';
+    }
+
+    function hideCookieBanner() {
+        document.getElementById('cookieBanner').style.display = 'none';
+    }
+
+    function acceptAllCookies() {
+        localStorage.setItem('cookieConsent', 'all');
+        localStorage.setItem('cookieConsentDate', new Date().toISOString());
+        hideCookieBanner();
+        loadGoogleAnalytics();
+    }
+
+    function acceptEssentialOnly() {
+        localStorage.setItem('cookieConsent', 'essential');
+        localStorage.setItem('cookieConsentDate', new Date().toISOString());
+        hideCookieBanner();
+    }
+
+    function loadGoogleAnalytics() {
+        // Only load if user accepted and DNT is not enabled
+        if (navigator.doNotTrack === '1' || window.doNotTrack === '1') {
+            return;
+        }
+
+        // Google Analytics code - replace with your actual GA4 ID
+        // Uncomment and add your GA4 Measurement ID when ready
+        /*
+        const script = document.createElement('script');
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
+        script.async = true;
+        document.head.appendChild(script);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX', {
+            'anonymize_ip': true
+        });
+        */
+    }
     </script>
 
     <!-- Main Script File -->

@@ -1,0 +1,61 @@
+{
+    "meta": {
+        "title": "Terms and Conditions | Barringtons Funeral Services Liverpool",
+        "description": "Terms and conditions for using the Barringtons Funeral Services website and arranging funeral services with us.",
+        "keywords": "terms and conditions, website terms, funeral services terms, barringtons terms"
+    },
+    "hero": {
+        "title": "Terms and Conditions",
+        "subtitle": "Terms of use for our website and services"
+    },
+    "lastUpdated": "January 2025",
+    "introduction": {
+        "text": "These Terms and Conditions govern your use of the Barringtons Funeral Services website (barringtonsfunerals.co.uk) and the funeral services we provide. By using our website or engaging our services, you agree to these terms."
+    },
+    "sections": [
+        {
+            "title": "About Us",
+            "content": "<p><strong>Company Name:</strong> Barringtons Funeral Services<br><strong>Trading Address:</strong> Multiple locations across Liverpool<br><strong>Contact:</strong> 0151 928 1625<br><strong>Email:</strong> info@barringtonsfunerals.co.uk</p><p>We are a family-run independent funeral director with over 75 years of experience serving the Liverpool community.</p>"
+        },
+        {
+            "title": "Website Use",
+            "content": "<h4>Permitted Use</h4><p>You may use our website for:</p><ul><li>Viewing information about our funeral services</li><li>Contacting us to arrange services or make enquiries</li><li>Using our online funeral cost estimator</li><li>Accessing our memorial pages and tribute services</li><li>Reading our blog and resource articles</li></ul><h4>Prohibited Use</h4><p>You must not:</p><ul><li>Use the website for any unlawful purpose</li><li>Attempt to gain unauthorized access to our systems</li><li>Copy, reproduce, or distribute our content for commercial purposes</li><li>Use automated systems (bots, scrapers) to access the website</li><li>Post or transmit harmful code, viruses, or malware</li><li>Misrepresent your identity or impersonate others</li><li>Abuse or harass our staff through the website</li></ul>"
+        },
+        {
+            "title": "Intellectual Property",
+            "content": "<p>All content on this website, including text, images, logos, graphics, and design, is owned by Barringtons Funeral Services or licensed to us and is protected by UK copyright law.</p><p><strong>You may:</strong></p><ul><li>View and print pages for personal, non-commercial use</li><li>Share links to our website on social media</li><li>Quote small excerpts with proper attribution</li></ul><p><strong>You may not:</strong></p><ul><li>Reproduce, modify, or distribute our content without written permission</li><li>Use our logos, trademarks, or branding without authorization</li><li>Create derivative works from our content</li><li>Remove copyright notices or watermarks</li></ul><p>If you wish to use our content for any other purpose, please contact info@barringtonsfunerals.co.uk for permission.</p>"
+        },
+        {
+            "title": "Funeral Services Terms",
+            "content": "<h4>Service Arrangements</h4><p>When you engage our funeral services:</p><ul><li>We will provide a detailed written estimate before proceeding</li><li>All prices are clearly stated and include VAT where applicable</li><li>Third-party costs (crematorium, cemetery, clergy fees) are subject to change and passed on at cost</li><li>Changes to arrangements may incur additional costs</li><li>We will keep you informed of all costs throughout the process</li></ul><h4>Payment Terms</h4><ul><li>Payment is typically due within 14 days of the funeral service</li><li>We accept payment by cash, cheque, bank transfer, and all major credit/debit cards</li><li>Payment plans are available through our finance partners (subject to approval)</li><li>Funeral plans are available through Ecclesiastical Planning Services</li><li>We may assist with claiming from estates or insurance policies</li></ul><h4>Cancellation</h4><p>If you need to cancel or postpone funeral arrangements, please contact us as soon as possible. Cancellation charges may apply for third-party services already booked or goods already purchased.</p>"
+        },
+        {
+            "title": "Third-Party Links",
+            "content": "<p>Our website contains links to third-party websites including:</p><ul><li>Crematorium and cemetery websites</li><li>Charity donation pages</li><li>Memorial and tribute services</li><li>Regulatory bodies (NAFD, SAIF)</li><li>Funeral plan providers</li></ul><p>We are not responsible for the content, privacy practices, or terms of these external websites. Links are provided for your convenience and do not imply endorsement. Please review the terms and privacy policies of any third-party sites you visit.</p>"
+        },
+        {
+            "title": "Limitation of Liability",
+            "content": "<p>While we strive to provide accurate and up-to-date information:</p><ul><li>We cannot guarantee the website will always be available or error-free</li><li>We are not liable for technical issues, interruptions, or loss of data</li><li>Third-party costs quoted are estimates and subject to change</li><li>We are not responsible for decisions made based solely on website information without speaking to us directly</li></ul><p><strong>Nothing in these terms limits our liability for:</strong></p><ul><li>Death or personal injury caused by negligence</li><li>Fraud or fraudulent misrepresentation</li><li>Any liability that cannot be excluded by law</li></ul><p>For our funeral services, our liability is governed by our professional indemnity insurance and relevant consumer protection laws.</p>"
+        },
+        {
+            "title": "Data Protection and Privacy",
+            "content": "<p>We collect and process personal information in accordance with UK GDPR and the Data Protection Act 2018. Please see our <a href=\"/privacy-policy.php\">Privacy Policy</a> for full details on how we handle your personal data.</p>"
+        },
+        {
+            "title": "Complaints Procedure",
+            "content": "<p>If you have a complaint about our services:</p><ol><li>Contact us directly at info@barringtonsfunerals.co.uk or call 0151 928 1625</li><li>We will acknowledge your complaint within 48 hours</li><li>We aim to resolve all complaints within 5 working days</li><li>If you are not satisfied, you can escalate to our senior management</li><li>As members of NAFD and SAIF, you can also contact these bodies for independent dispute resolution</li></ol>"
+        },
+        {
+            "title": "Changes to These Terms",
+            "content": "<p>We may update these Terms and Conditions from time to time. Changes will be posted on this page with an updated \"Last Updated\" date. Continued use of our website after changes constitutes acceptance of the new terms.</p><p>For funeral services already arranged, the terms agreed at the time of arrangement will continue to apply.</p>"
+        },
+        {
+            "title": "Governing Law",
+            "content": "<p>These Terms and Conditions are governed by the laws of England and Wales. Any disputes will be subject to the exclusive jurisdiction of the courts of England and Wales.</p>"
+        },
+        {
+            "title": "Contact Us",
+            "content": "<p>If you have any questions about these Terms and Conditions, please contact us:</p><p><strong>Email:</strong> info@barringtonsfunerals.co.uk<br><strong>Phone:</strong> 0151 928 1625<br><strong>Address:</strong> Barringtons Funeral Services, Liverpool</p>"
+        }
+    ]
+}

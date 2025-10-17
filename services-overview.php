@@ -240,54 +240,6 @@ require_once 'includes/header.php';
                     </div>
                 </div>
 
-                <!-- Home Funeral Service -->
-                <div class="service-section fade-in" id="home-funeral">
-                    <div class="service-content">
-                        <div class="service-header">
-                            <h2><?php echo editable($content['services']['home']['title'] ?? '', 'services.home.title'); ?></h2>
-                            <div class="service-price">
-                                <span class="from-text">From</span>
-                                <span class="price-amount"><?php echo editable($content['services']['home']['price'] ?? '', 'services.home.price'); ?></span>
-                            </div>
-                        </div>
-
-                        <div class="service-description-with-image">
-                            <div class="service-description">
-                                <?php echo editable($content['services']['home']['fullDescription'] ?? '', 'services.home.fullDescription'); ?>
-                            </div>
-                            <div class="service-description-image">
-                                <?php echo editableImage($content['services']['home']['image'] ?? '', 'services.home.image', 'Home Funeral Service', 'Home Funeral'); ?>
-                            </div>
-                        </div>
-
-                        <div class="service-details-grid">
-                            <div class="service-included">
-                                <h3>Support Provided:</h3>
-                                <ul>
-                                    <?php foreach(($content['services']['home']['included'] ?? []) as $index => $item): ?>
-                                    <li><?php echo editable($item, "services.home.included.$index"); ?></li>
-                                    <?php endforeach; ?>
-                                </ul>
-                            </div>
-
-                            <div class="service-optional">
-                                <h3>Additional Support:</h3>
-                                <ul>
-                                    <?php foreach(($content['services']['home']['optional'] ?? []) as $index => $item): ?>
-                                    <li><?php echo editable($item['name'] ?? '', "services.home.optional.$index.name"); ?> -
-                                        <span class="price"><?php echo editable($item['price'] ?? '', "services.home.optional.$index.price"); ?></span>
-                                    </li>
-                                    <?php endforeach; ?>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="service-cta">
-                            <a href="immediate-need.php" class="btn-primary">Arrange Home Funeral</a>
-                            <a href="https://estimator.barringtonsfunerals.com/#/" class="btn-outline" target="_blank">Launch Funeral Cost Estimator</a>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <!-- Additional Services Section -->

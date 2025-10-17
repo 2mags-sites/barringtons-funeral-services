@@ -1,0 +1,57 @@
+{
+    "meta": {
+        "title": "Privacy Policy | Barringtons Funeral Services Liverpool",
+        "description": "Our privacy policy explains how Barringtons Funeral Services collects, uses, and protects your personal information in accordance with UK GDPR.",
+        "keywords": "privacy policy, data protection, GDPR, personal information, funeral services privacy"
+    },
+    "hero": {
+        "title": "Privacy Policy",
+        "subtitle": "How we protect and use your information"
+    },
+    "lastUpdated": "January 2025",
+    "introduction": {
+        "text": "At Barringtons Funeral Services, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, store, and protect your data in accordance with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018."
+    },
+    "sections": [
+        {
+            "title": "Who We Are",
+            "content": "<p><strong>Data Controller:</strong> Barringtons Funeral Services<br><strong>Address:</strong> Multiple locations across Liverpool (Formby, Netherton, Waterloo)<br><strong>Contact:</strong> 0151 928 1625<br><strong>Email:</strong> info@barringtonsfunerals.co.uk</p><p>We are registered with the Information Commissioner's Office (ICO) and comply with all applicable data protection legislation.</p>"
+        },
+        {
+            "title": "Information We Collect",
+            "content": "<p>In providing our funeral services, we may collect and process the following types of personal information:</p><h4>Information About the Deceased</h4><ul><li>Full name, date of birth, date and place of death</li><li>Address and contact details (if applicable)</li><li>Medical information (where necessary for legal requirements)</li><li>Religious or cultural preferences</li><li>Next of kin details</li></ul><h4>Information About You (as our client)</h4><ul><li>Your name, address, and contact details</li><li>Payment and financial information</li><li>Correspondence with us (emails, letters, phone calls)</li><li>Details of services you have arranged or enquired about</li></ul><h4>Website Information</h4><ul><li>IP address and browser information</li><li>Pages visited and time spent on our website</li><li>Referring website or source</li><li>Analytics data (via Google Analytics cookies)</li></ul>"
+        },
+        {
+            "title": "How We Use Your Information",
+            "content": "<p>We use your personal information for the following purposes:</p><ul><li><strong>To provide funeral services:</strong> Arranging and conducting funerals, liaising with third parties (crematoriums, cemeteries, clergy, etc.)</li><li><strong>Legal obligations:</strong> Completing death registration, cremation certificates, and other legal documentation</li><li><strong>Financial processing:</strong> Processing payments, managing payment plans, handling insurance claims</li><li><strong>Communication:</strong> Responding to enquiries, providing information about our services, sending service confirmations</li><li><strong>Record keeping:</strong> Maintaining accurate records as required by law and professional standards</li><li><strong>Service improvement:</strong> Understanding how our website is used to improve user experience</li><li><strong>Marketing (with consent):</strong> Sending information about funeral plans or related services only where you have given explicit consent</li></ul><p><strong>Legal Basis:</strong> We process your data under the following lawful bases:</p><ul><li>Contract performance (to provide the services you've requested)</li><li>Legal obligation (to comply with death registration and cremation laws)</li><li>Legitimate interests (to improve our services and communicate with you)</li><li>Consent (for marketing communications)</li></ul>"
+        },
+        {
+            "title": "Who We Share Information With",
+            "content": "<p>We may share your information with trusted third parties who help us provide our services:</p><ul><li><strong>Crematoriums and cemeteries:</strong> To arrange services and burials</li><li><strong>Clergy and celebrants:</strong> To conduct funeral services</li><li><strong>Medical professionals:</strong> For cremation certificates and medical examinations</li><li><strong>Registrars:</strong> For death registration</li><li><strong>Florists, caterers, and other suppliers:</strong> To fulfill your service requirements</li><li><strong>Financial services:</strong> For payment processing and funeral plan providers (Ecclesiastical Planning Services)</li><li><strong>IT service providers:</strong> For website hosting and email services</li><li><strong>Legal and regulatory authorities:</strong> When required by law</li></ul><p>We ensure all third parties respect the security of your data and treat it in accordance with the law. We do not sell your data to third parties for marketing purposes.</p>"
+        },
+        {
+            "title": "Data Security",
+            "content": "<p>We take the security of your personal information seriously and have implemented appropriate technical and organizational measures to protect it:</p><ul><li>Secure storage of physical records in locked cabinets with restricted access</li><li>Encrypted digital storage and secure backup systems</li><li>Password-protected computer systems</li><li>Regular staff training on data protection</li><li>Secure disposal of documents (shredding)</li><li>Limited access to personal data on a need-to-know basis</li></ul><p>While we strive to protect your personal information, no method of transmission over the internet or electronic storage is 100% secure. We cannot guarantee absolute security but we use industry-standard practices to minimize risk.</p>"
+        },
+        {
+            "title": "How Long We Keep Your Information",
+            "content": "<p>We retain personal information for different periods depending on the purpose:</p><ul><li><strong>Funeral service records:</strong> Indefinitely, as these are important historical records</li><li><strong>Financial records:</strong> Minimum 6 years for tax and accounting purposes</li><li><strong>Correspondence and enquiries:</strong> 2 years unless we have an ongoing relationship</li><li><strong>Marketing consent records:</strong> Until consent is withdrawn, or 3 years of inactivity</li><li><strong>Website analytics:</strong> 26 months (Google Analytics default)</li></ul><p>When information is no longer required, it is securely destroyed or permanently anonymized.</p>"
+        },
+        {
+            "title": "Your Rights",
+            "content": "<p>Under UK GDPR, you have the following rights regarding your personal information:</p><ul><li><strong>Right of access:</strong> Request a copy of the personal data we hold about you</li><li><strong>Right to rectification:</strong> Ask us to correct inaccurate or incomplete information</li><li><strong>Right to erasure:</strong> Request deletion of your data (subject to legal obligations)</li><li><strong>Right to restrict processing:</strong> Ask us to limit how we use your data</li><li><strong>Right to data portability:</strong> Receive your data in a common electronic format</li><li><strong>Right to object:</strong> Object to processing based on legitimate interests or for marketing</li><li><strong>Right to withdraw consent:</strong> Withdraw consent for marketing at any time</li></ul><p>To exercise any of these rights, please contact us at info@barringtonsfunerals.co.uk or call 0151 928 1625.</p><p>You also have the right to lodge a complaint with the Information Commissioner's Office (ICO) if you believe your data protection rights have been violated: www.ico.org.uk</p>"
+        },
+        {
+            "title": "Cookies",
+            "content": "<p>Our website uses cookies to improve your experience. We only use:</p><ul><li><strong>Essential cookies:</strong> Required for the website to function (e.g., cookie consent preference)</li><li><strong>Analytics cookies:</strong> Google Analytics to understand how visitors use our website (anonymized data)</li></ul><p>You can manage your cookie preferences at any time using our cookie banner or your browser settings. For more details, please see our <a href=\"/cookie-policy.php\">Cookie Policy</a>.</p>"
+        },
+        {
+            "title": "Changes to This Policy",
+            "content": "<p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. We will notify you of any significant changes by updating the \"Last Updated\" date at the top of this policy and, where appropriate, by email.</p><p>We encourage you to review this policy periodically to stay informed about how we protect your information.</p>"
+        },
+        {
+            "title": "Contact Us",
+            "content": "<p>If you have any questions about this Privacy Policy or how we handle your personal information, please contact us:</p><p><strong>Email:</strong> info@barringtonsfunerals.co.uk<br><strong>Phone:</strong> 0151 928 1625<br><strong>Address:</strong> Barringtons Funeral Services, Liverpool</p><p>We aim to respond to all queries within 5 working days.</p>"
+        }
+    ]
+}

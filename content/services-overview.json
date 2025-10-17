@@ -293,60 +293,6 @@
                 "Humanist and non-religious services",
                 "Other faiths and spiritual beliefs"
             ]
-        },
-        "home": {
-            "title": "Home Funeral Care",
-            "price": "\u00a32,495",
-            "image": "\/assets\/images\/uploads\/img_68ef92c240b86_1760531138.jpg",
-            "fullDescription": "A home funeral allows your loved one to rest in familiar surroundings, giving family and friends the opportunity for private farewells in a comfortable, personal setting. This traditional practice is seeing renewed interest from families who want more time and privacy to say goodbye. We provide all necessary equipment and support to make this possible, including cooling equipment to allow your loved one to rest at home safely for several days. Our team offers 24\/7 telephone support and can visit to ensure everything is arranged properly. This option can be combined with any type of funeral service, allowing the procession to begin from home rather than the funeral home.",
-            "included": [
-                "Initial home consultation",
-                "Preparation of your loved one for home viewing",
-                "Appropriate coffin for home setting",
-                "&nbsp;Delivery and setup of cooling equipment",
-                "24\/7 telephone support line",
-                "Daily welfare checks (if required)",
-                "Guidance on home funeral logistics",
-                "Supply of memorial items",
-                "Assistance with visiting arrangements",
-                "Collection from home for funeral",
-                "Support with paperwork from home",
-                "Flexible timing for family needs"
-            ],
-            "optional": [
-                {
-                    "name": "Additional cooling units",
-                    "price": "\u00a395 per day"
-                },
-                {
-                    "name": "Home chapel creation service",
-                    "price": "\u00a3395"
-                },
-                {
-                    "name": "Memorial guest book",
-                    "price": "\u00a375"
-                },
-                {
-                    "name": "Home blessing or ceremony",
-                    "price": "\u00a3195"
-                },
-                {
-                    "name": "Professional home photography",
-                    "price": "From \u00a3350"
-                },
-                {
-                    "name": "Aromatherapy and room preparation",
-                    "price": "\u00a395"
-                },
-                {
-                    "name": "",
-                    "price": ""
-                },
-                {
-                    "name": "",
-                    "price": ""
-                }
-            ]
         }
     },
     "additional": {
