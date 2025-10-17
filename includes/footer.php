@@ -82,7 +82,6 @@
                 <a href="/immediate-need">Immediate Need</a><br>
                 <a href="/planning-ahead">Plan Ahead</a><br>
                 <a href="/services-overview">Our Services</a><br>
-                <a href="/helpful-links">Grief Support</a><br>
                 <a href="/blog-news">News & Articles</a>
             </div>
             <div class="footer-section">
