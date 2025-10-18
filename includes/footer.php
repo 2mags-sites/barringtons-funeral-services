@@ -93,9 +93,8 @@
             </div>
             <div class="footer-section">
                 <h4>Professional Support</h4>
-                <p>Member of NAFD<br>
-                Member of SAIF<br>
-                GriefSteps Partnership</p>
+                <p><a href="https://www.nafd.org.uk/" target="_blank" rel="noopener">Member of NAFD</a><br>
+                <a href="https://saif.org.uk/" target="_blank" rel="noopener">Member of SAIF</a></p>
             </div>
         </div>
         <div class="footer-bottom">
