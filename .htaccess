@@ -127,6 +127,10 @@ RewriteRule ^(includes|content|cache|vendor)/ - [F,L]
     # HEADLESS WORDPRESS BLOG REDIRECTS
     # ============================================
 
+    # Redirect old WordPress media URLs to new /news/ location
+    # Pattern: /wp-content/uploads/... -> /news/wp-content/uploads/...
+    RewriteRule ^wp-content/uploads/(.*)$ /news/wp-content/uploads/$1 [R=301,L]
+
     # Redirect old WordPress date-based URLs to new headless structure
     # Pattern: /YYYY/MM/post-slug/ -> /blog-post.php?slug=post-slug
     RewriteRule ^[0-9]{4}/[0-9]{2}/([^/]+)/?$ /blog-post.php?slug=$1 [R=301,L]
