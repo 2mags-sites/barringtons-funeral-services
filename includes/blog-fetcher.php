@@ -61,6 +61,81 @@ function fetchLatestBlogPosts($limit = 4) {
 }
 
 /**
+ * Fetch blog posts with pagination
+ */
+function fetchBlogPostsPaginated($page = 1, $per_page = 9) {
+    // WordPress REST API endpoint with pagination
+    $api_url = '/news/wp-json/wp/v2/posts?per_page=' . $per_page . '&page=' . $page . '&_embed';
+
+    // For local development, use full URL
+    $base_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'];
+    $full_url = $base_url . $api_url;
+
+    // Initialize cURL
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $full_url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_HEADER, true); // Get headers to find total pages
+
+    $response = curl_exec($ch);
+    $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    $header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
+    curl_close($ch);
+
+    // Check if request was successful
+    if ($http_code !== 200 || !$response) {
+        return ['posts' => [], 'total_pages' => 0, 'current_page' => $page];
+    }
+
+    // Split header and body
+    $header = substr($response, 0, $header_size);
+    $body = substr($response, $header_size);
+
+    // Get total pages from header
+    $total_pages = 1;
+    if (preg_match('/X-WP-TotalPages:\s*(\d+)/i', $header, $matches)) {
+        $total_pages = (int)$matches[1];
+    }
+
+    $posts = json_decode($body, true);
+
+    // Process posts to extract needed data
+    $processed_posts = [];
+    foreach ($posts as $post) {
+        $processed_post = [
+            'id' => $post['id'],
+            'slug' => $post['slug'],
+            'title' => $post['title']['rendered'],
+            'excerpt' => wp_trim_words(strip_tags($post['excerpt']['rendered']), 20),
+            'link' => '/blog-post.php?slug=' . $post['slug'],
+            'date' => date('F j, Y', strtotime($post['date'])),
+            'featured_image' => null
+        ];
+
+        // Get featured image if available
+        if (isset($post['_embedded']['wp:featuredmedia'][0])) {
+            $media = $post['_embedded']['wp:featuredmedia'][0];
+            if (isset($media['media_details']['sizes']['medium'])) {
+                $processed_post['featured_image'] = $media['media_details']['sizes']['medium']['source_url'];
+            } elseif (isset($media['source_url'])) {
+                $processed_post['featured_image'] = $media['source_url'];
+            }
+        }
+
+        $processed_posts[] = $processed_post;
+    }
+
+    return [
+        'posts' => $processed_posts,
+        'total_pages' => $total_pages,
+        'current_page' => $page
+    ];
+}
+
+/**
  * Fetch a single blog post by slug
  */
 function fetchBlogPostBySlug($slug) {

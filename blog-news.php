@@ -16,8 +16,13 @@ require_once 'includes/header.php';
 // Include blog fetcher
 require_once 'includes/blog-fetcher.php';
 
-// Fetch blog posts
-$blog_posts = fetchLatestBlogPosts(12); // Get more posts for the main blog page
+// Get current page from URL
+$current_page = isset($_GET['page']) ? max(1, intval($_GET['page'])) : 1;
+
+// Fetch blog posts with pagination (9 per page)
+$result = fetchBlogPostsPaginated($current_page, 9);
+$blog_posts = $result['posts'];
+$total_pages = $result['total_pages'];
 ?>
 
     <!-- Page Hero -->
@@ -61,6 +66,29 @@ $blog_posts = fetchLatestBlogPosts(12); // Get more posts for the main blog page
                         </div>
                     <?php endforeach; ?>
                 </div>
+
+                <?php if ($total_pages > 1): ?>
+                    <div class="pagination">
+                        <?php if ($current_page > 1): ?>
+                            <a href="?page=<?php echo $current_page - 1; ?>" class="pagination-btn">← Previous</a>
+                        <?php endif; ?>
+
+                        <div class="pagination-numbers">
+                            <?php for ($i = 1; $i <= $total_pages; $i++): ?>
+                                <?php if ($i == $current_page): ?>
+                                    <span class="pagination-current"><?php echo $i; ?></span>
+                                <?php else: ?>
+                                    <a href="?page=<?php echo $i; ?>" class="pagination-number"><?php echo $i; ?></a>
+                                <?php endif; ?>
+                            <?php endfor; ?>
+                        </div>
+
+                        <?php if ($current_page < $total_pages): ?>
+                            <a href="?page=<?php echo $current_page + 1; ?>" class="pagination-btn">Next →</a>
+                        <?php endif; ?>
+                    </div>
+                <?php endif; ?>
+
             <?php else: ?>
                 <div class="no-posts">
                     <h2><?php echo editable($content['noPosts']['title'] ?? '', 'noPosts.title'); ?></h2>
@@ -159,10 +187,79 @@ $blog_posts = fetchLatestBlogPosts(12); // Get more posts for the main blog page
             margin: 0 auto;
         }
 
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .pagination-btn {
+            background: var(--navy);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .pagination-btn:hover {
+            background: var(--soft-navy);
+            transform: translateY(-2px);
+        }
+
+        .pagination-numbers {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .pagination-number,
+        .pagination-current {
+            display: inline-block;
+            min-width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .pagination-number {
+            background: var(--cream);
+            color: var(--text-dark);
+            border: 2px solid transparent;
+        }
+
+        .pagination-number:hover {
+            border-color: var(--navy);
+            background: white;
+        }
+
+        .pagination-current {
+            background: var(--navy);
+            color: white;
+            font-weight: 600;
+        }
+
         @media (max-width: 768px) {
             .blog-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
+            }
+
+            .pagination {
+                gap: 10px;
+            }
+
+            .pagination-btn {
+                padding: 8px 15px;
+                font-size: 14px;
             }
         }
     </style>
