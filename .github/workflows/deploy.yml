@@ -1,4 +1,4 @@
-name: Smart Deploy to Subdomain
+name: Deploy to Production
 
 on:
   push:
@@ -49,14 +49,14 @@ jobs:
         echo "Content files to deploy:"
         ls -la content/
 
-    - name: 📤 Deploy to barr.2magpiesseo.co.uk
+    - name: 📤 Deploy to www.barringtonsfunerals.co.uk
       uses: appleboy/scp-action@v0.1.4
       with:
         host: ${{ secrets.WHM_HOST }}
         username: ${{ secrets.WHM_USERNAME }}
         key: ${{ secrets.WHM_SSH_KEY }}
         source: "*.php,*.html,.htaccess,.github,assets,content,includes,blog"
-        target: "/home/twomagseo/barr.2magpiesseo.co.uk"
+        target: "/home/bfunerals/public_html"
         rm: false  # Never remove existing files
 
     - name: 🔒 Set correct permissions
@@ -67,30 +67,30 @@ jobs:
         key: ${{ secrets.WHM_SSH_KEY }}
         script: |
           # Set correct ownership
-          chown -R twomagseo:twomagseo /home/twomagseo/barr.2magpiesseo.co.uk
+          chown -R bfunerals:bfunerals /home/bfunerals/public_html
 
           # Set directory permissions
-          find /home/twomagseo/barr.2magpiesseo.co.uk -type d -exec chmod 755 {} \;
+          find /home/bfunerals/public_html -type d -exec chmod 755 {} \;
 
           # Set file permissions
-          find /home/twomagseo/barr.2magpiesseo.co.uk -type f -exec chmod 644 {} \;
+          find /home/bfunerals/public_html -type f -exec chmod 644 {} \;
 
           # Make uploads directory writable
-          if [ -d "/home/twomagseo/barr.2magpiesseo.co.uk/assets/images/uploads" ]; then
-            chmod 777 /home/twomagseo/barr.2magpiesseo.co.uk/assets/images/uploads
+          if [ -d "/home/bfunerals/public_html/assets/images/uploads" ]; then
+            chmod 777 /home/bfunerals/public_html/assets/images/uploads
           fi
 
           # Make content/backups directory writable for saving backups
-          if [ -d "/home/twomagseo/barr.2magpiesseo.co.uk/content/backups" ]; then
-            chmod 777 /home/twomagseo/barr.2magpiesseo.co.uk/content/backups
+          if [ -d "/home/bfunerals/public_html/content/backups" ]; then
+            chmod 777 /home/bfunerals/public_html/content/backups
           else
-            mkdir -p /home/twomagseo/barr.2magpiesseo.co.uk/content/backups
-            chmod 777 /home/twomagseo/barr.2magpiesseo.co.uk/content/backups
+            mkdir -p /home/bfunerals/public_html/content/backups
+            chmod 777 /home/bfunerals/public_html/content/backups
           fi
 
           # Protect .env file
-          if [ -f "/home/twomagseo/barr.2magpiesseo.co.uk/.env" ]; then
-            chmod 600 /home/twomagseo/barr.2magpiesseo.co.uk/.env
+          if [ -f "/home/bfunerals/public_html/.env" ]; then
+            chmod 600 /home/bfunerals/public_html/.env
           fi
 
           # Report what was deployed
