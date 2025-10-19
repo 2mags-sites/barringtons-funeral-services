@@ -52,6 +52,24 @@ require_once 'includes/header.php';
                         <p class="review-author"><?php echo editable($content['reviews']['review2']['author'] ?? '', 'reviews.review2.author'); ?></p>
                         <p class="review-source"><?php echo $content['reviews']['review2']['source'] ?? ''; ?></p>
                     </div>
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text"><?php echo editable($content['reviews']['review3']['text'] ?? '', 'reviews.review3.text'); ?></p>
+                        <p class="review-author"><?php echo editable($content['reviews']['review3']['author'] ?? '', 'reviews.review3.author'); ?></p>
+                        <p class="review-source"><?php echo $content['reviews']['review3']['source'] ?? ''; ?></p>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text"><?php echo editable($content['reviews']['review4']['text'] ?? '', 'reviews.review4.text'); ?></p>
+                        <p class="review-author"><?php echo editable($content['reviews']['review4']['author'] ?? '', 'reviews.review4.author'); ?></p>
+                        <p class="review-source"><?php echo $content['reviews']['review4']['source'] ?? ''; ?></p>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text"><?php echo editable($content['reviews']['review5']['text'] ?? '', 'reviews.review5.text'); ?></p>
+                        <p class="review-author"><?php echo editable($content['reviews']['review5']['author'] ?? '', 'reviews.review5.author'); ?></p>
+                        <p class="review-source"><?php echo $content['reviews']['review5']['source'] ?? ''; ?></p>
+                    </div>
                 </div>
             </div>
             <button class="carousel-btn carousel-btn-right" onclick="scrollReviews(1)">›</button>
