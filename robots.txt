@@ -1,0 +1,37 @@
+# Barrington's Funeral Services - robots.txt
+
+User-agent: *
+
+# Block WordPress admin backend (headless CMS only)
+Disallow: /news/wp-admin/
+Disallow: /news/wp-includes/
+Disallow: /news/wp-content/plugins/
+Disallow: /news/wp-content/themes/
+
+# Block entire /news directory from indexing
+# WordPress is used as headless CMS only
+# All public-facing blog posts are served via /blog-post.php
+Disallow: /news/
+
+# Block other WordPress files
+Disallow: /news/xmlrpc.php
+Disallow: /news/wp-login.php
+Disallow: /news/wp-signup.php
+
+# Block admin areas
+Disallow: /admin-save.php
+Disallow: /admin-upload.php
+Disallow: /contact-handler.php
+
+# Block system directories
+Disallow: /includes/
+Disallow: /content/
+Disallow: /cache/
+Disallow: /vendor/
+
+# Allow blog content served through our template
+Allow: /blog-news.php
+Allow: /blog-post.php
+
+# Sitemap (create this if needed)
+# Sitemap: https://www.barringtonsfunerals.co.uk/sitemap.xml

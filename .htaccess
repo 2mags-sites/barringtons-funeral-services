@@ -123,6 +123,21 @@ RewriteRule ^(includes|content|cache|vendor)/ - [F,L]
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)/$ /$1 [R=301,L]
 
+    # ============================================
+    # HEADLESS WORDPRESS BLOG REDIRECTS
+    # ============================================
+
+    # Redirect old WordPress date-based URLs to new headless structure
+    # Pattern: /YYYY/MM/post-slug/ -> /blog-post.php?slug=post-slug
+    RewriteRule ^[0-9]{4}/[0-9]{2}/([^/]+)/?$ /blog-post.php?slug=$1 [R=301,L]
+
+    # Redirect direct WordPress post URLs from /news to headless structure
+    # Pattern: /news/post-slug/ -> /blog-post.php?slug=post-slug
+    RewriteRule ^news/([^/]+)/?$ /blog-post.php?slug=$1 [R=301,L]
+
+    # Prevent access to WordPress feed URLs (use our own if needed)
+    RewriteRule ^news/feed/?$ /blog-news.php [R=301,L]
+
     # Error pages
     ErrorDocument 404 /404.php
     ErrorDocument 403 /403.php
@@ -145,6 +160,11 @@ RewriteRule ^(includes|content|cache|vendor)/ - [F,L]
 
     # Referrer Policy
     Header set Referrer-Policy "same-origin"
+
+    # Block /news from search engines (headless WordPress - admin only)
+    <If "%{REQUEST_URI} =~ m#^/news#">
+        Header set X-Robots-Tag "noindex, nofollow"
+    </If>
 
     # Content Security Policy (adjust as needed)
     # Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.youtube.com https://www.muchloved.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; frame-src https://www.youtube.com;"
