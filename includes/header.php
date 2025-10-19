@@ -48,6 +48,9 @@ if (!isset($page_keywords)) $page_keywords = 'funeral directors Liverpool, indep
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/styles.css">
 
+    <!-- Google reCAPTCHA v3 -->
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdFfe8rAAAAADYCyMduHW-J8ilM70S1wqk0x5kv"></script>
+
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {

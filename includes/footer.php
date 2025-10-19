@@ -12,6 +12,12 @@
                         <!-- CSRF Token -->
                         <input type="hidden" name="csrf_token" value="<?php echo isset($_SESSION['csrf_token']) ? $_SESSION['csrf_token'] : ''; ?>">
 
+                        <!-- Time-based validation (anti-bot) -->
+                        <input type="hidden" name="form_loaded_time" id="formLoadedTime" value="<?php echo time(); ?>">
+
+                        <!-- reCAPTCHA token -->
+                        <input type="hidden" name="recaptcha_token" id="recaptchaToken">
+
                         <div class="form-group">
                             <label for="name">Your Name *</label>
                             <input type="text" id="name" name="name" placeholder="Enter your name" required>
@@ -286,22 +292,29 @@
         // Contact form AJAX submission
         const contactForm = document.getElementById('contactForm');
         if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
+            contactForm.addEventListener('submit', async function(e) {
                 e.preventDefault();
 
-                const formData = new FormData(this);
                 const submitBtn = this.querySelector('.submit-btn');
                 const formMessage = document.getElementById('formMessage');
 
                 submitBtn.disabled = true;
                 submitBtn.textContent = 'Sending...';
 
-                fetch('/contact-handler.php', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
+                try {
+                    // Generate reCAPTCHA token
+                    const token = await grecaptcha.enterprise.execute('6LdFfe8rAAAAADYCyMduHW-J8ilM70S1wqk0x5kv', {action: 'contact_form'});
+                    document.getElementById('recaptchaToken').value = token;
+
+                    const formData = new FormData(this);
+
+                    const response = await fetch('/contact-handler.php', {
+                        method: 'POST',
+                        body: formData
+                    });
+
+                    const data = await response.json();
+
                     formMessage.style.display = 'block';
                     formMessage.className = 'form-message ' + (data.success ? 'success' : 'error');
                     formMessage.textContent = data.message;
@@ -317,15 +330,15 @@
                     setTimeout(() => {
                         formMessage.style.display = 'none';
                     }, 5000);
-                })
-                .catch(error => {
+
+                } catch (error) {
                     formMessage.style.display = 'block';
                     formMessage.className = 'form-message error';
                     formMessage.textContent = 'An error occurred. Please try again later.';
 
                     submitBtn.disabled = false;
                     submitBtn.textContent = 'Send Message';
-                });
+                }
             });
         }
 
