@@ -35,9 +35,11 @@ function fetchLatestBlogPosts($limit = 4) {
     $processed_posts = [];
     foreach ($posts as $post) {
         $processed_post = [
+            'id' => $post['id'],
+            'slug' => $post['slug'],
             'title' => $post['title']['rendered'],
             'excerpt' => wp_trim_words(strip_tags($post['excerpt']['rendered']), 20),
-            'link' => str_replace($base_url . '/news', '/news', $post['link']),
+            'link' => '/blog-post.php?slug=' . $post['slug'],
             'date' => date('F j, Y', strtotime($post['date'])),
             'featured_image' => null
         ];
@@ -56,6 +58,67 @@ function fetchLatestBlogPosts($limit = 4) {
     }
 
     return $processed_posts;
+}
+
+/**
+ * Fetch a single blog post by slug
+ */
+function fetchBlogPostBySlug($slug) {
+    // WordPress REST API endpoint
+    $api_url = '/news/wp-json/wp/v2/posts?slug=' . urlencode($slug) . '&_embed';
+
+    // For local development, use full URL
+    $base_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'];
+    $full_url = $base_url . $api_url;
+
+    // Initialize cURL
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $full_url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+
+    $response = curl_exec($ch);
+    $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+
+    // Check if request was successful
+    if ($http_code !== 200 || !$response) {
+        return false;
+    }
+
+    $posts = json_decode($response, true);
+
+    // Should return array with one post
+    if (empty($posts) || !isset($posts[0])) {
+        return false;
+    }
+
+    $post = $posts[0];
+
+    // Process the post
+    $processed_post = [
+        'id' => $post['id'],
+        'slug' => $post['slug'],
+        'title' => $post['title']['rendered'],
+        'content' => $post['content']['rendered'],
+        'excerpt' => strip_tags($post['excerpt']['rendered']),
+        'date' => date('F j, Y', strtotime($post['date'])),
+        'featured_image' => null
+    ];
+
+    // Get featured image if available
+    if (isset($post['_embedded']['wp:featuredmedia'][0])) {
+        $media = $post['_embedded']['wp:featuredmedia'][0];
+        if (isset($media['media_details']['sizes']['large'])) {
+            $processed_post['featured_image'] = $media['media_details']['sizes']['large']['source_url'];
+        } elseif (isset($media['source_url'])) {
+            $processed_post['featured_image'] = $media['source_url'];
+        }
+    }
+
+    return $processed_post;
 }
 
 // Helper function to trim words (in case WordPress function not available)
