@@ -74,13 +74,50 @@ $total_pages = $result['total_pages'];
                         <?php endif; ?>
 
                         <div class="pagination-numbers">
-                            <?php for ($i = 1; $i <= $total_pages; $i++): ?>
-                                <?php if ($i == $current_page): ?>
+                            <?php
+                            // Show first/last + current range with ellipsis
+                            // Pattern: 1 2 ... 6 [7] 8 ... 59 60
+
+                            // Always show first 2 pages
+                            for ($i = 1; $i <= min(2, $total_pages); $i++):
+                                if ($i == $current_page): ?>
                                     <span class="pagination-current"><?php echo $i; ?></span>
                                 <?php else: ?>
                                     <a href="?page=<?php echo $i; ?>" class="pagination-number"><?php echo $i; ?></a>
-                                <?php endif; ?>
-                            <?php endfor; ?>
+                                <?php endif;
+                            endfor;
+
+                            // Show ellipsis if there's a gap
+                            if ($current_page > 4): ?>
+                                <span class="pagination-ellipsis">...</span>
+                            <?php endif;
+
+                            // Show pages around current (current - 1, current, current + 1)
+                            $start = max(3, $current_page - 1);
+                            $end = min($total_pages - 2, $current_page + 1);
+
+                            for ($i = $start; $i <= $end; $i++):
+                                if ($i == $current_page): ?>
+                                    <span class="pagination-current"><?php echo $i; ?></span>
+                                <?php else: ?>
+                                    <a href="?page=<?php echo $i; ?>" class="pagination-number"><?php echo $i; ?></a>
+                                <?php endif;
+                            endfor;
+
+                            // Show ellipsis if there's a gap
+                            if ($current_page < $total_pages - 3): ?>
+                                <span class="pagination-ellipsis">...</span>
+                            <?php endif;
+
+                            // Always show last 2 pages
+                            for ($i = max($total_pages - 1, 3); $i <= $total_pages; $i++):
+                                if ($i == $current_page): ?>
+                                    <span class="pagination-current"><?php echo $i; ?></span>
+                                <?php else: ?>
+                                    <a href="?page=<?php echo $i; ?>" class="pagination-number"><?php echo $i; ?></a>
+                                <?php endif;
+                            endfor;
+                            ?>
                         </div>
 
                         <?php if ($current_page < $total_pages): ?>
@@ -221,7 +258,8 @@ $total_pages = $result['total_pages'];
         }
 
         .pagination-number,
-        .pagination-current {
+        .pagination-current,
+        .pagination-ellipsis {
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -249,6 +287,14 @@ $total_pages = $result['total_pages'];
             color: white;
             font-weight: 600;
             border: 2px solid var(--navy);
+        }
+
+        .pagination-ellipsis {
+            background: transparent;
+            color: var(--text-body);
+            font-weight: 600;
+            border: none;
+            cursor: default;
         }
 
         @media (max-width: 768px) {
