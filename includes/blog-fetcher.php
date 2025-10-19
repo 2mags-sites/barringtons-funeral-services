@@ -6,7 +6,7 @@
 
 function fetchLatestBlogPosts($limit = 4) {
     // WordPress REST API endpoint - adjust this to your WordPress installation
-    $api_url = '/blog/wp-json/wp/v2/posts?per_page=' . $limit . '&_embed';
+    $api_url = '/news/wp-json/wp/v2/posts?per_page=' . $limit . '&_embed';
 
     // For local development, use full URL
     $base_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'];
@@ -37,7 +37,7 @@ function fetchLatestBlogPosts($limit = 4) {
         $processed_post = [
             'title' => $post['title']['rendered'],
             'excerpt' => wp_trim_words(strip_tags($post['excerpt']['rendered']), 20),
-            'link' => str_replace($base_url . '/blog', '/blog', $post['link']),
+            'link' => str_replace($base_url . '/news', '/news', $post['link']),
             'date' => date('F j, Y', strtotime($post['date'])),
             'featured_image' => null
         ];

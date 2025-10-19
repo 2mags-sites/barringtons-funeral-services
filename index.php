@@ -193,11 +193,10 @@ require_once 'includes/header.php';
 
             <?php
             // Include blog fetcher
-            // require_once 'includes/blog-fetcher.php';
+            require_once 'includes/blog-fetcher.php';
 
-            // Temporarily disabled until WordPress is installed
-            // $latest_posts = fetchLatestBlogPosts(4);
-            $latest_posts = false; // Temporarily set to false
+            // Fetch latest 3 posts
+            $latest_posts = fetchLatestBlogPosts(3);
 
             if ($latest_posts && count($latest_posts) > 0): ?>
                 <div class="blog-preview-grid">
@@ -209,10 +208,8 @@ require_once 'includes/header.php';
                                 </div>
                             <?php endif; ?>
                             <div class="blog-preview-content">
-                                <div class="blog-preview-date"><?php echo $post['date']; ?></div>
                                 <h3><?php echo $post['title']; ?></h3>
-                                <p><?php echo $post['excerpt']; ?></p>
-                                <a href="<?php echo $post['link']; ?>" class="read-more"><?php echo $content['news']['readMoreText'] ?? ''; ?></a>
+                                <a href="<?php echo $post['link']; ?>" class="read-post-btn">Read Post</a>
                             </div>
                         </div>
                     <?php endforeach; ?>
@@ -230,49 +227,48 @@ require_once 'includes/header.php';
 
     <style>
         .blog-preview-section {
-            background: #f8f9fa;
             padding: 60px 0;
-            margin-top: 40px;
+            background: white;
         }
 
         .blog-preview-section h2 {
             text-align: center;
-            color: #333;
+            color: var(--text-dark);
             font-size: 36px;
             margin-bottom: 10px;
         }
 
         .blog-subtitle {
             text-align: center;
-            color: #666;
+            color: var(--text-body);
             font-size: 18px;
             margin-bottom: 40px;
         }
 
         .blog-preview-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
             margin-bottom: 40px;
         }
 
         .blog-preview-card {
-            background: white;
-            border-radius: 10px;
+            background: var(--cream);
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
         }
 
         .blog-preview-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
         }
 
         .blog-preview-image {
-            width: 100%;
-            height: 180px;
+            height: 200px;
             overflow: hidden;
+            background: linear-gradient(135deg, var(--soft-navy), var(--navy));
         }
 
         .blog-preview-image img {
@@ -282,38 +278,37 @@ require_once 'includes/header.php';
         }
 
         .blog-preview-content {
-            padding: 20px;
-        }
-
-        .blog-preview-date {
-            color: #999;
-            font-size: 13px;
-            margin-bottom: 8px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
         }
 
         .blog-preview-content h3 {
-            color: #333;
+            color: var(--text-dark);
             font-size: 18px;
-            margin-bottom: 10px;
+            margin: 0;
             line-height: 1.3;
+            font-weight: normal;
+            flex-grow: 1;
         }
 
-        .blog-preview-content p {
-            color: #666;
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 15px;
-        }
-
-        .read-more {
-            color: var(--primary-color, #2c5530);
+        .read-post-btn {
+            display: inline-block;
+            background: var(--navy);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
             text-decoration: none;
-            font-weight: 500;
             font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-align: center;
         }
 
-        .read-more:hover {
-            color: var(--primary-hover, #1e3a21);
+        .read-post-btn:hover {
+            background: var(--soft-navy);
+            transform: translateY(-2px);
         }
 
         .blog-view-all {
@@ -322,7 +317,7 @@ require_once 'includes/header.php';
 
         .btn-primary {
             display: inline-block;
-            background: var(--primary-color, #2c5530);
+            background: var(--navy);
             color: white;
             padding: 12px 30px;
             border-radius: 5px;
@@ -332,20 +327,21 @@ require_once 'includes/header.php';
         }
 
         .btn-primary:hover {
-            background: var(--primary-hover, #1e3a21);
+            background: var(--soft-navy);
         }
 
         .blog-coming-soon {
             text-align: center;
             padding: 40px;
-            background: white;
-            border-radius: 10px;
-            color: #666;
+            background: var(--cream);
+            border-radius: 15px;
+            color: var(--text-body);
         }
 
         @media (max-width: 768px) {
             .blog-preview-grid {
-                grid-template-columns: 1fr;
+                display: flex;
+                flex-direction: column;
             }
         }
     </style>
