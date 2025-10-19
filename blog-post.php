@@ -35,21 +35,18 @@ require_once 'includes/header.php';
         <?php else: ?>
             <div class="post-hero-image" style="background: linear-gradient(135deg, var(--soft-navy), var(--navy));"></div>
         <?php endif; ?>
-        <div class="hero-overlay"></div>
-        <div class="post-hero-content">
-            <div class="container">
-                <div class="post-meta">
-                    <span class="post-date"><?php echo $post['date']; ?></span>
-                </div>
-                <h1><?php echo $post['title']; ?></h1>
-            </div>
-        </div>
     </section>
 
     <!-- Blog Post Content -->
     <article class="post-content-section section-padding">
         <div class="container">
             <div class="post-content-wrapper">
+                <div class="post-header">
+                    <div class="post-meta">
+                        <span class="post-date"><?php echo $post['date']; ?></span>
+                    </div>
+                    <h1><?php echo $post['title']; ?></h1>
+                </div>
                 <div class="post-content">
                     <?php echo $post['content']; ?>
                 </div>
@@ -64,38 +61,23 @@ require_once 'includes/header.php';
     <style>
         .post-hero {
             position: relative;
+            width: 100%;
             height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            overflow: hidden;
         }
 
         .post-hero-image {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
             height: 100%;
             background-size: cover;
             background-position: center;
         }
 
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-        }
-
-        .post-hero-content {
-            position: relative;
-            z-index: 2;
-            color: white;
+        .post-header {
             text-align: center;
-            width: 100%;
-            padding: 0 20px;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #eee;
         }
 
         .post-meta {
@@ -103,20 +85,20 @@ require_once 'includes/header.php';
         }
 
         .post-date {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 8px 16px;
+            background: var(--cream);
+            color: var(--text-body);
+            padding: 8px 20px;
             border-radius: 20px;
             font-size: 14px;
             display: inline-block;
         }
 
-        .post-hero-content h1 {
-            font-size: 48px;
+        .post-header h1 {
+            font-size: 42px;
             margin: 0;
             font-weight: normal;
-            line-height: 1.2;
-            max-width: 900px;
-            margin: 0 auto;
+            line-height: 1.3;
+            color: var(--text-dark);
         }
 
         .post-content-section {
@@ -213,11 +195,11 @@ require_once 'includes/header.php';
 
         @media (max-width: 768px) {
             .post-hero {
-                height: 300px;
+                height: 250px;
             }
 
-            .post-hero-content h1 {
-                font-size: 32px;
+            .post-header h1 {
+                font-size: 28px;
             }
 
             .post-content {

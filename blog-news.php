@@ -192,7 +192,7 @@ $total_pages = $result['total_pages'];
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 15px;
+            gap: 10px;
             margin-top: 50px;
             flex-wrap: wrap;
         }
@@ -200,34 +200,37 @@ $total_pages = $result['total_pages'];
         .pagination-btn {
             background: var(--navy);
             color: white;
-            padding: 10px 20px;
+            padding: 12px 24px;
             border-radius: 5px;
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s ease;
+            white-space: nowrap;
         }
 
         .pagination-btn:hover {
             background: var(--soft-navy);
-            transform: translateY(-2px);
         }
 
         .pagination-numbers {
             display: flex;
-            gap: 8px;
+            gap: 5px;
             align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .pagination-number,
         .pagination-current {
-            display: inline-block;
-            min-width: 40px;
-            height: 40px;
-            line-height: 40px;
-            text-align: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 45px;
+            height: 45px;
             border-radius: 5px;
             text-decoration: none;
             transition: all 0.3s ease;
+            font-size: 16px;
         }
 
         .pagination-number {
@@ -245,6 +248,7 @@ $total_pages = $result['total_pages'];
             background: var(--navy);
             color: white;
             font-weight: 600;
+            border: 2px solid var(--navy);
         }
 
         @media (max-width: 768px) {
