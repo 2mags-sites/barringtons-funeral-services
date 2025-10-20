@@ -1892,24 +1892,52 @@ footer {
     font-size: 1.8rem;
 }
 
-.guide-section ul {
+.guide-section > ul:not(.check-list):not(.support-list) {
     list-style: none;
     padding: 0;
     margin: 1rem 0;
 }
 
-.guide-section li {
+.guide-section > ul:not(.check-list):not(.support-list) > li {
     padding: 0.5rem 0;
     padding-left: 1.5rem;
     position: relative;
     line-height: 1.6;
 }
 
-.guide-section li:before {
+.guide-section > ul:not(.check-list):not(.support-list) > li:before {
     content: "◆";
     position: absolute;
     left: 0;
     color: var(--pink);
+}
+
+/* Nested lists inside info-box, sub-section, planning-step, etc. should have default styling */
+.info-box ul,
+.sub-section ul,
+.planning-step ul,
+.practical-card ul,
+.support-box ul {
+    list-style: disc;
+    padding-left: 2rem;
+    margin: 0.5rem 0;
+}
+
+.info-box ul li,
+.sub-section ul li,
+.planning-step ul li,
+.practical-card ul li,
+.support-box ul li {
+    padding: 0.25rem 0;
+    line-height: 1.6;
+}
+
+.info-box ul li:before,
+.sub-section ul li:before,
+.planning-step ul li:before,
+.practical-card ul li:before,
+.support-box ul li:before {
+    content: none;
 }
 
 .check-list {
