@@ -427,6 +427,7 @@ require_once 'includes/header.php';
         font-weight: 600;
         transition: all 0.3s;
         display: inline-block;
+        text-align: center;
     }
 
     .btn-primary {
