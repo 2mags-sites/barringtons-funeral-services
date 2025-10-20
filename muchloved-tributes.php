@@ -209,6 +209,7 @@ require_once 'includes/header.php';
                     padding: 20px !important;
                     border-radius: 8px;
                     margin-bottom: 15px !important;
+                    overflow: hidden !important;
                 }
 
                 .ml-thumb {
@@ -216,6 +217,14 @@ require_once 'includes/header.php';
                     width: 100% !important;
                     margin-bottom: 15px;
                     text-align: center;
+                    max-width: 100% !important;
+                }
+
+                .ml-thumb img {
+                    max-width: 100% !important;
+                    height: auto !important;
+                    display: block;
+                    margin: 0 auto;
                 }
 
                 .ml-details {
