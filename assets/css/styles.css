@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 :root {
     --navy: #3a4d63;
     --soft-navy: #4a5f7a;
@@ -20,6 +25,9 @@ body {
     background-color: var(--cream);
     color: var(--text-body);
     line-height: 1.8;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
 }
 
 /* Typography - Headings */
@@ -74,6 +82,16 @@ ul li::before {
 
 .sans-serif {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Prevent horizontal scroll */
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+section, div {
+    max-width: 100%;
 }
 
 /* Header */
