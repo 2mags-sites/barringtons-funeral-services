@@ -333,7 +333,7 @@ require_once 'includes/header.php';
 
     .reason-card {
         background: white;
-        padding: 2rem;
+        padding: 1.5rem 1.25rem;
         border-radius: 8px;
         box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
@@ -530,7 +530,11 @@ require_once 'includes/header.php';
         .comparison-section,
         .faq-section,
         .next-steps {
-            padding: 2rem 1.5rem;
+            padding: 2rem 1rem;
+        }
+
+        .reason-card {
+            padding: 1.5rem 1rem;
         }
 
         .comparison-table thead th,
