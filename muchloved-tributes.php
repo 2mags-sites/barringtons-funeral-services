@@ -201,6 +201,54 @@ require_once 'includes/header.php';
             .muchloved-notice-search {
                 margin-top: 20px;
             }
+
+            /* Mobile fixes for MuchLoved widget */
+            @media (max-width: 768px) {
+                .ml-notice {
+                    background: rgba(255, 255, 255, 0.95) !important;
+                    padding: 20px !important;
+                    border-radius: 8px;
+                    margin-bottom: 15px !important;
+                }
+
+                .ml-thumb {
+                    float: none !important;
+                    width: 100% !important;
+                    margin-bottom: 15px;
+                    text-align: center;
+                }
+
+                .ml-details {
+                    float: none !important;
+                    width: 100% !important;
+                    margin-left: 0 !important;
+                    text-align: left;
+                }
+
+                .ml-notice p {
+                    text-align: left !important;
+                    padding-left: 0 !important;
+                }
+
+                /* Prevent long URLs from breaking layout */
+                .ml-link, .ml-garden-link a, .ml-details a {
+                    word-break: break-all !important;
+                    overflow-wrap: break-word !important;
+                    display: block !important;
+                    max-width: 100% !important;
+                }
+            }
+
+            /* Ensure all content has white background on mobile */
+            @media (max-width: 768px) {
+                .muchloved-funerals-widget,
+                .muchloved-funerals-widget-search-results {
+                    background: rgba(255, 255, 255, 0.95);
+                    padding: 15px;
+                    border-radius: 8px;
+                    margin-bottom: 20px;
+                }
+            }
             </style>
             <div class="muchloved-notice-search">
                 <input type="text" class="muchloved-funerals-search-box textfield_effect" data-widgetid="338355093" placeholder="Search all funerals by name">
