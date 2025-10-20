@@ -152,13 +152,23 @@ require_once 'includes/header.php';
 
         .steps-container .info-card ul {
             margin: 1rem 0;
-            padding-left: 1.5rem;
+            padding: 0;
+            list-style: none;
         }
 
         .steps-container .info-card ul li {
             color: #666;
             line-height: 1.8;
             margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .steps-container .info-card ul li:before {
+            content: "◆";
+            position: absolute;
+            left: 0;
+            color: var(--pink);
         }
 
         /* Add connecting line between steps */
