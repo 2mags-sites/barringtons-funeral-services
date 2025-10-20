@@ -16,8 +16,10 @@ function getVisibleCards() {
 function updateCarousel() {
     const visibleCards = getVisibleCards();
     const cardWidth = 100 / visibleCards;
-    const gap = 2; // rem
-    const gapInPercent = (gap * 16) / (reviewsTrack.offsetWidth / visibleCards) * 100;
+
+    // No gap on mobile (768px and below), 2rem gap on desktop
+    const gap = window.innerWidth <= 768 ? 0 : 2; // rem
+    const gapInPercent = gap > 0 ? (gap * 16) / (reviewsTrack.offsetWidth / visibleCards) * 100 : 0;
     const offset = currentReviewIndex * (cardWidth + gapInPercent);
     reviewsTrack.style.transform = `translateX(-${offset}%)`;
 }

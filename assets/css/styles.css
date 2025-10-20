@@ -1270,13 +1270,24 @@ footer {
         padding: 0 1rem;
     }
     
-    .review-card {
-        flex: 0 0 85%;
-        margin: 0 auto;
-    }
-    
     .reviews-carousel {
-        padding: 0 30px;
+        padding: 0 40px;
+    }
+
+    .reviews-container {
+        padding: 0;
+        margin: 0;
+    }
+
+    .reviews-track {
+        gap: 0 !important;
+    }
+
+    .review-card {
+        flex: 0 0 100% !important;
+        margin: 0 !important;
+        padding: 2rem 1.5rem;
+        box-sizing: border-box;
     }
     
     .carousel-btn {
@@ -1507,14 +1518,34 @@ footer {
         padding: 3rem 0;
     }
 
+    .hero-content-single {
+        padding: 0 1rem;
+        width: 90%;
+        max-width: 100%;
+    }
+
     .hero-content-single h1 {
         font-size: 2rem;
     }
 
     .intro-content,
-    .card-content,
     .feature-with-image {
         grid-template-columns: 1fr;
+    }
+
+    /* On mobile, always show image first regardless of reverse class */
+    .card-content {
+        display: flex !important;
+        flex-direction: column !important;
+        grid-template-columns: unset !important;
+    }
+
+    .card-image {
+        order: 1 !important;
+    }
+
+    .card-text {
+        order: 2 !important;
     }
 
     .intro-block,

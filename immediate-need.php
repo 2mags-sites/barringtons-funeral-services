@@ -181,7 +181,9 @@ require_once 'includes/header.php';
         @media (max-width: 768px) {
             .steps-container .info-card {
                 padding-left: 3.5rem;
-                margin-left: 1rem;
+                padding-right: 1rem;
+                margin-left: 0;
+                margin-right: 0;
             }
 
             .steps-container .step-number {
@@ -192,7 +194,7 @@ require_once 'includes/header.php';
             }
 
             .steps-container::before {
-                left: 1.5rem;
+                left: 0.75rem;
             }
 
             .steps-container .info-card h3 {
