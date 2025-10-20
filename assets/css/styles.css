@@ -1720,11 +1720,13 @@ footer {
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
-        padding: 0 1rem;
+        padding: 0;
+        margin: 0 auto;
     }
-    
+
     .contact-form {
         padding: 1.5rem;
+        margin: 0;
     }
     
     /* Footer mobile */
