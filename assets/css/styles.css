@@ -1892,6 +1892,26 @@ footer {
     font-size: 1.8rem;
 }
 
+.guide-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.guide-section li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.guide-section li:before {
+    content: "◆";
+    position: absolute;
+    left: 0;
+    color: var(--pink);
+}
+
 .check-list {
     list-style: none;
     padding: 0;

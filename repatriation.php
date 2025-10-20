@@ -563,8 +563,35 @@ require_once 'includes/header.php';
             grid-template-columns: 1fr;
         }
 
+        .countries-section {
+            padding: 2rem 1rem;
+        }
+
         .countries-grid {
             grid-template-columns: 1fr;
+        }
+
+        .region-card {
+            padding: 1.5rem 1rem;
+        }
+
+        .process-section,
+        .support-section {
+            padding: 2rem 1rem;
+        }
+
+        .cta-section {
+            padding: 2rem 1rem;
+        }
+
+        .faq-item {
+            padding: 1.5rem 1rem;
+        }
+
+        .type-card,
+        .doc-card,
+        .consideration-card {
+            padding: 1.5rem 1rem;
         }
 
         .cta-buttons {
