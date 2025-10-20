@@ -94,6 +94,28 @@ section, div {
     max-width: 100%;
 }
 
+/* Fix reCAPTCHA badge positioning on mobile */
+.grecaptcha-badge {
+    width: 70px !important;
+    overflow: hidden !important;
+    transition: all 0.3s ease !important;
+    right: 4px !important;
+    bottom: 4px !important;
+}
+
+.grecaptcha-badge:hover {
+    width: 256px !important;
+}
+
+@media (max-width: 768px) {
+    .grecaptcha-badge {
+        transform: scale(0.85);
+        transform-origin: bottom right;
+        right: 0 !important;
+        bottom: 0 !important;
+    }
+}
+
 /* Header */
 header {
     background: #fdfdfd;
