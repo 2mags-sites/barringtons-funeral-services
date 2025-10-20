@@ -486,7 +486,7 @@ require_once 'includes/header.php';
 
     .additional-service-card {
         background: white;
-        padding: 1.5rem;
+        padding: 1.5rem 1.25rem;
         border-radius: 8px;
         box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         display: block;
@@ -532,7 +532,7 @@ require_once 'includes/header.php';
     }
 
     .payment-option {
-        padding: 1.5rem;
+        padding: 1.5rem 1.25rem;
         background: #fafafa;
         border-radius: 8px;
     }
@@ -575,7 +575,20 @@ require_once 'includes/header.php';
         }
 
         .service-section {
-            padding: 2rem 1.5rem;
+            padding: 2rem 1rem;
+        }
+
+        .additional-services-comprehensive {
+            padding: 2rem 1rem;
+        }
+
+        .payment-options {
+            padding: 2rem 1rem;
+        }
+
+        .additional-service-card,
+        .payment-option {
+            padding: 1.5rem 1rem;
         }
     }
     </style>
