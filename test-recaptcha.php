@@ -17,7 +17,7 @@ $test_results = [
         'site_key' => getenv('RECAPTCHA_SITE_KEY') ?: '✗ Not set',
         'min_score' => getenv('RECAPTCHA_MIN_SCORE') ?: '0.5 (default)'
     ],
-    'site_key_in_frontend' => '6LdFfe8rAAAAADYCyMduHW-J8ilM70S1wqk0x5kv',
+    'site_key_in_frontend' => '6LfDw_krAAAAAM3IfnUCxzIGfGKxMwKwF6HRD7ft',
     'configuration_status' => null
 ];
 
@@ -46,7 +46,7 @@ $test_results['setup_instructions'] = [
     'step2' => 'Register a new site with reCAPTCHA v3',
     'step3' => 'Add your domain: barringtonsfunerals.co.uk',
     'step4' => 'Copy the SECRET KEY and add it to .env as RECAPTCHA_SECRET_KEY',
-    'step5' => 'Copy the SITE KEY and update footer.php (currently: 6LdFfe8rAAAAADYCyMduHW-J8ilM70S1wqk0x5kv)',
+    'step5' => 'Copy the SITE KEY and update footer.php (currently: 6LfDw_krAAAAAM3IfnUCxzIGfGKxMwKwF6HRD7ft)',
     'step6' => 'Test a form submission and check /logs/error.log for reCAPTCHA scores'
 ];
 

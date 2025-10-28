@@ -303,7 +303,7 @@
 
                 try {
                     // Generate reCAPTCHA token
-                    const token = await grecaptcha.enterprise.execute('6LdFfe8rAAAAADYCyMduHW-J8ilM70S1wqk0x5kv', {action: 'contact_form'});
+                    const token = await grecaptcha.execute('6LfDw_krAAAAAM3IfnUCxzIGfGKxMwKwF6HRD7ft', {action: 'contact_form'});
                     document.getElementById('recaptchaToken').value = token;
 
                     const formData = new FormData(this);
