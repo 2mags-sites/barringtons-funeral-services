@@ -1,6 +1,6 @@
 <?php
 /**
- * reCAPTCHA Configuration Test
+ * reCAPTCHA v3 Configuration Test
  * This file helps diagnose reCAPTCHA setup issues
  */
 
@@ -9,50 +9,52 @@ require_once 'includes/env-loader.php';
 header('Content-Type: application/json');
 
 $test_results = [
+    'api_version' => 'reCAPTCHA v3 (Standard)',
     'env_file_exists' => file_exists(__DIR__ . '/.env'),
-    'env_loaded' => EnvLoader::has('RECAPTCHA_API_KEY'),
+    'env_loaded' => EnvLoader::has('RECAPTCHA_SECRET_KEY'),
     'credentials' => [
-        'api_key' => getenv('RECAPTCHA_API_KEY') ? '✓ Set (hidden)' : '✗ Not set',
-        'project_id' => getenv('RECAPTCHA_PROJECT_ID') ?: '✗ Not set',
+        'secret_key' => getenv('RECAPTCHA_SECRET_KEY') ? '✓ Set (hidden)' : '✗ Not set',
         'site_key' => getenv('RECAPTCHA_SITE_KEY') ?: '✗ Not set',
-        'min_score' => getenv('RECAPTCHA_MIN_SCORE') ?: '✗ Not set (default: 0.5)'
+        'min_score' => getenv('RECAPTCHA_MIN_SCORE') ?: '0.5 (default)'
     ],
-    'api_test' => null
+    'site_key_in_frontend' => '6LdFfe8rAAAAADYCyMduHW-J8ilM70S1wqk0x5kv',
+    'configuration_status' => null
 ];
 
-// Test API connectivity if credentials are present
-if (getenv('RECAPTCHA_API_KEY') && getenv('RECAPTCHA_PROJECT_ID')) {
-    $project_id = getenv('RECAPTCHA_PROJECT_ID');
-    $api_key = getenv('RECAPTCHA_API_KEY');
+// Check configuration
+$secret_key = getenv('RECAPTCHA_SECRET_KEY');
+$site_key = getenv('RECAPTCHA_SITE_KEY');
 
-    // Try to list assessments (this will fail with permissions error but confirms API connectivity)
-    $test_url = "https://recaptchaenterprise.googleapis.com/v1/projects/{$project_id}/keys?key={$api_key}";
+if (empty($secret_key)) {
+    $test_results['configuration_status'] = '✗ RECAPTCHA_SECRET_KEY not set in .env file';
+    $test_results['action_required'] = 'Add RECAPTCHA_SECRET_KEY to your .env file. Get it from https://www.google.com/recaptcha/admin';
+} elseif (empty($site_key)) {
+    $test_results['configuration_status'] = '⚠ RECAPTCHA_SITE_KEY not set (using hardcoded key)';
+    $test_results['action_required'] = 'Add RECAPTCHA_SITE_KEY to your .env file for consistency';
+} else {
+    $test_results['configuration_status'] = '✓ Configuration looks good';
 
-    $ch = curl_init($test_url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
-
-    $response = curl_exec($ch);
-    $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-    curl_close($ch);
-
-    $test_results['api_test'] = [
-        'http_code' => $http_code,
-        'response' => json_decode($response, true),
-        'status' => $http_code === 200 ? '✓ API accessible' :
-                   ($http_code === 403 ? '⚠ API key may be invalid or lacks permissions' :
-                   ($http_code === 404 ? '⚠ Project ID may be incorrect' :
-                   '✗ API error'))
-    ];
+    // Check if keys match
+    if ($site_key !== $test_results['site_key_in_frontend']) {
+        $test_results['warning'] = 'Site key in .env differs from hardcoded key in footer.php';
+    }
 }
 
 // Add helpful instructions
-$test_results['instructions'] = [
-    'step1' => 'Verify all credentials are set in .env file',
-    'step2' => 'Check that the site key in footer.php matches RECAPTCHA_SITE_KEY',
-    'step3' => 'Ensure the Google Cloud project "' . getenv('RECAPTCHA_PROJECT_ID') . '" has reCAPTCHA Enterprise API enabled',
-    'step4' => 'Verify the API key has reCAPTCHA Enterprise API permissions',
-    'step5' => 'Check error logs at /logs/error.log for reCAPTCHA validation errors'
+$test_results['setup_instructions'] = [
+    'step1' => 'Go to https://www.google.com/recaptcha/admin',
+    'step2' => 'Register a new site with reCAPTCHA v3',
+    'step3' => 'Add your domain: barringtonsfunerals.co.uk',
+    'step4' => 'Copy the SECRET KEY and add it to .env as RECAPTCHA_SECRET_KEY',
+    'step5' => 'Copy the SITE KEY and update footer.php (currently: 6LdFfe8rAAAAADYCyMduHW-J8ilM70S1wqk0x5kv)',
+    'step6' => 'Test a form submission and check /logs/error.log for reCAPTCHA scores'
+];
+
+$test_results['important_notes'] = [
+    'scoring' => 'reCAPTCHA v3 scores range from 0.0 (bot) to 1.0 (human)',
+    'current_threshold' => 'Currently blocking scores below ' . (getenv('RECAPTCHA_MIN_SCORE') ?: '0.5'),
+    'recommendation' => 'Monitor logs to see spam scores, then adjust threshold if needed',
+    'logs_location' => '/logs/error.log - check for "reCAPTCHA submission" entries'
 ];
 
 echo json_encode($test_results, JSON_PRETTY_PRINT);
