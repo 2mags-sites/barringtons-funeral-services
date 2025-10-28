@@ -141,12 +141,16 @@ if (isset($_POST['recaptcha_token']) && !empty($_POST['recaptcha_token'])) {
         }
     }
 } else {
-    // No reCAPTCHA token provided - log this
-    ErrorLogger::log('No reCAPTCHA token provided', [
+    // No reCAPTCHA token provided - BLOCK THE SUBMISSION
+    ErrorLogger::log('No reCAPTCHA token provided - BLOCKED', [
         'ip' => $_SERVER['REMOTE_ADDR'] ?? 'unknown',
         'has_post_token' => isset($_POST['recaptcha_token']),
-        'token_empty' => empty($_POST['recaptcha_token'] ?? '')
+        'token_empty' => empty($_POST['recaptcha_token'] ?? ''),
+        'user_agent' => $_SERVER['HTTP_USER_AGENT'] ?? 'unknown'
     ]);
+    $response['message'] = 'Security validation failed. Please enable JavaScript and try again.';
+    echo json_encode($response);
+    exit;
 }
 
 // Verify CSRF token (skip in development for testing)
