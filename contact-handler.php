@@ -90,16 +90,7 @@ if (isset($_POST['recaptcha_token']) && !empty($_POST['recaptcha_token'])) {
                 $recaptcha_debug['action'] = $action;
                 $recaptcha_debug['passed'] = $score >= $min_score;
 
-                // Log all submissions with scores for analysis
-                ErrorLogger::log('reCAPTCHA submission', [
-                    'score' => $score,
-                    'action' => $action,
-                    'passed' => $score >= $min_score,
-                    'ip' => $_SERVER['REMOTE_ADDR'] ?? 'unknown',
-                    'name' => $_POST['name'] ?? '',
-                    'email' => $_POST['email'] ?? ''
-                ]);
-
+                // Only log blocked or suspicious submissions (not all legitimate ones)
                 if ($score < $min_score) {
                     ErrorLogger::log('reCAPTCHA score too low - BLOCKED', [
                         'score' => $score,
