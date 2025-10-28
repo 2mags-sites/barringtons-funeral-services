@@ -4,8 +4,10 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
+require_once 'includes/env-loader.php';
 require_once 'includes/config.php';
 require_once 'includes/email-service.php';
+require_once 'includes/error-logger.php';
 
 // Set JSON response header
 header('Content-Type: application/json');
@@ -40,12 +42,19 @@ if (isset($_POST['form_loaded_time'])) {
 }
 
 // Verify reCAPTCHA token
+$recaptcha_debug = [];
 if (isset($_POST['recaptcha_token']) && !empty($_POST['recaptcha_token'])) {
     $recaptcha_token = $_POST['recaptcha_token'];
     $recaptcha_api_key = getenv('RECAPTCHA_API_KEY');
     $recaptcha_project_id = getenv('RECAPTCHA_PROJECT_ID');
     $recaptcha_site_key = getenv('RECAPTCHA_SITE_KEY');
     $min_score = (float)(getenv('RECAPTCHA_MIN_SCORE') ?: 0.5);
+
+    $recaptcha_debug['has_token'] = true;
+    $recaptcha_debug['has_api_key'] = !empty($recaptcha_api_key);
+    $recaptcha_debug['has_project_id'] = !empty($recaptcha_project_id);
+    $recaptcha_debug['has_site_key'] = !empty($recaptcha_site_key);
+    $recaptcha_debug['min_score'] = $min_score;
 
     // Verify with Google reCAPTCHA Enterprise API
     $assessment_url = "https://recaptchaenterprise.googleapis.com/v1/projects/{$recaptcha_project_id}/assessments?key={$recaptcha_api_key}";
@@ -68,24 +77,54 @@ if (isset($_POST['recaptcha_token']) && !empty($_POST['recaptcha_token'])) {
     $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
     curl_close($ch);
 
+    $recaptcha_debug['http_code'] = $http_code;
+    $recaptcha_debug['response'] = $assessment_response;
+
     if ($http_code === 200) {
         $assessment = json_decode($assessment_response, true);
+        $recaptcha_debug['assessment'] = $assessment;
 
         // Check if token is valid and score is above threshold
         if (isset($assessment['tokenProperties']['valid']) && $assessment['tokenProperties']['valid'] === true) {
             $score = $assessment['riskAnalysis']['score'] ?? 0;
+            $recaptcha_debug['score'] = $score;
+            $recaptcha_debug['passed'] = $score >= $min_score;
 
             if ($score < $min_score) {
+                ErrorLogger::log('reCAPTCHA score too low', [
+                    'score' => $score,
+                    'min_score' => $min_score,
+                    'ip' => $_SERVER['REMOTE_ADDR'] ?? 'unknown'
+                ]);
                 $response['message'] = 'Security validation failed. Please try again.';
                 echo json_encode($response);
                 exit;
             }
         } else {
+            $recaptcha_debug['valid'] = false;
+            $recaptcha_debug['reason'] = $assessment['tokenProperties']['invalidReason'] ?? 'unknown';
+            ErrorLogger::log('reCAPTCHA token invalid', [
+                'debug' => $recaptcha_debug,
+                'ip' => $_SERVER['REMOTE_ADDR'] ?? 'unknown'
+            ]);
             $response['message'] = 'Security validation failed. Please try again.';
             echo json_encode($response);
             exit;
         }
+    } else {
+        ErrorLogger::log('reCAPTCHA API error', [
+            'http_code' => $http_code,
+            'response' => $assessment_response,
+            'debug' => $recaptcha_debug
+        ]);
     }
+} else {
+    // No reCAPTCHA token provided - log this
+    ErrorLogger::log('No reCAPTCHA token provided', [
+        'ip' => $_SERVER['REMOTE_ADDR'] ?? 'unknown',
+        'has_post_token' => isset($_POST['recaptcha_token']),
+        'token_empty' => empty($_POST['recaptcha_token'] ?? '')
+    ]);
 }
 
 // Verify CSRF token (skip in development for testing)
