@@ -77,6 +77,16 @@ require_once 'includes/header.php';
                 <div class="reviews-track">
                     <?php if (!empty($reviews)): ?>
                         <?php foreach ($reviews as $review): ?>
+                            <?php
+                            $reviewText = $review->text ?? '';
+                            $wordCount = str_word_count($reviewText);
+                            $needsTruncate = $wordCount > 50; // Truncate if more than 50 words
+
+                            if ($needsTruncate) {
+                                $words = explode(' ', $reviewText);
+                                $truncatedText = implode(' ', array_slice($words, 0, 50));
+                            }
+                            ?>
                             <div class="review-card">
                                 <div class="stars">
                                     <?php
@@ -85,7 +95,15 @@ require_once 'includes/header.php';
                                     echo str_repeat('★', $rating);
                                     ?>
                                 </div>
-                                <p class="review-text"><?php echo htmlspecialchars($review->text ?? ''); ?></p>
+                                <?php if ($needsTruncate): ?>
+                                    <p class="review-text truncated">
+                                        <span class="review-short"><?php echo htmlspecialchars($truncatedText); ?>...</span>
+                                        <span class="review-full" style="display: none;"><?php echo htmlspecialchars($reviewText); ?></span>
+                                    </p>
+                                    <button class="read-more-toggle" onclick="toggleReview(this)">Read More</button>
+                                <?php else: ?>
+                                    <p class="review-text"><?php echo htmlspecialchars($reviewText); ?></p>
+                                <?php endif; ?>
                                 <p class="review-author"><?php echo htmlspecialchars($review->author ?? ''); ?></p>
                                 <p class="review-source">Google</p>
                             </div>
@@ -116,6 +134,55 @@ require_once 'includes/header.php';
             <button class="carousel-btn carousel-btn-right" onclick="scrollReviews(1)">›</button>
         </div>
     </section>
+
+    <style>
+        .read-more-toggle {
+            background: none;
+            border: none;
+            color: var(--navy);
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: underline;
+            padding: 5px 0 10px 0;
+            margin-top: 5px;
+            font-style: normal;
+            transition: color 0.3s ease;
+        }
+
+        .read-more-toggle:hover {
+            color: var(--soft-navy);
+        }
+
+        .review-text.truncated {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            .read-more-toggle {
+                font-size: 13px;
+            }
+        }
+    </style>
+
+    <script>
+        function toggleReview(button) {
+            const reviewCard = button.closest('.review-card');
+            const shortText = reviewCard.querySelector('.review-short');
+            const fullText = reviewCard.querySelector('.review-full');
+
+            if (shortText.style.display !== 'none') {
+                // Show full review
+                shortText.style.display = 'none';
+                fullText.style.display = 'inline';
+                button.textContent = 'Show Less';
+            } else {
+                // Show truncated review
+                shortText.style.display = 'inline';
+                fullText.style.display = 'none';
+                button.textContent = 'Read More';
+            }
+        }
+    </script>
 
     <section class="family-section">
         <div class="family-content">
