@@ -13,7 +13,7 @@
     "hero": {
         "card1": {
             "title": "Immediate Need",
-            "description": "Our warm and friendly team is here to guide you <br>through every step in making funeral arrangements..&nbsp;",
+            "description": "Our warm and friendly team is here to <br>guide you through every step in making funeral arrangements..&nbsp;",
             "buttonText": "Begin Planning",
             "buttonLink": "immediate-need.php"
         },
@@ -73,7 +73,7 @@
         "service2": {
             "title": "Funeral Estimator",
             "description": "Transparent pricing to help you plan within your budget, whatever your budget.<br><a href=\"https:\/\/estimator.barringtonsfunerals.com\/#\/\">Barringtons Funeral Calculator<\/a><br>",
-            "image": "\/assets\/images\/uploads\/img_68d10c499c4de_1758530633.jpg"
+            "image": "\/assets\/images\/uploads\/img_690c714f0f210_1762423119.png"
         },
         "service3": {
             "title": "Finance for Funerals",
@@ -104,7 +104,7 @@
             },
             {
                 "name": "Formby",
-                "image": "\/assets\/images\/uploads\/img_68e8d00c9be93_1760088076.jpeg",
+                "image": "\/assets\/images\/uploads\/img_690dc89390963_1762510995.jpg",
                 "address": "&nbsp; &nbsp; &nbsp; &nbsp;49 Liverpool Road, Formby L37 6BT",
                 "phone": "01704 461511 (24 hours)",
                 "hours": "Monday - Friday, 10am - 4pm"

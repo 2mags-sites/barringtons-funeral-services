@@ -1,9 +1,44 @@
 <?php
 // Homepage
 require_once 'includes/admin-config.php';
+require_once 'includes/env-loader.php';
 
 // Load content from JSON
 $content = loadContent('index');
+
+// Get reviews from database
+function get_homepage_reviews($limit = 10) {
+    try {
+        $pdo = new PDO(
+            sprintf(
+                'mysql:host=%s;dbname=%s;charset=utf8mb4',
+                EnvLoader::get('DB_HOST', 'localhost'),
+                EnvLoader::get('DB_NAME')
+            ),
+            EnvLoader::get('DB_USER'),
+            EnvLoader::get('DB_PASSWORD'),
+            [
+                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ
+            ]
+        );
+
+        $prefix = EnvLoader::get('DB_PREFIX', 'wp_');
+        $table = $prefix . 'mgpf_reviews_import';
+        $sql = "SELECT * FROM {$table} WHERE trash = 0 ORDER BY time DESC LIMIT :limit";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindValue(':limit', (int)$limit, PDO::PARAM_INT);
+        $stmt->execute();
+
+        return $stmt->fetchAll();
+
+    } catch (PDOException $e) {
+        error_log('Homepage Reviews Error: ' . $e->getMessage());
+        return [];
+    }
+}
+
+$reviews = get_homepage_reviews(10);
 
 // Business info for schema markup from JSON
 $business_info = $content['business_info'] ?? [];
@@ -40,36 +75,42 @@ require_once 'includes/header.php';
             <button class="carousel-btn carousel-btn-left" onclick="scrollReviews(-1)">‹</button>
             <div class="reviews-container">
                 <div class="reviews-track">
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <p class="review-text"><?php echo editable($content['reviews']['review1']['text'] ?? '', 'reviews.review1.text'); ?></p>
-                        <p class="review-author"><?php echo editable($content['reviews']['review1']['author'] ?? '', 'reviews.review1.author'); ?></p>
-                        <p class="review-source"><?php echo $content['reviews']['review1']['source'] ?? ''; ?></p>
-                    </div>
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <p class="review-text"><?php echo editable($content['reviews']['review2']['text'] ?? '', 'reviews.review2.text'); ?></p>
-                        <p class="review-author"><?php echo editable($content['reviews']['review2']['author'] ?? '', 'reviews.review2.author'); ?></p>
-                        <p class="review-source"><?php echo $content['reviews']['review2']['source'] ?? ''; ?></p>
-                    </div>
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <p class="review-text"><?php echo editable($content['reviews']['review3']['text'] ?? '', 'reviews.review3.text'); ?></p>
-                        <p class="review-author"><?php echo editable($content['reviews']['review3']['author'] ?? '', 'reviews.review3.author'); ?></p>
-                        <p class="review-source"><?php echo $content['reviews']['review3']['source'] ?? ''; ?></p>
-                    </div>
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <p class="review-text"><?php echo editable($content['reviews']['review4']['text'] ?? '', 'reviews.review4.text'); ?></p>
-                        <p class="review-author"><?php echo editable($content['reviews']['review4']['author'] ?? '', 'reviews.review4.author'); ?></p>
-                        <p class="review-source"><?php echo $content['reviews']['review4']['source'] ?? ''; ?></p>
-                    </div>
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <p class="review-text"><?php echo editable($content['reviews']['review5']['text'] ?? '', 'reviews.review5.text'); ?></p>
-                        <p class="review-author"><?php echo editable($content['reviews']['review5']['author'] ?? '', 'reviews.review5.author'); ?></p>
-                        <p class="review-source"><?php echo $content['reviews']['review5']['source'] ?? ''; ?></p>
-                    </div>
+                    <?php if (!empty($reviews)): ?>
+                        <?php foreach ($reviews as $review): ?>
+                            <div class="review-card">
+                                <div class="stars">
+                                    <?php
+                                    // Generate stars based on rating
+                                    $rating = isset($review->rating) ? (int)$review->rating : 5;
+                                    echo str_repeat('★', $rating);
+                                    ?>
+                                </div>
+                                <p class="review-text"><?php echo htmlspecialchars($review->text ?? ''); ?></p>
+                                <p class="review-author"><?php echo htmlspecialchars($review->author ?? ''); ?></p>
+                                <p class="review-source">Google</p>
+                            </div>
+                        <?php endforeach; ?>
+                    <?php else: ?>
+                        <!-- Fallback to static reviews if database is empty -->
+                        <div class="review-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="review-text"><?php echo editable($content['reviews']['review1']['text'] ?? '', 'reviews.review1.text'); ?></p>
+                            <p class="review-author"><?php echo editable($content['reviews']['review1']['author'] ?? '', 'reviews.review1.author'); ?></p>
+                            <p class="review-source"><?php echo $content['reviews']['review1']['source'] ?? ''; ?></p>
+                        </div>
+                        <div class="review-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="review-text"><?php echo editable($content['reviews']['review2']['text'] ?? '', 'reviews.review2.text'); ?></p>
+                            <p class="review-author"><?php echo editable($content['reviews']['review2']['author'] ?? '', 'reviews.review2.author'); ?></p>
+                            <p class="review-source"><?php echo $content['reviews']['review2']['source'] ?? ''; ?></p>
+                        </div>
+                        <div class="review-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="review-text"><?php echo editable($content['reviews']['review3']['text'] ?? '', 'reviews.review3.text'); ?></p>
+                            <p class="review-author"><?php echo editable($content['reviews']['review3']['author'] ?? '', 'reviews.review3.author'); ?></p>
+                            <p class="review-source"><?php echo $content['reviews']['review3']['source'] ?? ''; ?></p>
+                        </div>
+                    <?php endif; ?>
                 </div>
             </div>
             <button class="carousel-btn carousel-btn-right" onclick="scrollReviews(1)">›</button>

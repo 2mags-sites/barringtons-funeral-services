@@ -1,11 +1,12 @@
 {
-    "site": "barr.2magpiesseo.co.uk",
-    "backup_date": "2025-10-17 07:27:11",
-    "file_count": 23,
+    "site": "barringtonsfunerals.co.uk",
+    "backup_date": "2025-11-14 07:08:46",
+    "file_count": 26,
     "files": [
         "about-us.json",
         "blog-news.json",
         "coffins.json",
+        "cookie-policy.json",
         "direct-cremation.json",
         "etiquette.json",
         "frequently-asked-questions.json",
@@ -20,10 +21,12 @@
         "personalisation.json",
         "pet-products.json",
         "planning-ahead.json",
+        "privacy-policy.json",
         "repatriation.json",
         "services-overview.json",
         "social-security-benefits.json",
         "standardised-price-list.json",
+        "terms-conditions.json",
         "transport.json",
         "when-a-death-occurs.json"
     ]

@@ -17,22 +17,22 @@
         "included": [
             "Professional services and administration. Including a professional vehicle for transport to the crematorium.<br>",
             "Collection from place of death (within 20 miles)",
-            "Care at our facilities",
+            "Care at our facilities for up to 21 days",
             "Simple coffin suitable for cremation",
             "A face to face meeting with one of our team to complete all necessary paperwork and documentation.&nbsp;",
             "Crematorium fees (unattended service)",
-            "Return of ashes in a decorative scatter tube within 7 days.&nbsp;",
+            "Return of ashes within 7 days.&nbsp;",
             "Death certification assistance",
             "Online MuchLoved memorial page or <br>online Liverpool Echo notice.&nbsp;"
         ],
         "optional": [
             {
-                "name": "Direct Cremation + <br>Spending time with your loved one in our funeral <br>home, including dressing for up to 1.5 hours - <br>maybe play some music, have a cup of tea or a <br>drink with your loved one.",
+                "name": "Spending time with your loved one in our funeral <br>home, including dressing the person who has died<br>for up to 1.5 hours - maybe play some music, <br>have a cup of tea or a&nbsp;drink with your loved one.",
                 "price": "+\u00a3200"
             },
             {
-                "name": "Attended Direct Cremation<br>Attendance at crematorium committal for up to<br>10 people.&nbsp; This would also include spending time&nbsp;<br>visiting your loved one whilst they were in our care.&nbsp;<br>",
-                "price": "+\u00a3400"
+                "name": "Witnessed Direct Cremation<br>Attendance at crematorium committal for up to<br>10 people and a piece of music played.&nbsp;<br>",
+                "price": "+\u00a3200"
             },
             {
                 "name": "Additional mileage (per mile over 20)",
@@ -51,12 +51,12 @@
                 "price": "\u00a3350"
             },
             {
-                "name": "Certificate of cremation",
-                "price": "included"
+                "name": "Supporting you to plan and arrange <br>a memorial service.&nbsp;",
+                "price": "from \u00a3300"
             },
             {
-                "name": "Scatter tube for ashes afterwards",
-                "price": "included"
+                "name": "Decorative scatter tube for ashes&nbsp;",
+                "price": "\u00a360"
             }
         ]
     },

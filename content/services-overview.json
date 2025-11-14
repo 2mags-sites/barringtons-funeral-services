@@ -19,19 +19,19 @@
             "title": "Bespoke Funeral Service",
             "price": "\u00a32,645",
             "image": "\/assets\/images\/uploads\/img_68ef909ee796f_1760530590.jpg",
-            "fullDescription": "Our bespoke funeral service honours time-tested customs while allowing for personal touches that reflect your loved one's life. This comprehensive service includes professional care from the moment you contact us through to the final farewell. We handle all arrangements with dignity and respect, ensuring every detail meets your family's expectations. Our experienced team guides you through each decision, from choosing the right coffin to selecting music and readings that capture the essence of your loved one's life. The traditional service typically includes a viewing at our chapel of rest, a formal procession to the service venue or crematorium, and support with the reception afterwards. Options can be added or removed.&nbsp;",
+            "fullDescription": "Our bespoke funeral service honours time-tested customs while allowing for personal touches that reflect your loved one's life. This comprehensive service includes professional care from the moment you contact us through to the final farewell. We handle all arrangements with dignity and respect, ensuring every detail meets your family's expectations. Our experienced team guides you through each decision, from choosing the right coffin to selecting music and readings that capture the essence of your loved one's life. The traditional service typically includes visiting your loved one at our chapel of rest, a formal procession to the service venue or crematorium, and support with the reception afterwards. Options can be added or removed.&nbsp;",
             "included": [
                 "Professional services of funeral director and staff",
                 "Collection of the person who has died<br>&nbsp;in working hours.",
                 "Traditional oak or mahogany veneered coffin <br>with quality fittings",
                 "Use of chapel of rest for visiting your loved one.",
                 "Preparation and dressing of the person who has died. Including embalming.&nbsp;",
-                "Care of the deceased until the funeral service.&nbsp;",
+                "Care of the deceased person until the funeral service.&nbsp;",
                 "&nbsp;Hearse for the funeral procession and four professional pallbearers.",
                 "All necessary documentation and administration",
                 "Advice on registering the death",
                 "Liaison with officiants",
-                "Liaison with creative partners including Audio Visual, Music and printed stationery and florists.&nbsp;",
+                "Liaising with creative partners including Audio Visual, Music and printed stationery and florists.&nbsp;",
                 "Online memorial page and donations collection&nbsp;"
             ],
             "optional": [
@@ -56,16 +56,16 @@
                     "price": "from \u00a350"
                 },
                 {
-                    "name": "Live streaming service",
-                    "price": "\u00a395"
+                    "name": "Audio Visual Services",
+                    "price": "From \u00a390"
                 },
                 {
-                    "name": "Memorial book",
-                    "price": "from \u00a340"
+                    "name": "Celebrant\/Minister",
+                    "price": "from \u00a3234"
                 },
                 {
-                    "name": "Additional order of service (per 25)",
-                    "price": "\u00a325"
+                    "name": "Order of service",
+                    "price": "from \u00a3100"
                 }
             ]
         },
@@ -73,7 +73,7 @@
             "title": "Contemporary Celebration of Life",
             "price": "\u00a33,195",
             "image": "\/assets\/images\/uploads\/img_68ef94140c998_1760531476.JPG",
-            "fullDescription": "A modern celebration of life focuses on joy, memories, and the unique personality of your loved one. This service breaks away from traditional constraints, allowing complete personalization of every element. Whether it's a themed celebration reflecting their passions, a gathering at their favorite venue, or a service filled with their beloved music, we can help you create a farewell that truly celebrates who they were. Our contemporary services often include multimedia tributes, personalized decorations, and unique touches like memory tables, photo displays, or even live performances. We work closely with celebrants who specialize in creating meaningful, non-religious ceremonies that capture the spirit of your loved one. We have put some typical options below.&nbsp;",
+            "fullDescription": "A modern celebration of life focuses on joy, memories, and the unique personality of your loved one. This service breaks away from traditional constraints, allowing complete personalization of every element. Whether it's a themed event reflecting their passions, a gathering at their favourite venue, or a service filled with their favourite music, we can help you create a farewell that truly celebrates who they were. Our contemporary services often include multimedia tributes, personalized decorations, and unique touches like memory tables, photo displays, or even live performances. We work closely with celebrants who specialize in creating meaningful commemorations that capture the spirit of your loved one. We have put some typical options below.&nbsp;",
             "included": [
                 "Professional services and personalized planning consultation",
                 "Collection and care of your loved one",
@@ -85,7 +85,7 @@
                 "Creation of multimedia tribute (photos\/video)",
                 "Personalized order of service design",
                 "Memory table and photo display setup",
-                "Coordination of personal tributes",
+                "Co-ordination of personal tributes",
                 "Online memorial with photos",
                 "Assistance with reception planning"
             ],
@@ -96,11 +96,11 @@
                 },
                 {
                     "name": "Motorcycle hearse",
-                    "price": "\u00a31400"
+                    "price": "from \u00a31500"
                 },
                 {
                     "name": "VW camper or vintage car hearse",
-                    "price": "\u00a31400"
+                    "price": "from \u00a31500"
                 },
                 {
                     "name": "Professional photography",
@@ -108,19 +108,19 @@
                 },
                 {
                     "name": "Dove release",
-                    "price": "\u00a3295"
+                    "price": "from \u00a3295"
                 },
                 {
                     "name": "Bagpiper or bugler",
-                    "price": "\u00a3150"
+                    "price": "from \u00a3150"
                 },
                 {
                     "name": "Printed photo memorial boards up to A1",
-                    "price": "\u00a3100"
+                    "price": "from \u00a3100"
                 },
                 {
                     "name": "Catering coordination service",
-                    "price": "\u00a3150"
+                    "price": "from \u00a3150"
                 }
             ]
         },
@@ -191,8 +191,8 @@
                 "Biodegradable order of service",
                 "Natural flower arrangements (locally sourced)",
                 "Carbon offset for all transport",
-                "Woodland or meadow burial plot",
-                "Natural grave marker (Wood)"
+                "Natural grave marker (Wood)",
+                ""
             ],
             "optional": [
                 {
@@ -208,8 +208,8 @@
                     "price": "\u00a375"
                 },
                 {
-                    "name": "",
-                    "price": ""
+                    "name": "Woodland or Meadow Burial Plot",
+                    "price": "Ask for prices"
                 },
                 {
                     "name": "",
@@ -238,13 +238,13 @@
             "included": [
                 "Liaison with religious leaders and places of worship",
                 "Faith-specific preparation of your loved one",
-                "Appropriate religious coffin or casket",
-                "Hearse and following cars",
+                "Veneered Coffin with appropriate furniture.",
+                "Hearse and 1 following limousine",
                 "Professional pallbearers familiar with religious customs",
                 "Coordination of religious ceremonies",
                 "Assistance with ritual requirements",
-                "Books of condolence",
-                "Faith-appropriate memorial stationery",
+                "Book of condolence option",
+                "Faith-appropriate memorial stationery option",
                 "Guidance on religious mourning practices",
                 "Arrangement of specific timing requirements",
                 "Cultural and religious sensitivity throughout"
@@ -290,7 +290,7 @@
                 "Hindu ceremonies and cremation",
                 "Buddhist practices (all traditions)",
                 "Sikh customs and requirements",
-                "Humanist and non-religious services",
+                "Muslim customs and requirements",
                 "Other faiths and spiritual beliefs"
             ]
         }
@@ -321,7 +321,7 @@
                 "price": "From \u00a395"
             },
             "streaming": {
-                "title": "Live Streaming",
+                "title": "Audio Visual Services",
                 "description": "Professional webcasting allows distant family and friends to attend the service virtually. Includes recording for later viewing and sharing.",
                 "price": "&nbsp;From \u00a395"
             },
@@ -352,7 +352,7 @@
         "options": {
             "immediate": {
                 "title": "Immediate Payment",
-                "description": "Payment in full by cash, cheque, or card. We accept all major credit and debit cards. Full payment is typically due within 14 days of the funeral."
+                "description": "<br>Payment in full by cash, cheque, or card. We accept all major credit and debit cards. Full payment is typically due within 14 days of the funeral."
             },
             "installment": {
                 "title": "Payment Plans with Funeral Safe Finance",
