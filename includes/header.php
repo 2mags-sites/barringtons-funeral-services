@@ -105,7 +105,6 @@ if (!isset($page_keywords)) $page_keywords = 'funeral directors Liverpool, indep
                         <a href="personalisation.php">Personalisation</a>
                         <a href="transport.php">Transport</a>
                         <a href="repatriation.php">Repatriation</a>
-                        <a href="pet-products.php">Pet Products</a>
                     </div>
                 </div>
                 <a href="planning-ahead.php">Plan Ahead</a>
