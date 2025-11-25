@@ -17,7 +17,7 @@ require_once 'includes/header.php';
     <section class="page-hero">
         <div class="hero-image editable-hero-bg" data-field="hero.image" data-page="funeral-details" style="background-image: url('<?php echo $content['hero']['image'] ?? 'assets/images/hero-bg.jpg'; ?>');">
         <?php if (IS_ADMIN): ?>
-            <div class="hero-edit-overlay" onclick="editHeroImage(this)" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(37, 99, 235, 0.9); color: white; padding: 15px 30px; border-radius: 8px; cursor: pointer; font-weight: 500; display: none;">
+            <div class="hero-edit-overlay" onclick="editHeroImage(this)" style="position: absolute; top: 70%; left: 50%; transform: translate(-50%, -50%); background: rgba(37, 99, 235, 0.9); color: white; padding: 15px 30px; border-radius: 8px; cursor: pointer; font-weight: 500; display: none; z-index: 100;">
                 📷 Click to Change Hero Image
             </div>
         <?php endif; ?>
