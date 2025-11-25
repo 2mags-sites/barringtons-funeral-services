@@ -2,21 +2,29 @@
 // Funeral Details Page - Individual funeral detail display from MuchLoved widget
 require_once 'includes/admin-config.php';
 
-// Set page meta
-$page_title = 'Funeral Details | Barringtons Funeral Services';
-$page_description = 'View funeral details, service information, and tribute pages for funerals arranged by Barringtons Funeral Services.';
-$page_keywords = 'funeral details, funeral service, tribute, muchloved, barringtons';
+// Load page content
+$content = loadContent('funeral-details');
+
+// Set page meta from JSON or use defaults
+$page_title = $content['meta']['title'] ?? 'Funeral Details | Barringtons Funeral Services';
+$page_description = $content['meta']['description'] ?? '';
+$page_keywords = $content['meta']['keywords'] ?? '';
 
 // Include header
 require_once 'includes/header.php';
 ?>
 
     <section class="page-hero">
-        <div class="hero-image" style="background-image: url('assets/images/hero-bg.jpg');">
+        <div class="hero-image editable-hero-bg" data-field="hero.image" data-page="funeral-details" style="background-image: url('<?php echo $content['hero']['image'] ?? 'assets/images/hero-bg.jpg'; ?>');">
+        <?php if (IS_ADMIN): ?>
+            <div class="hero-edit-overlay" onclick="editHeroImage(this)" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(37, 99, 235, 0.9); color: white; padding: 15px 30px; border-radius: 8px; cursor: pointer; font-weight: 500; display: none;">
+                📷 Click to Change Hero Image
+            </div>
+        <?php endif; ?>
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content-single">
-            <h1>Funeral Details</h1>
+            <h1><?php echo $content['hero']['title'] ?? 'Funeral Details'; ?></h1>
         </div>
     </section>
 
