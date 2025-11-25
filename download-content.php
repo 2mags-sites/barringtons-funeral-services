@@ -37,6 +37,16 @@ if ($zip->open($tempFile, ZipArchive::CREATE | ZipArchive::OVERWRITE) !== TRUE) 
 $contentDir = __DIR__ . '/content/';
 $jsonFiles = glob($contentDir . '*.json');
 
+// Exclude files for removed pages (these should not be in backups)
+$excludedFiles = [
+    'pet-products.json'
+];
+
+// Filter out excluded files
+$jsonFiles = array_filter($jsonFiles, function($file) use ($excludedFiles) {
+    return !in_array(basename($file), $excludedFiles);
+});
+
 if (empty($jsonFiles)) {
     $zip->close();
     unlink($tempFile);

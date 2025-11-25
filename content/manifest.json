@@ -1,7 +1,7 @@
 {
     "site": "barringtonsfunerals.co.uk",
-    "backup_date": "2025-11-18 09:44:55",
-    "file_count": 25,
+    "backup_date": "2025-11-25 19:59:50",
+    "file_count": 26,
     "files": [
         "about-us.json",
         "blog-news.json",
@@ -19,6 +19,7 @@
         "our-facilities.json",
         "our-location.json",
         "personalisation.json",
+        "pet-products.json",
         "planning-ahead.json",
         "privacy-policy.json",
         "repatriation.json",
