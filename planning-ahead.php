@@ -126,15 +126,18 @@ require_once 'includes/header.php';
             <div class="ecclesiastical-section fade-in">
                 <div class="ecclesiastical-content">
                     <div class="ecclesiastical-logo">
-                        <img src="/assets/images/ecclesiastical.jpg" alt="Ecclesiastical Planning Services">
+                        <?php
+                        $eccImg = editableImage($content['ecclesiastical']['image'] ?? '/assets/images/ecclesiastical.jpg', 'ecclesiastical.image', 'Ecclesiastical Logo', 'Ecclesiastical Planning Services');
+                        echo $eccImg;
+                        ?>
                     </div>
                     <div class="ecclesiastical-text">
-                        <h3>Our Funeral Plan Provider</h3>
-                        <p>We work with Ecclesiastical Planning Services, part of the award-winning Benefact Group. All funeral plans are regulated by the Financial Conduct Authority (FCA), giving you complete peace of mind.</p>
-                        <p>Download their comprehensive brochure to learn more about how funeral plans work, what's included, and answers to common questions.</p>
-                        <a href="/assets/files/EPS-Funeral-Plans-Brochure.pdf" class="btn-download" download>
+                        <h3><?php echo editable($content['ecclesiastical']['title'] ?? 'Our Funeral Plan Provider', 'ecclesiastical.title'); ?></h3>
+                        <p><?php echo editable($content['ecclesiastical']['description1'] ?? '', 'ecclesiastical.description1'); ?></p>
+                        <p><?php echo editable($content['ecclesiastical']['description2'] ?? '', 'ecclesiastical.description2'); ?></p>
+                        <a href="<?php echo htmlspecialchars($content['ecclesiastical']['brochure_url'] ?? ''); ?>" class="btn-download" target="_blank" rel="noopener">
                             <span class="download-icon">📄</span>
-                            Download Funeral Plans Brochure
+                            <?php echo editable($content['ecclesiastical']['brochure_text'] ?? 'Download Funeral Plans Brochure', 'ecclesiastical.brochure_text'); ?>
                         </a>
                     </div>
                 </div>

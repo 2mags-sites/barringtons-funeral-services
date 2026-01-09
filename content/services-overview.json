@@ -37,18 +37,18 @@
             "optional": [
                 {
                     "name": "Additional limousines",
-                    "price": "\u00a3250 each"
+                    "price": "\u00a3275 each"
                 },
                 {
                     "name": "Horse-drawn hearse",
-                    "price": "\u00a31350"
+                    "price": "\u00a31250"
                 },
                 {
                     "name": "Solid wood coffin upgrade",
                     "price": "from +\u00a3570&nbsp;"
                 },
                 {
-                    "name": "Extended viewing hours",
+                    "name": "Out of office hours viewing&nbsp;",
                     "price": "\u00a375 per visit"
                 },
                 {
@@ -61,66 +61,66 @@
                 },
                 {
                     "name": "Celebrant\/Minister",
-                    "price": "from \u00a3234"
+                    "price": "from \u00a3244"
                 },
                 {
                     "name": "Order of service",
-                    "price": "from \u00a3100"
+                    "price": "from \u00a3125"
                 }
             ]
         },
         "contemporary": {
-            "title": "Contemporary Celebration of Life",
-            "price": "\u00a33,195",
-            "image": "\/assets\/images\/uploads\/img_68ef94140c998_1760531476.JPG",
-            "fullDescription": "A modern celebration of life focuses on joy, memories, and the unique personality of your loved one. This service breaks away from traditional constraints, allowing complete personalization of every element. Whether it's a themed event reflecting their passions, a gathering at their favourite venue, or a service filled with their favourite music, we can help you create a farewell that truly celebrates who they were. Our contemporary services often include multimedia tributes, personalized decorations, and unique touches like memory tables, photo displays, or even live performances. We work closely with celebrants who specialize in creating meaningful commemorations that capture the spirit of your loved one. We have put some typical options below.&nbsp;",
+            "title": "Modest Funeral Service",
+            "price": "\u00a32,250",
+            "image": "\/assets\/images\/uploads\/img_695b9707ccbae_1767610119.jpg",
+            "fullDescription": "Our budget-friendly service is perfect for those who prioritise cost while still desiring the exceptional level of care we provide. This service is available, Monday to Thursday in the morning until 10am or after 3pm. It can take place at the crematorium or graveside. You'll also have the opportunity to visit our loved one on a day prior to the funeral and have them dressed in their personal clothing or a modest gown.&nbsp;",
             "included": [
-                "Professional services and personalized planning consultation",
-                "Collection and care of your loved one",
-                "Choice of cardboard contemporary coffin or casket",
-                "Venue decoration and setup",
-                "Modern hearse or alternative transport",
-                "Limousine<br>",
-                "Professional celebrant services",
-                "Creation of multimedia tribute (photos\/video)",
+                "Face to face meeting in our warm and friendly funeral home or at your own home.",
+                "Collection and care of your loved one any time of the day or night. (Within 20 miles). Care for up to 14 days and simple preparation for visiting. Including dressing in their own clothes.&nbsp;",
+                "A single visit by appointment to the deceased person for up to 1.5 hours.&nbsp;",
+                "A simple wood effect or Jute coffin suitable for burial or cremation.&nbsp;",
+                "Traditional hearse direct from our funeral home to the crematorium or cemetery.&nbsp;&nbsp;",
+                "All of the required personnel including 4 pallbearers. (Extra bearers are \u00a360 each).&nbsp;",
+                "Liaising with third parties, AV Media, Music, Celebrants, etc.&nbsp;",
+                "Muchloved unique tribute page which is yours to keep forever.&nbsp;",
+                "Free online notice in the Liverpool Echo.&nbsp;",
                 "Personalized order of service design",
-                "Memory table and photo display setup",
-                "Co-ordination of personal tributes",
-                "Online memorial with photos",
-                "Assistance with reception planning"
+                "Ashes returned to you in the container from the crematorium.",
+                "Access to bereavement support, (SAIFCare).",
+                "Additional printing and stationery if required.&nbsp;"
             ],
             "optional": [
                 {
-                    "name": "Themed coffin design or wrap",
-                    "price": "From \u00a3450"
+                    "name": "Personalised route from home or another address.",
+                    "price": "From \u00a3100"
                 },
                 {
-                    "name": "Motorcycle hearse",
-                    "price": "from \u00a31500"
+                    "name": "Limousines",
+                    "price": "\u00a3275 each"
                 },
                 {
-                    "name": "VW camper or vintage car hearse",
-                    "price": "from \u00a31500"
+                    "name": "Embalming",
+                    "price": "from \u00a3125"
                 },
                 {
-                    "name": "Professional photography",
-                    "price": "From \u00a3495"
+                    "name": "Visual Tributes",
+                    "price": "From \u00a390"
                 },
                 {
-                    "name": "Dove release",
-                    "price": "from \u00a3295"
+                    "name": "Webcasts",
+                    "price": "from \u00a395"
                 },
                 {
-                    "name": "Bagpiper or bugler",
-                    "price": "from \u00a3150"
+                    "name": "Notices printed in newspapers",
+                    "price": "from \u00a3146"
                 },
                 {
-                    "name": "Printed photo memorial boards up to A1",
-                    "price": "from \u00a3100"
+                    "name": "Extra days in our care.&nbsp;",
+                    "price": "\u00a325 per day"
                 },
                 {
-                    "name": "Catering coordination service",
-                    "price": "from \u00a3150"
+                    "name": "Upgrade of coffins",
+                    "price": "Difference in cost"
                 }
             ]
         },
@@ -212,12 +212,12 @@
                     "price": "Ask for prices"
                 },
                 {
-                    "name": "",
-                    "price": ""
+                    "name": "Limousine&nbsp;",
+                    "price": "\u00a3275 each"
                 },
                 {
-                    "name": "",
-                    "price": ""
+                    "name": "Printed order of service (FSC accredited)",
+                    "price": "From \u00a3125"
                 },
                 {
                     "name": "",
@@ -228,7 +228,7 @@
                     "price": ""
                 }
             ],
-            "commitment": "We offset all carbon emissions from our services and contribute to local conservation projects. Every green funeral includes lifetime membership to the natural burial ground for family visits."
+            "commitment": "We offset all carbon emissions from our services and contribute to conservation projects. Every green funeral includes lifetime membership to the natural burial ground for family visits."
         },
         "religious": {
             "title": "Religious & Faith Services",

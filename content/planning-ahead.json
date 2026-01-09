@@ -6,7 +6,7 @@
     },
     "intro": {
         "title": "Plan Your Farewell, Your Way",
-        "subtitle": "Taking time now to plan your funeral is what you want\u2013 it's one of the most thoughtful gifts you can give your family. It ensures your wishes are known and removes difficult decisions during an emotional time.<br><br>Funeral plans are regulated by the Financial Conduct Authority (FCA), we are an appointed representative of Ecclesiastical Planning Services Limited (EPSL) and cannot give you advice. We will give you the information to be able to make a decision if the plan is right for your needs. EPSL and Barringtons Funeral Services can be found on the FCA Register.&nbsp;<br>"
+        "subtitle": "Make financial provision for your funeral - fix our direct costs and make a contribution towards third party costs. You can also spread the cost with regular payment plans.&nbsp;<br>"
     },
     "benefits": {
         "family": {
@@ -19,7 +19,7 @@
         },
         "financial": {
             "title": "Financial Peace of Mind",
-            "description": "Lock in today's prices and protect against inflation. Spread the cost with flexible payment plans that suit your budget."
+            "description": ""
         }
     },
     "process": {
@@ -39,7 +39,7 @@
             },
             {
                 "title": "Peace of Mind",
-                "description": "Your plan is securely stored and can be updated anytime. We'll provide documentation for you and your family."
+                "description": "Your plan details are securely stored and can be updated once it's fully paid. We'll provide documentation for you and your family."
             }
         ]
     },
@@ -61,25 +61,25 @@
         "prepaid": {
             "title": "Prepaid Plan",
             "price": "Bespoke Service",
-            "description": "Lock in today's prices and protect against inflation. Full peace of mind for you and your family.",
+            "description": "Peace of mind for you and your family.",
             "badge": "Most Popular",
             "features": [
-                "Price guarantee",
-                "Flexible payment options",
-                "Fully transferable",
-                "Protected in trust",
-                "Complete peace of mind"
+                "Make your funeral wishes known.",
+                "Reduce worry for loved ones.",
+                "Ensure your family has expert help at a difficult time.",
+                "Make financial provision for your funeral.",
+                "Fully Transferable"
             ]
         },
         "installment": {
-            "title": "Installment Plan",
+            "title": "Instalment Plan",
             "price": "Monthly Payments",
             "description": "Spread the cost over time with affordable monthly payments. No credit checks required.",
             "features": [
-                "Low monthly payments",
-                "No interest charges",
-                "Flexible terms",
-                "Can upgrade anytime"
+                "Low monthly payments over 1, 2, 3, 4 or 5 years.",
+                "No credit checks required.",
+                "You can make changes to your plan once it's fully paid.",
+                "No additional cost for paying over 12 months. There's an additional cost for paying over two or more years and eligibility criteria applies. Please refer to the [Instalment Q&A](https://www.funeralplans.co.uk/media/ibhfxvog/eps_instalment_q_a_pdf_.pdf) and the [Terms and Conditions](https://www.funeralplans.co.uk/media/tk5plg5u/eps-funeral-plan-terms-and-conditions.pdf) for more information. We can provide you with a personalised quote."
             ]
         }
     },
@@ -88,29 +88,37 @@
         "items": [
             {
                 "question": "Can I change my mind?",
-                "answer": "Absolutely. Your plan can be updated anytime, and prepaid plans can be cancelled with if unused and a refund less the administration fee (\u00a3325) will be issued.&nbsp;"
+                "answer": "Absolutely. Your plan can be updated once it's fully paid. There may be more to pay if you add additional services. If you choose to cancel the plan after the cancellation period you'll receive a refund of the original amount paid excluding the administration fee and any payments to insure an instalment on the plan."
             },
             {
                 "question": "What if I move away?",
-                "answer": "Your plan can be transferred to another funeral director in the UK, or we can arrange services anywhere in the country. (There may be additional fees to pay)."
+                "answer": "You should be able to transfer your plan to another funeral director in the UK, or we can arrange services anywhere in the country. There may be additional fees to pay depending on local prices. Please refer to the [Terms and Conditions](https://www.funeralplans.co.uk/media/tk5plg5u/eps-funeral-plan-terms-and-conditions.pdf) for details or speak to us for more information."
             },
             {
-                "question": "Is my money safe?",
-                "answer": "Yes. All prepaid funds are held in an whole of life insurance policy, completely separate from our business. <br>We are an Appointed Representative of Ecclesiastical Planning Services (EPS) who are regulated by the Financial Conduct Authority (FCA). EPS and Barringtons can be found on the FCA Register.&nbsp;"
+                "question": "What happens to my money?",
+                "answer": "All prepaid funds are held in a whole of life insurance policy, completely separate from our business. The full value of your plan, excluding the administration fee and any instalment charges, is ring fenced and cannot be used for anything but your funeral when the time comes."
             },
             {
                 "question": "What's included in the price?",
-                "answer": "Our services, care of your loved one, coffin, hearse, and administration are core parts of the plans. You can also add on additional options and third-party costs like crematorium fees if you choose."
+                "answer": "Our services, care of your loved one, coffin, hearse, and administration costs are core parts of the plans. You can also add on additional options and third-party costs like crematorium fees if you choose. These costs are outside of our control. If these costs, as listed in the plan details, are not covered by the plan value at the time of need, there will be a balance to pay. Please refer to the [Terms and Conditions](https://www.funeralplans.co.uk/media/tk5plg5u/eps-funeral-plan-terms-and-conditions.pdf) for more information."
             },
             {
                 "question": "Can I plan for someone else?",
-                "answer": "Yes, with their consent. Many people arrange plans for elderly parents or relatives to ensure their wishes are met."
+                "answer": "Yes. Many people arrange plans for elderly parents or relatives to ensure their wishes are met."
             },
             {
                 "question": "How do I start?",
                 "answer": "Simply call us on 0151 928 1625 or complete our online form. There's no pressure, just a friendly chat about your options."
             }
         ]
+    },
+    "ecclesiastical": {
+        "title": "Our Funeral Plan Provider",
+        "description1": "We work with Ecclesiastical Planning Services, part of the award-winning Benefact Group. All funeral plans are regulated by the Financial Conduct Authority (FCA), giving you complete peace of mind. You can view their [Funeral Plans Brochure](https://www.funeralplans.co.uk/bendall-group/plans-brochure.pdf) to learn more about how funeral plans work, what's included, and answers to common questions.",
+        "description2": "We work with Ecclesiastical Planning Services, which is part of the Benefact Group, a group of award-winning, specialist financial services companies, which gives available profit to charity.",
+        "brochure_url": "https://www.funeralplans.co.uk/bendall-group/plans-brochure.pdf",
+        "brochure_text": "Download Funeral Plans Brochure",
+        "image": "/assets/images/ecclesiastical.jpg"
     },
     "cta": {
         "title": "Start Your Plan Today",

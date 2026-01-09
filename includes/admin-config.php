@@ -141,18 +141,35 @@ function getDefaultContent($page_name) {
 }
 
 /**
+ * Parse Markdown-style links [text](url) to HTML anchor tags
+ * This allows clients to easily add links in content without knowing HTML
+ */
+function parseMarkdownLinks($text) {
+    // Pattern matches [link text](url)
+    $pattern = '/\[([^\]]+)\]\(([^)]+)\)/';
+    $replacement = '<a href="$2" target="_blank" rel="noopener">$1</a>';
+    return preg_replace($pattern, $replacement, $text);
+}
+
+/**
  * Make text editable in admin mode
+ * Supports Markdown-style links: [text](url)
  */
 function editable($value, $field_path, $type = 'text') {
+    // Parse Markdown links for display (both admin and non-admin)
+    $parsed_value = parseMarkdownLinks($value);
+
     if (!IS_ADMIN) {
-        return $value;
+        return $parsed_value;
     }
 
     $data_field = htmlspecialchars($field_path);
     $current_page = basename($_SERVER['PHP_SELF'], '.php');
     if ($current_page === '') $current_page = 'index';
 
-    return '<span class="editable-content" data-field="' . $data_field . '" data-page="' . $current_page . '">' . $value . '</span>';
+    // In admin mode, show the ORIGINAL value (with markdown) for editing
+    // but wrap it so the admin can edit the raw markdown
+    return '<span class="editable-content" data-field="' . $data_field . '" data-page="' . $current_page . '">' . $parsed_value . '</span>';
 }
 
 /**

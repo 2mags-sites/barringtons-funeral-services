@@ -1,3 +1,10 @@
+    <!-- Privacy Notice - Before data capture -->
+    <div class="privacy-notice-banner">
+        <div class="container">
+            <p>We capture and retain data in accordance with our <a href="/privacy-policy.php">Privacy Policy</a>.</p>
+        </div>
+    </div>
+
     <!-- Contact Section - Appears on every page -->
     <!-- Smart Deploy Test: <?php echo date('Y-m-d H:i:s'); ?> -->
     <section class="contact-section" id="contact">

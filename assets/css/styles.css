@@ -814,6 +814,28 @@ nav a:hover {
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
+/* Privacy Notice Banner - Before contact form */
+.privacy-notice-banner {
+    background: var(--soft-navy);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.privacy-notice-banner p {
+    color: white;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.privacy-notice-banner a {
+    color: var(--pink);
+    text-decoration: underline;
+}
+
+.privacy-notice-banner a:hover {
+    color: var(--warm-pink);
+}
+
 /* Contact Section */
 .contact-section {
     padding: 5rem 0;
@@ -1831,6 +1853,22 @@ footer {
 
 .cta-section .btn-primary {
     margin-top: 1rem;
+}
+
+.cta-section .privacy-notice {
+    font-size: 0.9rem;
+    color: var(--text-body);
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+}
+
+.cta-section .privacy-notice a {
+    color: var(--soft-navy);
+    text-decoration: underline;
+}
+
+.cta-section .privacy-notice a:hover {
+    color: var(--navy);
 }
 
 .contact-cards {
