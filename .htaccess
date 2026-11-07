@@ -1,3 +1,88 @@
+# BEGIN reviews subdomain goes to the main site (ctl01, 6 Nov 2026)
+# This host exists only for WordPress and Get Great Reviews at /news. The rest of this folder
+# is the old site, which Google was indexing as a duplicate.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^reviews\.barringtonsfunerals\.co\.uk$ [NC]
+RewriteCond %{QUERY_STRING} (^|&)slug=([^&]+)
+RewriteRule ^blog-post(\.php)?$ https://barringtonsfunerals.co.uk/news/%2? [R=301,L]
+RewriteCond %{HTTP_HOST} ^reviews\.barringtonsfunerals\.co\.uk$ [NC]
+RewriteRule ^(index(-new)?(\.php)?)?$ https://barringtonsfunerals.co.uk/? [R=301,L]
+RewriteCond %{HTTP_HOST} ^reviews\.barringtonsfunerals\.co\.uk$ [NC]
+RewriteRule ^blog-news(\.php)?$ https://barringtonsfunerals.co.uk/news? [R=301,L]
+RewriteCond %{HTTP_HOST} ^reviews\.barringtonsfunerals\.co\.uk$ [NC]
+RewriteRule ^contact(\.php|/)?$ https://barringtonsfunerals.co.uk/#contact? [R=301,NE,L]
+RewriteCond %{HTTP_HOST} ^reviews\.barringtonsfunerals\.co\.uk$ [NC]
+RewriteRule ^pet-products(\.php|/)?$ https://barringtonsfunerals.co.uk/services? [R=301,L]
+RewriteCond %{HTTP_HOST} ^reviews\.barringtonsfunerals\.co\.uk$ [NC]
+RewriteCond %{REQUEST_URI} !^/(news|assets|\.well-known)(/|$)
+RewriteRule ^(.*?)(\.php)?$ https://barringtonsfunerals.co.uk/$1 [R=301,L]
+</IfModule>
+# END reviews subdomain goes to the main site
+
+# BEGIN 2mags-probe-block
+# Managed by 2mags-new-server/tools/probe-block.sh - do not edit by hand.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule \.php$ - [F,L]
+
+RewriteRule (^|/)\.(env|git|svn|aws|ssh|htpasswd)(/|$) - [F,L]
+
+RewriteRule \.(sql|bak|old|swp|ini|log)$ - [F,L]
+
+RewriteRule \.wpress$ - [F,L]
+RewriteRule (^|/)wp-content/ai1wm-backups/ - [F,L]
+
+RewriteRule (^|/)wp-config\.php[^/]+$ - [F,L]
+RewriteRule (^|/)wp-config\.[^/]*\.php$ - [F,L]
+RewriteRule (^|/)wp-config\.(bak|old|save|orig|txt|inc|bkp|prostack)$ - [F,L]
+
+RewriteRule \.(bak|old|save|orig)[.\-_][^/]*$ - [F,L]
+
+RewriteCond %{REQUEST_URI} \.php[^/]+$
+RewriteCond %{REQUEST_URI} !\.(jpe?g|png|gif|webp|avif|svg|ico|css|js|map|json|pdf|zip|mp4|webm|woff2?|ttf|eot)$ [NC]
+RewriteRule .* - [F,L]
+
+RewriteRule ^(webmin|adminer|phpmyadmin|pma)(/|$) - [F,L]
+
+RewriteRule (^|/)dup-installer(-cache)?(/|$) - [F,L]
+RewriteRule (^|/)duplicator/installer(/|$) - [F,L]
+RewriteRule (^|/)(main\.installer|installer-backup)\.php$ - [F,L]
+
+RewriteRule (^|/)wp-content/uploads/gravity_forms/ - [F,L]
+
+RewriteRule (^|/)xmlrpc\.php$ - [F,L]
+RewriteRule (^|/)wp-comments-post\.php$ - [F,L]
+</IfModule>
+# END 2mags-probe-block
+
+
+
+
+
+
+
+# BEGIN Brandy Digital - deny site archives / DB dumps (2026-07-26)
+# Full-site zips in a docroot contain wp-config.php (DB credentials + salts).
+# converted from <FilesMatch \.(sql|tar|tgz|gz|bz2|7z|rar|sql\.gz)$> by htaccess_convert.py
+RewriteRule \.(sql|tar|tgz|gz|bz2|7z|rar|sql\.gz)$ - [F,L]
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	# .zip anywhere except wp-content/uploads/
+	RewriteCond %{REQUEST_URI} !^/wp-content/uploads/ [NC]
+	RewriteCond %{REQUEST_URI} \.zip$ [NC]
+	RewriteRule .* - [F,L]
+</IfModule>
+# END Brandy Digital - deny site archives / DB dumps
+# BEGIN Brandy Digital - deny dev/editor backup files (2026-07-25)
+# .old/.bak/.orig are not parsed as PHP and would be served as plaintext source.
+# converted from <FilesMatch \.(old|bak|orig|save|swp|swo|rej)$> by htaccess_convert.py
+RewriteRule \.(old|bak|orig|save|swp|swo|rej)$ - [F,L]
+# converted from <FilesMatch ~$> by htaccess_convert.py
+RewriteRule ~$ - [F,L]
+# END Brandy Digital - deny dev/editor backup files
 # Barringtons Funeral Services - Production .htaccess
 # Rename this file to .htaccess when deploying to production
 
@@ -6,22 +91,16 @@
 # ============================================
 
 # Block access to .env files (MOST IMPORTANT)
-<Files .env>
-    Order deny,allow
-    Deny from all
-</Files>
+# converted from <Files .env> by htaccess_convert.py
+RewriteRule (^|/)\.env$ - [F,L]
 
 # Block all dot files
-<FilesMatch "^\.">
-    Order deny,allow
-    Deny from all
-</FilesMatch>
+# converted from <FilesMatch ^\.> by htaccess_convert.py
+RewriteRule (^|/)\. - [F,L]
 
 # Protect sensitive file extensions
-<FilesMatch "\.(env|json|log|md|gitignore|lock|yml|yaml|ini|conf|config)$">
-    Order deny,allow
-    Deny from all
-</FilesMatch>
+# converted from <FilesMatch \.(env|json|log|md|gitignore|lock|yml|yaml|ini|conf|config)$> by htaccess_convert.py
+RewriteRule \.(env|json|log|md|gitignore|lock|yml|yaml|ini|conf|config)$ - [F,L]
 
 # Protect includes directory
 RewriteEngine On
@@ -42,15 +121,6 @@ RewriteRule ^(includes|content|cache|vendor)/ - [F,L]
 
 # PHP Settings for better security
 <IfModule mod_php7.c>
-    php_flag display_errors off
-    php_flag log_errors on
-    php_value error_log /home/username/error_log
-    php_value upload_max_filesize 5M
-    php_value post_max_size 5M
-    php_value max_execution_time 30
-    php_value max_input_time 30
-    php_flag session.cookie_httponly on
-    php_flag session.cookie_secure on
 </IfModule>
 
 # ============================================
@@ -194,10 +264,8 @@ ServerSignature Off
 
 <Directory "/assets/images/uploads">
     # Disable PHP execution in uploads
-    <FilesMatch "\.ph(p[2-7]?|tml)$">
-        Order deny,allow
-        Deny from all
-    </FilesMatch>
+# converted from <FilesMatch \.ph(p[2-7]?|tml)$> by htaccess_convert.py
+RewriteRule \.ph(p[2-7]?|tml)$ - [F,L]
 
     # Only allow image files
     <FilesMatch "^.*\.(gif|jpe?g|png|webp|svg)$">
@@ -255,3 +323,9 @@ ServerSignature Off
 # 4. Choose www or non-www redirect (lines 88-94) and uncomment
 # 5. Adjust Content-Security-Policy header if needed (line 125)
 # 6. Test thoroughly after deployment
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php80” package as the default “PHP” programming language.
+<IfModule mime_module>
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
